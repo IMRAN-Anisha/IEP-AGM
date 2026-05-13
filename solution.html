@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution · Team 7 — EWB Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">
+                <span class="nav__logo-mark">◐</span>
+                <span class="nav__logo-text">Team 7 <em>/ EWB 3.4</em></span>
+            </a>
+            <nav class="nav__links">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="empathise.html" class="nav__link">Empathise</a>
+                <a href="define.html" class="nav__link">Define</a>
+                <a href="ideate.html" class="nav__link">Ideate</a>
+                <a href="solution.html" class="nav__link nav__link--active">Solution</a>
+                <a href="appendix.html" class="nav__link">Appendix</a>
+            </nav>
+            <a href="#overview" class="nav__cta">Overview ↓</a>
+        </div>
+    </header>
+
+    <!-- DARK SOLUTION HERO -->
+    <section class="sol-hero">
+        <div class="sol-hero__inner">
+            <div class="page-hero__crumbs">
+                <a href="index.html" style="color: rgba(245, 239, 228, 0.7);">Home</a>
+                <span class="sep" style="color: var(--clay);">/</span>
+                <span class="current" style="color: var(--bone);">Solution</span>
+            </div>
+
+            <div class="page-hero__stage">
+                <span class="page-hero__num" style="color: var(--clay);">IV.</span>
+                <span class="page-hero__stage-label sol-hero__meta-text">Stage 04 · Our proposal</span>
+            </div>
+
+            <h2 class="sol-hero__title">
+                An intelligent monitoring<br>
+                system, built for <em>Country.</em>
+            </h2>
+
+            <p class="sol-hero__intro">
+                Team 7 proposes an intelligent monitoring and fault detection system for
+                Stand-Alone Power Systems (SAPS), designed in response to the needs of the
+                Port Stewart community — reflecting local cultural values while addressing
+                the environmental challenges and economic constraints of operating energy
+                systems in remote areas.
+            </p>
+
+            <div class="sol-stats">
+                <div class="sol-stat">
+                    <span class="sol-stat__num">≤ 5<em>min</em></span>
+                    <span class="sol-stat__label">Data latency</span>
+                </div>
+                <div class="sol-stat">
+                    <span class="sol-stat__num">95%<em>+</em></span>
+                    <span class="sol-stat__label">Uptime target</span>
+                </div>
+                <div class="sol-stat">
+                    <span class="sol-stat__num">SMS</span>
+                    <span class="sol-stat__label">Alert channel</span>
+                </div>
+                <div class="sol-stat">
+                    <span class="sol-stat__num">Off-grid</span>
+                    <span class="sol-stat__label">Solar-powered</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANCHOR SUB-NAV -->
+    <nav class="subnav">
+        <div class="subnav__inner">
+            <a href="#overview" class="subnav__link">Our Design Solution</a>
+            <a href="#components" class="subnav__link">Components Overview</a>
+            <a href="#hardware" class="subnav__link">Hardware</a>
+            <a href="#software" class="subnav__link">Software</a>
+            <a href="#testing" class="subnav__link">Testing</a>
+        </div>
+    </nav>
+
+    <!-- OUR DESIGN SOLUTION -->
+    <section class="block block--paper" id="overview">
+        <div class="block__inner">
+            <div class="block__eyebrow">
+                <span class="num">01</span>
+                <span class="line"></span>
+                <span class="label">Our Design Solution</span>
+            </div>
+
+            <h2 class="block__title">
+                Reliable power,<br>
+                <em>quietly</em> looked after.
+            </h2>
+
+            <div class="sol-feature">
+                <div>
+                    <p class="block__lead" style="margin-bottom: 24px;">
+                        Our solution improves the reliability and long-term performance of
+                        SAPS by enabling early fault detection, reducing the risk of equipment
+                        damage, and minimising system downtime. By providing timely insights
+                        into system health, it also supports faster and more effective remote
+                        maintenance responses.
+                    </p>
+                    <p class="block__lead" style="margin-bottom: 0;">
+                        This is achieved through continuous monitoring of key operating
+                        parameters — current, voltage, temperature and moisture — analysed
+                        using threshold-based fault detection methods to identify abnormal
+                        conditions. When potential issues are detected, the system automatically
+                        sends SMS alerts, allowing operators and maintenance teams to respond
+                        quickly before faults escalate.
+                    </p>
+                </div>
+
+                <ul class="sol-feature__list">
+                    <li>
+                        <strong>Continuous monitoring</strong>
+                        Tracks current, voltage, temperature and moisture in real time to provide
+                        full visibility into system performance.
+                    </li>
+                    <li>
+                        <strong>Threshold-based diagnosis</strong>
+                        Compares monitored data against predefined safe limits to detect overvoltage,
+                        excessive current, overheating, or moisture intrusion.
+                    </li>
+                    <li>
+                        <strong>Automatic SMS alerts</strong>
+                        Notifies operators or maintenance personnel the moment a fault or warning
+                        condition is identified — enabling rapid, remote response.
+                    </li>
+                    <li>
+                        <strong>Built for resilience</strong>
+                        Minimises equipment damage, reduces maintenance costs, and strengthens
+                        the overall resilience of the energy system in remote community settings.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPONENTS OVERVIEW -->
+    <section class="block block--bone" id="components">
+        <div class="block__inner">
+            <div class="block__eyebrow">
+                <span class="num">02</span>
+                <span class="line"></span>
+                <span class="label">Components Overview</span>
+            </div>
+
+            <h2 class="block__title">
+                The system, at a <em>glance.</em>
+            </h2>
+
+            <p class="block__lead">
+                The system is built from a small number of robust, well-understood parts —
+                a sensing layer that watches the panels and batteries, a processing layer
+                that interprets that data, and a communications layer that gets the message
+                out when something is wrong.
+            </p>
+
+            <div class="components">
+                <article class="comp">
+                    <div class="comp__icon">S</div>
+                    <h3 class="comp__name">Sensors</h3>
+                    <p class="comp__desc">Current, voltage, temperature, and moisture sensors mounted at key points across the SAPS.</p>
+                </article>
+
+                <article class="comp">
+                    <div class="comp__icon">M</div>
+                    <h3 class="comp__name">Microcontroller</h3>
+                    <p class="comp__desc">A low-power controller reads sensor data, applies threshold logic, and triggers alerts.</p>
+                </article>
+
+                <article class="comp">
+                    <div class="comp__icon">G</div>
+                    <h3 class="comp__name">GSM Module</h3>
+                    <p class="comp__desc">Sends SMS notifications over cellular networks — no internet required.</p>
+                </article>
+
+                <article class="comp">
+                    <div class="comp__icon">E</div>
+                    <h3 class="comp__name">Enclosure</h3>
+                    <p class="comp__desc">Weatherproof, UV-stable housing designed for tropical, wildlife-prone environments.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- HARDWARE -->
+    <section class="block block--paper" id="hardware">
+        <div class="block__inner">
+            <div class="block__eyebrow">
+                <span class="num">03</span>
+                <span class="line"></span>
+                <span class="label">Hardware</span>
+            </div>
+
+            <h2 class="block__title">
+                Designed for <em>heat,</em> humidity<br>
+                and the long wet season.
+            </h2>
+
+            <div class="media-pair">
+                <div class="media-pair__media media-pair__media--placeholder">
+                    Hardware render · placeholder
+                </div>
+                <div class="media-pair__body">
+                    <h3>A rugged sensing layer</h3>
+                    <p>
+                        Sensors are mounted directly to the solar charge controller, battery
+                        terminals and inside the enclosure to capture the full electrical and
+                        environmental picture. All wiring is sealed and rated for outdoor
+                        tropical conditions.
+                    </p>
+                    <p>
+                        Components have been selected for long mean-time-between-failure
+                        ratings, low power draw, and field-serviceability — so that when
+                        something does eventually wear out, a Ranger can swap it without a
+                        specialist callout.
+                    </p>
+                </div>
+            </div>
+
+            <div class="media-pair media-pair--reverse" style="margin-top: 80px;">
+                <div class="media-pair__media media-pair__media--placeholder">
+                    Enclosure diagram · placeholder
+                </div>
+                <div class="media-pair__body">
+                    <h3>A weatherproof enclosure</h3>
+                    <p>
+                        The IP-rated housing keeps moisture, dust and wildlife out, while a
+                        ventilated heat-management design keeps internal temperatures within
+                        operating range during the dry season.
+                    </p>
+                    <p>
+                        Mounting points are designed for both wall and pole installation, with
+                        a service hatch that can be opened with standard tools — no proprietary
+                        fasteners.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOFTWARE -->
+    <section class="block block--ink" id="software">
+        <div class="block__inner">
+            <div class="block__eyebrow">
+                <span class="num">04</span>
+                <span class="line"></span>
+                <span class="label">Software</span>
+            </div>
+
+            <h2 class="block__title">
+                Quiet, simple, <em>understandable.</em>
+            </h2>
+
+            <p class="block__lead">
+                The firmware runs locally on the microcontroller and does not rely on cloud
+                infrastructure. Decisions are made on-device using threshold logic, so the
+                system continues to detect faults even when connectivity drops out.
+            </p>
+
+            <div class="sol-feature">
+                <ul class="sol-feature__list">
+                    <li>
+                        <strong>On-device logic</strong>
+                        All threshold checks, fault classification and alert prioritisation run
+                        locally — no internet dependency.
+                    </li>
+                    <li>
+                        <strong>Plain-language alerts</strong>
+                        SMS messages describe the problem and the recommended next step using
+                        clear, non-technical language.
+                    </li>
+                    <li>
+                        <strong>Event logging</strong>
+                        Every alert and reading is timestamped and stored for later retrieval,
+                        building a maintenance history the community can own.
+                    </li>
+                </ul>
+                <ul class="sol-feature__list">
+                    <li>
+                        <strong>Configurable thresholds</strong>
+                        Safe operating bands can be tuned by trained Rangers as the system
+                        matures and seasonal patterns become clearer.
+                    </li>
+                    <li>
+                        <strong>Watchdog &amp; self-heal</strong>
+                        Built-in watchdog timers restart the firmware if it hangs, ensuring
+                        the device returns to monitoring without manual intervention.
+                    </li>
+                    <li>
+                        <strong>Open &amp; auditable</strong>
+                        The codebase is open source and documented, so future maintainers —
+                        community or otherwise — can read, repair and extend it.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTING -->
+    <section class="block block--bone" id="testing">
+        <div class="block__inner">
+            <div class="block__eyebrow">
+                <span class="num">05</span>
+                <span class="line"></span>
+                <span class="label">Testing</span>
+            </div>
+
+            <h2 class="block__title">
+                Proof, not <em>promises.</em>
+            </h2>
+
+            <p class="block__lead">
+                Before deployment, the system is validated against the design requirements
+                set out in <a href="define.html" style="color: var(--ochre-deep); border-bottom: 1px solid rgba(154,74,31,0.4);">Define</a>.
+                Each test maps back to a specific user need — uptime, latency, training
+                time, and recoverability.
+            </p>
+
+            <div class="components">
+                <article class="comp">
+                    <div class="comp__icon">01</div>
+                    <h3 class="comp__name">Environmental</h3>
+                    <p class="comp__desc">IP-rating verification, UV exposure, thermal cycling and humidity chamber tests.</p>
+                </article>
+
+                <article class="comp">
+                    <div class="comp__icon">02</div>
+                    <h3 class="comp__name">Electrical</h3>
+                    <p class="comp__desc">Calibration of sensors against reference instruments and fault-injection tests.</p>
+                </article>
+
+                <article class="comp">
+                    <div class="comp__icon">03</div>
+                    <h3 class="comp__name">Usability</h3>
+                    <p class="comp__desc">Time-to-install and time-to-diagnose trials with non-technical users.</p>
+                </article>
+
+                <article class="comp">
+                    <div class="comp__icon">04</div>
+                    <h3 class="comp__name">Field Pilot</h3>
+                    <p class="comp__desc">Extended deployment on a representative SAPS, monitoring for false positives and missed events.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEXT -->
+    <section class="next-up">
+        <div class="next-up__inner">
+            <div>
+                <span class="next-up__label">Supporting evidence · 05</span>
+                <h3 class="next-up__title">Costing, prototypes &amp; <em>implementation.</em></h3>
+            </div>
+            <a href="appendix.html" class="next-up__btn">
+                Continue to Appendix
+                <span class="arr">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <span class="footer__mark">◐</span>
+                <div>
+                    <h4>Team 7</h4>
+                    <p>EWB Challenge · Research Area 3.4<br>Energy Monitoring &amp; Fault Diagnosis</p>
+                </div>
+            </div>
+
+            <nav class="footer__nav">
+                <h5>Explore</h5>
+                <a href="index.html">Home</a>
+                <a href="empathise.html">Empathise</a>
+                <a href="define.html">Define</a>
+                <a href="ideate.html">Ideate</a>
+                <a href="solution.html">Solution</a>
+                <a href="appendix.html">Appendix</a>
+            </nav>
+
+            <div class="footer__partner">
+                <h5>In partnership with</h5>
+                <p>The Lama Lama Peoples<br>Port Stewart, Cape York Peninsula<br>Queensland, Australia</p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span>© 2026 Team 7 · Designed with respect for Country.</span>
+            <span class="footer__ack">Always was, always will be Aboriginal land.</span>
+        </div>
+    </footer>
+
+</body>
+</html>

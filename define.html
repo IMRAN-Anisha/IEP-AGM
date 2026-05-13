@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Define · Team 7 — EWB Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">
+                <span class="nav__logo-mark">◐</span>
+                <span class="nav__logo-text">Team 7 <em>/ EWB 3.4</em></span>
+            </a>
+            <nav class="nav__links">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="empathise.html" class="nav__link">Empathise</a>
+                <a href="define.html" class="nav__link nav__link--active">Define</a>
+                <a href="ideate.html" class="nav__link">Ideate</a>
+                <a href="solution.html" class="nav__link">Solution</a>
+                <a href="appendix.html" class="nav__link">Appendix</a>
+            </nav>
+            <a href="solution.html" class="nav__cta">View Solution →</a>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero__grain"></div>
+        <div class="page-hero__inner">
+            <div class="page-hero__crumbs">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <span class="current">Define</span>
+            </div>
+
+            <div class="page-hero__stage">
+                <span class="page-hero__num">II.</span>
+                <span class="page-hero__stage-label">Stage 02 · Framing the problem</span>
+            </div>
+
+            <h1 class="page-hero__title">
+                From user need<br>
+                to <em>engineering</em> spec.
+            </h1>
+
+            <p class="page-hero__intro">
+                The user needs and design requirements capture real-world problems,
+                constraints and goals — translating what users must achieve into measurable
+                engineering criteria. Together they keep our focus on the non-negotiables:
+                extreme-environment reliability, user-friendly design, and cultural appropriateness.
+            </p>
+        </div>
+    </section>
+
+    <!-- REQUIREMENTS -->
+    <section class="block block--paper" id="requirements">
+        <div class="block__inner">
+            <div class="block__eyebrow">
+                <span class="num">01</span>
+                <span class="line"></span>
+                <span class="label">User Needs · Design Requirements</span>
+            </div>
+
+            <h2 class="block__title">
+                Ten promises the system <em>must keep.</em>
+            </h2>
+
+            <p class="block__lead">
+                The user needs state what the user must achieve through the system and what
+                problems it must solve. The design requirements translate each of those
+                into measurable engineering criteria — the way we will know, objectively,
+                that the system has done its job.
+            </p>
+
+            <div class="target-group">
+                <div class="target-group__label">Target Group</div>
+                <p>
+                    Rangers living and working on Lama Lama Country, who monitor and care
+                    for the land by collecting data and implementing solutions.
+                </p>
+            </div>
+
+            <div class="reqs">
+
+                <article class="req">
+                    <span class="req__num">01</span>
+                    <div class="req__need">
+                        <span class="req__label">User Need</span>
+                        <p class="req__need-text">Rangers need a system that can reliably operate in harsh and changing outdoor weather conditions while working on Lama Lama Country.</p>
+                    </div>
+                    <div class="req__divider"></div>
+                    <div class="req__spec">
+                        <span class="req__label">Design Requirement</span>
+                        <p class="req__spec-text">The system must be weatherproof and durable (waterproof, UV and heat resistant, dust protection, fire resistant), maintaining ≥ 95% uptime in extreme conditions (heat, rain, dust and impact).</p>
+                    </div>
+                </article>
+
+                <article class="req">
+                    <span class="req__num">02</span>
+                    <div class="req__need">
+                        <span class="req__label">User Need</span>
+                        <p class="req__need-text">Rangers require a system that is easy to understand, learn, and use regardless of technical knowledge level.</p>
+                    </div>
+                    <div class="req__divider"></div>
+                    <div class="req__spec">
+                        <span class="req__label">Design Requirement</span>
+                        <p class="req__spec-text">Usable by non-technical users within ≤ 1 day of training, with clear documentation covering installation, monitoring and diagnostics, intuitive interfaces with step-by-step instructions, icons, colour coding, and minimal non-technical language.</p>
+                    </div>
+                </article>
+
+                <article class="req">
+                    <span class="req__num">03</span>
+                    <div class="req__need">
+                        <span class="req__label">User Need</span>
+                        <p class="req__need-text">Rangers need to diagnose faults quickly due to limited time at each site.</p>
+                    </div>
+                    <div class="req__divider"></div>
+                    <div class="req__spec">
+                        <span class="req__label">Design Requirement</span>
+                        <p class="req__spec-text">Provides automatic diagnostics with instant fault classification and real-time monitoring of energy generation and consumption within ≤ 5 minute data latency.</p>
+                    </div>
+                </article>
+
+                <article class="req">
+                    <span class="req__num">04</span>
+                    <div class="req__need">
+                        <span class="req__label">User Need</span>
+                        <p class="req__need-text">Rangers need a system that works in remote areas without reliable internet access.</p>
+                    </div>
+                    <div class="req__divider"></div>
+                    <div class="req__spec">
+                        <span class="req__label">Design Requirement</span>
+                        <p class="req__spec-text">Supports full offline operation and diagnostics while operating within existing infrastructure constraints (low-bandwidth and intermittent connectivity).</p>
+                    </div>
+                </article>
+
+                <article class="req">
+                    <span class="req__num">05</span>
+                    <div class="req__need">
+                        <span class="req__label">User Need</span>
+                        <p class="req__need-text">Rangers require a lightweight portable system that can be easily transported across large distances.</p>
+                    </div>
+                    <div class="req__divider"></div>
+                    <div class="req__spec">
+                        <span class="req__label">Design Requirement</span>
+                        <p class="req__spec-text">Handheld, battery-powered, and supports solar or vehicle charging for remote use.</p>
+                    </div>
+                </article>
+
+                <article class="req">
+                    <span class="req__num">06</span>
+                    <div class="req__need">
+                        <span class="req__label">User Need</span>
+                        <p class="req__need-text">Rangers need to track system performance over time and prevent failures before they occur.</p>
+                    </div>
+                    <div class="req__divider"></div>
+                    <div class="req__spec">
+                        <span class="req__label">Design Requirement</span>
+                        <p class="req__spec-text">Logs faults with timestamps and locations, enabling predictive maintenance by identifying trends (e.g. battery degradation) at least 7 days before failure risk.</p>
+                    </div>
+                </article>
+
+                <article class="req">
+                    <span class="req__num">07</span>
+                    <div class="req__need">
+                        <span class="req__label">User Need</span>
+                        <p class="req__need-text">Rangers need to confidently identify faults and carry out repairs in the field without external assistance.</p>
+                    </div>
+                    <div class="req__divider"></div>
+                    <div class="req__spec">
+                        <span class="req__label">Design Requirement</span>
+                        <p class="req__spec-text">Accurately diagnoses the source of faults and delivers built-in step-by-step repair guidance with clear documentation.</p>
+                    </div>
+                </article>
+
+                <article class="req">
+                    <span class="req__num">08</span>
+                    <div class="req__need">
+                        <span class="req__label">User Need</span>
+                        <p class="req__need-text">Rangers require a system that supports their responsibility to care for and protect Country in a sustainable and culturally respectful way.</p>
+                    </div>
+                    <div class="req__divider"></div>
+                    <div class="req__spec">
+                        <span class="req__label">Design Requirement</span>
+                        <p class="req__spec-text">Uses sustainable, non-toxic materials and operates with minimal environmental impact, supporting long-term care of Lama Lama Country.</p>
+                    </div>
+                </article>
+
+                <article class="req">
+                    <span class="req__num">09</span>
+                    <div class="req__need">
+                        <span class="req__label">User Need</span>
+                        <p class="req__need-text">Rangers need to maintain situational awareness when not directly on site.</p>
+                    </div>
+                    <div class="req__divider"></div>
+                    <div class="req__spec">
+                        <span class="req__label">Design Requirement</span>
+                        <p class="req__spec-text">Transmits key operational data to accountable individuals (e.g. Rangers, government providers) at least once every 24 hours when appropriate connectivity is available.</p>
+                    </div>
+                </article>
+
+                <article class="req">
+                    <span class="req__num">10</span>
+                    <div class="req__need">
+                        <span class="req__label">User Need</span>
+                        <p class="req__need-text">Rangers need to be able to easily and efficiently inspect and repair the system.</p>
+                    </div>
+                    <div class="req__divider"></div>
+                    <div class="req__spec">
+                        <span class="req__label">Design Requirement</span>
+                        <p class="req__spec-text">Repairable without a specialist third party, within 12 hours of recognising system hardware or software damage.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEXT -->
+    <section class="next-up">
+        <div class="next-up__inner">
+            <div>
+                <span class="next-up__label">Next stage · 03</span>
+                <h3 class="next-up__title">Concepts, trade-offs &amp; <em>decisions.</em></h3>
+            </div>
+            <a href="ideate.html" class="next-up__btn">
+                Continue to Ideate
+                <span class="arr">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <span class="footer__mark">◐</span>
+                <div>
+                    <h4>Team 7</h4>
+                    <p>EWB Challenge · Research Area 3.4<br>Energy Monitoring &amp; Fault Diagnosis</p>
+                </div>
+            </div>
+
+            <nav class="footer__nav">
+                <h5>Explore</h5>
+                <a href="index.html">Home</a>
+                <a href="empathise.html">Empathise</a>
+                <a href="define.html">Define</a>
+                <a href="ideate.html">Ideate</a>
+                <a href="solution.html">Solution</a>
+                <a href="appendix.html">Appendix</a>
+            </nav>
+
+            <div class="footer__partner">
+                <h5>In partnership with</h5>
+                <p>The Lama Lama Peoples<br>Port Stewart, Cape York Peninsula<br>Queensland, Australia</p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span>© 2026 Team 7 · Designed with respect for Country.</span>
+            <span class="footer__ack">Always was, always will be Aboriginal land.</span>
+        </div>
+    </footer>
+
+</body>
+</html>
