@@ -804,7 +804,480 @@ em { font-style: italic; }
 @media (max-width: 880px) {
     .context__inner { grid-template-columns: 1fr; }
 }
+/* ============================================
+   HOME · EXECUTIVE SUMMARY (wide text-only)
+   ============================================ */
 
+.exec {
+    padding: clamp(80px, 12vw, 160px) var(--gutter);
+    background: var(--paper);
+}
+
+.exec__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.exec__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+}
+
+.exec__eyebrow .num { color: var(--ochre); font-weight: 500; }
+.exec__eyebrow .line { flex: 0 0 60px; height: 1px; background: var(--ochre); }
+
+.exec__title {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(36px, 5.5vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 56px;
+    max-width: 900px;
+}
+
+.exec__title em {
+    font-style: italic;
+    color: var(--ochre);
+    font-weight: 300;
+}
+
+.exec__prose {
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    column-count: 1;
+}
+
+.exec__prose p {
+    font-size: clamp(16px, 1.5vw, 18px);
+    line-height: 1.75;
+    color: var(--ink-soft);
+}
+
+.exec__lead {
+    font-family: var(--display);
+    font-size: clamp(20px, 2vw, 24px) !important;
+    line-height: 1.45 !important;
+    color: var(--ink) !important;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(42, 29, 18, 0.12);
+    margin-bottom: 8px;
+}
+
+.exec__lead em {
+    font-style: italic;
+    color: var(--ochre-deep);
+}
+
+.exec__prose strong {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.exec__prose em {
+    font-style: italic;
+    color: var(--ochre-deep);
+}
+
+/* ============================================
+   HOME · LAMA LAMA COUNTRY (map)
+   ============================================ */
+
+.place {
+    padding: clamp(80px, 12vw, 140px) var(--gutter);
+    background: var(--bone);
+    position: relative;
+    overflow: hidden;
+}
+
+.place::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 1px 1px, rgba(42, 29, 18, 0.06) 1px, transparent 0);
+    background-size: 28px 28px;
+    pointer-events: none;
+}
+
+.place__inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(40px, 6vw, 96px);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.place__title {
+    font-family: var(--display);
+    font-size: clamp(34px, 5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    font-weight: 400;
+    margin: 24px 0 24px;
+}
+
+.place__title em {
+    font-style: italic;
+    color: var(--ochre);
+    font-weight: 300;
+}
+
+.place__lead {
+    font-size: clamp(16px, 1.4vw, 18px);
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 40px;
+    max-width: 540px;
+}
+
+.place__facts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(42, 29, 18, 0.15);
+}
+
+.pfact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pfact__k {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+}
+
+.pfact__v {
+    font-family: var(--display);
+    font-size: 18px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    font-weight: 500;
+}
+
+/* Map */
+.place__map {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -30px rgba(42, 29, 18, 0.35);
+    border: 1px solid rgba(42, 29, 18, 0.12);
+}
+
+.place__map img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.place__pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.place__pin-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--ochre);
+    box-shadow:
+        0 0 0 4px rgba(194, 98, 45, 0.25),
+        0 0 0 12px rgba(194, 98, 45, 0.08);
+    animation: pinPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pinPulse {
+    0%, 100% {
+        box-shadow:
+            0 0 0 4px rgba(194, 98, 45, 0.25),
+            0 0 0 12px rgba(194, 98, 45, 0.08);
+    }
+    50% {
+        box-shadow:
+            0 0 0 8px rgba(194, 98, 45, 0.18),
+            0 0 0 20px rgba(194, 98, 45, 0.04);
+    }
+}
+
+.place__pin-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 4px 10px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .place__inner { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   HOME · DEEPER CONTEXT (why this matters)
+   ============================================ */
+
+.deep {
+    padding: clamp(80px, 12vw, 140px) var(--gutter);
+    background: var(--paper);
+}
+
+.deep__inner {
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+.deep__title {
+    font-family: var(--display);
+    font-size: clamp(34px, 5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    font-weight: 400;
+    margin: 24px 0 64px;
+    max-width: 900px;
+}
+
+.deep__title em {
+    font-style: italic;
+    color: var(--ochre);
+    font-weight: 300;
+}
+
+.deep__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.deep__col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.deep__photo {
+    aspect-ratio: 4 / 3;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--bone-warm);
+    box-shadow: 0 20px 40px -20px rgba(42, 29, 18, 0.3);
+}
+
+.deep__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease);
+}
+
+.deep__col:hover .deep__photo img {
+    transform: scale(1.04);
+}
+
+.deep__h3 {
+    font-family: var(--display);
+    font-size: 22px;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.deep__col p {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+    .deep__grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ============================================
+   JOURNEY · 7-card grid override
+   ============================================ */
+
+.journey__cards--seven {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.journey__cards--seven .jcard:nth-child(5),
+.journey__cards--seven .jcard:nth-child(6),
+.journey__cards--seven .jcard:nth-child(7) {
+    /* The three cards on the second row stretch to fill */
+}
+
+@media (max-width: 1100px) {
+    .journey__cards--seven { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 760px) {
+    .journey__cards--seven { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .journey__cards--seven { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   HOME · TEAM
+   ============================================ */
+
+.team {
+    padding: clamp(80px, 12vw, 140px) var(--gutter);
+    background: var(--bone);
+    position: relative;
+    overflow: hidden;
+}
+
+.team::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at bottom left, rgba(194, 98, 45, 0.12), transparent 55%);
+    pointer-events: none;
+}
+
+.team__inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: clamp(40px, 6vw, 96px);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.team__title {
+    font-family: var(--display);
+    font-size: clamp(40px, 6vw, 80px);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    font-weight: 400;
+    margin: 24px 0 28px;
+}
+
+.team__title em {
+    font-style: italic;
+    color: var(--ochre);
+    font-weight: 300;
+}
+
+.team__lead {
+    font-family: var(--display);
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.5;
+    color: var(--ink);
+    font-weight: 400;
+    margin-bottom: 20px;
+    max-width: 540px;
+    letter-spacing: -0.01em;
+}
+
+.team__body {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 540px;
+    margin-bottom: 40px;
+}
+
+.team__credits {
+    padding-top: 24px;
+    border-top: 1px solid rgba(42, 29, 18, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.team__credits-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ochre-deep);
+}
+
+.team__credits-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink);
+}
+
+/* Team photo */
+.team__photo {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--bone-warm);
+    box-shadow: 0 30px 60px -30px rgba(42, 29, 18, 0.4);
+    border: 1px solid rgba(42, 29, 18, 0.1);
+}
+
+.team__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease);
+}
+
+.team__photo:hover img {
+    transform: scale(1.03);
+}
+
+.team__photo-tag {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    background: var(--charcoal);
+    color: var(--bone);
+    padding: 8px 14px;
+    border-radius: 100px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    .team__inner { grid-template-columns: 1fr; }
+    .team__photo { order: -1; }
+}
 /* ============================================
    FOOTER
    ============================================ */
