@@ -12,6 +12,7 @@
 </head>
 <body>
 
+    <!-- NAVIGATION -->
     <header class="nav">
         <div class="nav__inner">
             <a href="index.html" class="nav__logo">
@@ -32,20 +33,326 @@
         </div>
     </header>
 
-    <main>
-        <section class="page-hero">
-            <div class="page-hero__grain"></div>
-            <div class="page-hero__inner">
-                <div class="page-hero__crumbs">
-                    <a href="index.html">Home</a>
-                    <span class="sep">/</span>
-                    <span class="current">References</span>
-                </div>
-                <h1>References</h1>
-                <p>References content coming soon.</p>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero__grain"></div>
+        <div class="page-hero__inner">
+            <div class="page-hero__crumbs">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <span class="current">References</span>
             </div>
-        </section>
-    </main>
+
+            <div class="page-hero__stage">
+                <span class="page-hero__num">VII.</span>
+                <span class="page-hero__stage-label">Sources &amp; citations</span>
+            </div>
+
+            <h1 class="page-hero__title">
+                The shoulders we<br>
+                <em>stood</em> on.
+            </h1>
+
+            <p class="page-hero__intro">
+                Every legislation reference, report, dataset and image used across this
+                project. Filter by category, search for any keyword, or follow the link
+                straight to the source.
+            </p>
+        </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="block block--paper" id="references">
+        <div class="block__inner">
+
+            <div class="block__eyebrow">
+                <span class="num">01</span>
+                <span class="line"></span>
+                <span class="label">Reference list</span>
+            </div>
+
+            <h2 class="block__title">
+                Sourced, cited, <em>verifiable.</em>
+            </h2>
+
+            <p class="block__lead">
+                References are grouped by source type. Use the search to find any author,
+                title or year, or the chips to narrow by category.
+            </p>
+
+            <!-- Tools -->
+            <div class="ref-tools">
+                <label class="glossary-search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="refSearch" placeholder="Search a reference, author, year or keyword…" aria-label="Search references">
+                </label>
+
+                <div class="glossary-filters" role="tablist" aria-label="Filter references by category">
+                    <button class="g-chip g-chip--active" data-cat="all">All</button>
+                    <button class="g-chip" data-cat="legislation">Legislation</button>
+                    <button class="g-chip" data-cat="papers">Reports &amp; Papers</button>
+                    <button class="g-chip" data-cat="web">Web Sources</button>
+                    <button class="g-chip" data-cat="images">Images &amp; Diagrams</button>
+                    <button class="g-chip" data-cat="tools">Software &amp; Tools</button>
+                </div>
+            </div>
+
+            <!-- Style toggle -->
+            <div class="ref-style">
+                <span class="ref-style__label">Citation style:</span>
+                <div class="ref-style__group" role="radiogroup">
+                    <button class="ref-style__btn ref-style__btn--active" data-style="apa">APA 7</button>
+                </div>
+            </div>
+
+            <!-- Reference list -->
+            <ol class="ref-list" id="refList">
+
+                <!-- LEGISLATION -->
+                <li class="ref" data-cat="legislation" data-keywords="aboriginal cultural heritage act 2003 qld queensland">
+                    <div class="ref__num">01</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Legislation</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Government. (2003). <em>Aboriginal Cultural Heritage Act 2003 (QLD)</em>. Queensland Legislation.
+                        </p>
+                        <p class="ref__cite ref__cite--harvard" hidden>
+                            Queensland Government 2003, <em>Aboriginal Cultural Heritage Act 2003 (QLD)</em>, Queensland Legislation.
+                        </p>
+                        <p class="ref__cite ref__cite--ieee" hidden>
+                            Queensland Government, "Aboriginal Cultural Heritage Act 2003 (QLD)," Queensland Legislation, 2003.
+                        </p>
+                        <a class="ref__link" href="https://www.legislation.qld.gov.au/view/whole/html/inforce/current/act-2003-079" target="_blank" rel="noopener">View source ↗</a>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="legislation" data-keywords="electrical safety act 2002 qld queensland">
+                    <div class="ref__num">02</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Legislation</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Government. (2002). <em>Electrical Safety Act 2002 (QLD)</em>. Queensland Legislation.
+                        </p>
+                        <p class="ref__cite ref__cite--harvard" hidden>
+                            Queensland Government 2002, <em>Electrical Safety Act 2002 (QLD)</em>, Queensland Legislation.
+                        </p>
+                        <p class="ref__cite ref__cite--ieee" hidden>
+                            Queensland Government, "Electrical Safety Act 2002 (QLD)," Queensland Legislation, 2002.
+                        </p>
+                        <a class="ref__link" href="https://www.legislation.qld.gov.au/view/html/inforce/current/act-2002-042" target="_blank" rel="noopener">View source ↗</a>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="legislation" data-keywords="work health and safety act 2011 qld queensland whs">
+                    <div class="ref__num">03</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Legislation</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Government. (2011). <em>Work Health and Safety Act 2011 (QLD)</em>. Queensland Legislation.
+                        </p>
+                        <p class="ref__cite ref__cite--harvard" hidden>
+                            Queensland Government 2011, <em>Work Health and Safety Act 2011 (QLD)</em>, Queensland Legislation.
+                        </p>
+                        <p class="ref__cite ref__cite--ieee" hidden>
+                            Queensland Government, "Work Health and Safety Act 2011 (QLD)," Queensland Legislation, 2011.
+                        </p>
+                        <a class="ref__link" href="https://www.legislation.qld.gov.au/view/html/inforce/current/act-2011-018" target="_blank" rel="noopener">View source ↗</a>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="legislation" data-keywords="privacy act 1988 commonwealth australia">
+                    <div class="ref__num">04</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Legislation</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Commonwealth of Australia. (1988). <em>Privacy Act 1988 (Cth)</em>. Federal Register of Legislation.
+                        </p>
+                        <p class="ref__cite ref__cite--harvard" hidden>
+                            Commonwealth of Australia 1988, <em>Privacy Act 1988 (Cth)</em>, Federal Register of Legislation.
+                        </p>
+                        <p class="ref__cite ref__cite--ieee" hidden>
+                            Commonwealth of Australia, "Privacy Act 1988 (Cth)," Federal Register of Legislation, 1988.
+                        </p>
+                        <a class="ref__link" href="https://www.legislation.gov.au/C2004A03712/latest/text" target="_blank" rel="noopener">View source ↗</a>
+                    </div>
+                </li>
+
+                <!-- PLACEHOLDER · Reports & Papers -->
+                <li class="ref ref--placeholder" data-cat="papers" data-keywords="ewb engineers without borders challenge 2026">
+                    <div class="ref__num">05</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Engineers Without Borders Australia. (2026). <em>EWB Challenge Design Brief: Lama Lama Country</em>. EWB Australia.
+                        </p>
+                        <p class="ref__cite ref__cite--harvard" hidden>
+                            Engineers Without Borders Australia 2026, <em>EWB Challenge Design Brief: Lama Lama Country</em>, EWB Australia.
+                        </p>
+                        <p class="ref__cite ref__cite--ieee" hidden>
+                            Engineers Without Borders Australia, "EWB Challenge Design Brief: Lama Lama Country," EWB Australia, 2026.
+                        </p>
+                        <a class="ref__link" href="#" target="_blank" rel="noopener">View source ↗</a>
+                    </div>
+                </li>
+
+                <!-- PLACEHOLDER · Web Source -->
+                <li class="ref ref--placeholder" data-cat="web" data-keywords="placeholder web source">
+                    <div class="ref__num">06</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Author, A. (Year). <em>Title of online resource</em>. Site Name. <span class="ref__placeholder">[Add URL]</span>
+                        </p>
+                        <p class="ref__cite ref__cite--harvard" hidden>
+                            Author, A. Year, <em>Title of online resource</em>, Site Name.
+                        </p>
+                        <p class="ref__cite ref__cite--ieee" hidden>
+                            A. Author, "Title of online resource," Site Name, Year.
+                        </p>
+                        <a class="ref__link" href="#" target="_blank" rel="noopener">View source ↗</a>
+                    </div>
+                </li>
+
+                <!-- PLACEHOLDER · Image -->
+                <li class="ref ref--placeholder" data-cat="images" data-keywords="placeholder image diagram">
+                    <div class="ref__num">07</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Image</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Photographer, P. (Year). <em>Image title</em> [Photograph]. Source.
+                        </p>
+                        <p class="ref__cite ref__cite--harvard" hidden>
+                            Photographer, P. Year, <em>Image title</em>, photograph, Source.
+                        </p>
+                        <p class="ref__cite ref__cite--ieee" hidden>
+                            P. Photographer, "Image title," Year. [Photograph].
+                        </p>
+                        <a class="ref__link" href="#" target="_blank" rel="noopener">View source ↗</a>
+                    </div>
+                </li>
+
+                <!-- PLACEHOLDER · Tools -->
+                <li class="ref ref--placeholder" data-cat="tools" data-keywords="placeholder software tools">
+                    <div class="ref__num">08</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Software</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Tool Name. (Year). <em>Version / Description</em>. Vendor.
+                        </p>
+                        <p class="ref__cite ref__cite--harvard" hidden>
+                            Tool Name Year, <em>Version / Description</em>, Vendor.
+                        </p>
+                        <p class="ref__cite ref__cite--ieee" hidden>
+                            "Tool Name," Vendor, Year.
+                        </p>
+                        <a class="ref__link" href="#" target="_blank" rel="noopener">View source ↗</a>
+                    </div>
+                </li>
+
+            </ol>
+
+            <p class="glossary-empty" id="refEmpty" hidden>No references match that search. Try a different term or clear the filters.</p>
+
+            <!-- Notes box -->
+            <aside class="ref-notes">
+                <div class="ref-notes__label">A note on citations</div>
+                <p>
+                    Where a single source supports multiple sections of the site, it is
+                    cited once here. In-text references throughout the rest of the project
+                    follow the same numbering used in this list.
+                </p>
+            </aside>
+
+        </div>
+    </section>
+
+    <!-- NEXT -->
+    <section class="next-up">
+        <div class="next-up__inner">
+            <div>
+                <span class="next-up__label">Return to start</span>
+                <h3 class="next-up__title">Back to the <em>landing</em> page.</h3>
+            </div>
+            <a href="index.html" class="next-up__btn">
+                Return to Home
+                <span class="arr">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <span class="footer__mark">◐</span>
+                <div>
+                    <h4>Team 7</h4>
+                    <p>EWB Challenge · Research Area 3.4<br>Energy Monitoring &amp; Fault Diagnosis</p>
+                </div>
+            </div>
+            <div class="footer__partner">
+                <h5>In partnership with</h5>
+                <p>The Lama Lama Peoples<br>Port Stewart, Cape York Peninsula<br>Queensland, Australia</p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span>© 2026 Team 7 · Designed with respect for Country.</span>
+            <span class="footer__ack">Always was, always will be Aboriginal land.</span>
+        </div>
+    </footer>
+
+    <!-- JS · search, filter, citation style toggle -->
+    <script>
+    (function () {
+        const search = document.getElementById('refSearch');
+        const chips = document.querySelectorAll('.g-chip');
+        const items = document.querySelectorAll('.ref');
+        const empty = document.getElementById('refEmpty');
+        let activeCat = 'all';
+
+        function applyFilters() {
+            const q = (search.value || '').trim().toLowerCase();
+            let visible = 0;
+            items.forEach(item => {
+                const cat = item.dataset.cat || '';
+                const keys = (item.dataset.keywords || '') + ' ' + item.textContent.toLowerCase();
+                const matchCat = activeCat === 'all' || cat === activeCat;
+                const matchQuery = q === '' || keys.indexOf(q) !== -1;
+                const show = matchCat && matchQuery;
+                item.hidden = !show;
+                if (show) visible++;
+            });
+            empty.hidden = visible !== 0;
+        }
+
+        if (search) search.addEventListener('input', applyFilters);
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => c.classList.remove('g-chip--active'));
+                chip.classList.add('g-chip--active');
+                activeCat = chip.dataset.cat;
+                applyFilters();
+            });
+        });
+
+        // Citation style toggle
+        const styleBtns = document.querySelectorAll('.ref-style__btn');
+        styleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                styleBtns.forEach(b => b.classList.remove('ref-style__btn--active'));
+                btn.classList.add('ref-style__btn--active');
+                const style = btn.dataset.style;
+                document.querySelectorAll('.ref__cite').forEach(cite => {
+                    cite.hidden = !cite.classList.contains('ref__cite--' + style);
+                });
+            });
+        });
+    })();
+    </script>
 
 </body>
 </html>
