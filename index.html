@@ -130,46 +130,116 @@
                 A practical answer to an<br>
                 <em>invisible problem.</em>
             </h2>
+<div class="exec__prose">
 
-            <div class="exec__prose">
-                <p class="exec__lead">
-                    This website presents <strong>Team 7's design proposal</strong> for the
-                    Engineers Without Borders (EWB) Challenge Research Area 3.4: <em>Energy
-                    Monitoring and Fault Diagnosis</em>. The project focuses on supporting the
-                    Lama Lama community at Port Stewart, Queensland, where off-grid solar
-                    energy systems power essential ranger facilities and community services.
-                </p>
+    <!-- Design Area + Keywords -->
+    <div class="exec__meta">
+        <div class="exec__meta-row">
+            <span class="exec__meta-label">Design Area</span>
+            <p class="exec__meta-text">
+                Engineers Without Borders (EWB) Challenge — Lama Lama, Port Stewart<br>
+                <em>Research Area 3.4 — Energy Monitoring and Fault Diagnosis</em>
+            </p>
+        </div>
+        <div class="exec__meta-row">
+            <span class="exec__meta-label">Keywords</span>
+            <p class="exec__meta-text">
+                Off-grid energy, solar energy monitoring, fault diagnosis, sustainability,
+                remote communities, low-cost, community autonomy.
+            </p>
+        </div>
+    </div>
 
-                <p>
-                    The community's energy infrastructure is vulnerable to faults caused by
-                    the region's tropical climate — including extreme heat, wet-season
-                    isolation, and wildlife interference. Because these systems operate in
-                    remote locations without continuous supervision, faults often go undetected
-                    until they cause major disruptions. When energy failures occur, they
-                    affect critical needs such as <strong>food storage, medical equipment,
-                    education, and ranger operations</strong>. Through our research and
-                    analysis, current fault diagnosis systems in the community are ambiguous
-                    and non-user-friendly, causing misdiagnosis and evidencing a clear gap
-                    in sufficient and effective energy fault diagnosis systems.
-                </p>
+    <!-- Proposal Summary -->
+    <h3 class="exec__h3">Executive Summary</h3>
+    <p >
+        This project addresses the lack of sufficient and effective energy fault diagnosis
+        systems on Lama Lama Country in Port Stewart, Queensland (Engineers Without Borders
+        [EWB], 2024). The Lama Lama community relies on off-grid solar energy systems to
+        power essential services (Ergon Energy, 2023); however, these systems are vulnerable
+        to faults caused by harsh tropical conditions. Due to the remoteness of the region
+        and limited supervision of infrastructure, faults often go undetected (Mahmud &amp; Roy,
+        2025) until major disruptions occur, impacting critical services such as food storage,
+        medical equipment, education and ranger operations.
+    </p>
+    <p>
+        Through extensive research and analysis, Team 7 identified that current fault
+        diagnosis methods are ambiguous, non-user friendly, and can result in misdiagnosis
+        (Mahmud &amp; Roy, 2025). To address this challenge, the team proposes a
+        <strong>low-cost, durable, and easy-to-use SMS-based fault alert system</strong>,
+        that doesn't require specialist technical knowledge. The proposed design aims to
+        improve energy reliability, reduce downtime, and support the long-term sustainability
+        and wellbeing of the Lama Lama community.
+    </p>
 
-                <p>
-                    To address this challenge, our team proposes a <strong>low-cost, durable,
-                    and easy-to-use energy monitoring system</strong> that enables early fault
-                    detection without requiring specialist technical training. The solution
-                    aims to improve energy reliability, reduce downtime, and support the
-                    long-term sustainability of ranger activities and community wellbeing
-                    across Lama Lama Country.
-                </p>
+    <!-- Overview of Design -->
+    <h3 class="exec__h3">Overview of Design</h3>
+    <ul class="exec__list">
+        <li>The system will primarily be used by <strong>Lama Lama Rangers</strong> to identify energy faults early and maintain reliable access to essential services.</li>
+        <li>The proposed system monitors solar energy infrastructure and sends simple <strong>SMS alerts</strong> to chosen devices when a fault occurs, allowing fast maintenance responses and reduced downtime across community infrastructure.</li>
+        <li>
+            The design includes the following components:
+            <ul class="exec__list exec__list--sub">
+                <li>Monitoring sensors</li>
+                <li>Battery and wiring</li>
+                <li>Weather-resistant housing</li>
+                <li>Simple user interface / display system that receives the SMS alerts (external device)</li>
+            </ul>
+        </li>
+        <li>The implementation is supported by installing monitoring hardware on already-existing solar infrastructure, along with providing a simplified report outlining maintenance processes to assist Rangers. Further, community engagement is utilised to ensure the system is culturally appropriate.</li>
+    </ul>
 
-                <p>
-                    This site provides a high-level overview of our proposed design,
-                    aimed to inform stakeholders including <strong>Lama Lama representatives
-                    and marketers</strong> to achieve implementation of the design. It includes
-                    evidence of decision-making processes, prototype testing, implementation
-                    plan and costing, as well as a detailed final design breakdown.
-                </p>
-            </div>
+    <!-- Key Considerations -->
+    <h3 class="exec__h3">Key Considerations</h3>
+    <div class="exec__chips">
+        <span class="exec__chip">Withstands tropical weather conditions</span>
+        <span class="exec__chip">Low maintenance &amp; easy to use</span>
+        <span class="exec__chip">Affordable for remote communities</span>
+        <span class="exec__chip">Community consultation &amp; testing</span>
+    </div>
+
+    <!-- Proposed Materials and Cost Summary -->
+    <h3 class="exec__h3">Proposed Materials and Cost Summary</h3>
+
+    <div class="exec__split">
+        <div class="exec__split-col">
+            <span class="exec__split-label">Materials</span>
+            <ul class="exec__list exec__list--materials">
+                <li>
+                    <span class="exec__mat-icon" aria-hidden="true">◐</span>
+                    <span>Monitoring sensors</span>
+                </li>
+                <li>
+                    <span class="exec__mat-icon" aria-hidden="true">◐</span>
+                    <span>Electrical wiring and connectors</span>
+                </li>
+                <li>
+                    <span class="exec__mat-icon" aria-hidden="true">◐</span>
+                    <span>Weatherproof housing</span>
+                </li>
+                <li>
+                    <span class="exec__mat-icon" aria-hidden="true">◐</span>
+                    <span>Display / interface components</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="exec__split-col">
+            <span class="exec__split-label">Cost</span>
+            <p class="exec__cost-headline">
+                Approximately <strong>AUD&nbsp;$3,500</strong><br>
+                <span>for the first installation of one unit</span>
+            </p>
+            <ul class="exec__list exec__list--cost">
+                <li><span class="exec__cost-amt">$300</span><span>per unit (material costs)</span></li>
+                <li><span class="exec__cost-amt">$100</span><span>monthly subscription</span></li>
+                <li><span class="exec__cost-amt">$2,900</span><span>installation (technician call-out &amp; labour)</span></li>
+                <li><span class="exec__cost-amt">$899</span><span>one-time purchase of central receiver device (MacBook NEO)</span></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
 
         </div>
     </section>
