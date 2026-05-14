@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appendix · Team 7 — EWB Challenge</title>
-     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,6 +12,7 @@
 </head>
 <body>
 
+    <!-- NAVIGATION -->
     <header class="nav">
         <div class="nav__inner">
             <a href="index.html" class="nav__logo">
@@ -30,6 +31,7 @@
         </div>
     </header>
 
+    <!-- PAGE HERO -->
     <section class="page-hero">
         <div class="page-hero__grain"></div>
         <div class="page-hero__inner">
@@ -41,21 +43,717 @@
 
             <div class="page-hero__stage">
                 <span class="page-hero__num">V.</span>
-                <span class="page-hero__stage-label">Supporting evidence</span>
+                <span class="page-hero__stage-label">Supporting evidence &amp; reference</span>
             </div>
 
             <h1 class="page-hero__title">
-                Costing, prototypes &amp;<br>
-                <em>implementation.</em>
+                The full <em>working</em><br>
+                behind the design.
             </h1>
 
             <p class="page-hero__intro">
-                This page will host detailed costing, prototype test results, implementation
-                plan, and supporting references. Content coming soon.
+                Every diagram, document, costing sheet and test record that supports the
+                proposal lives here. Use the sidebar to jump between sections, search the
+                glossary for any unfamiliar term, and open the linked documents to read the
+                source material in full.
             </p>
         </div>
     </section>
 
+    <!-- GLOSSARY -->
+    <section class="block block--paper" id="glossary">
+        <div class="block__inner">
+
+            <div class="block__eyebrow">
+                <span class="num">00</span>
+                <span class="line"></span>
+                <span class="label">Glossary &amp; key terms</span>
+            </div>
+
+            <h2 class="block__title">
+                A quick reference for any<br>
+                <em>unfamiliar</em> language.
+            </h2>
+
+            <p class="block__lead">
+                The project crosses engineering, community context, and design vocabulary.
+                Search or filter the glossary below to find any term used across this site.
+            </p>
+
+            <div class="glossary-tools">
+                <label class="glossary-search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="glossarySearch" placeholder="Search a term, definition or category…" aria-label="Search glossary">
+                </label>
+
+                <div class="glossary-filters" role="tablist" aria-label="Filter by category">
+                    <button class="g-chip g-chip--active" data-cat="all">All</button>
+                    <button class="g-chip" data-cat="technical">Technical</button>
+                    <button class="g-chip" data-cat="community">Community</button>
+                    <button class="g-chip" data-cat="design">Design Process</button>
+                    <button class="g-chip" data-cat="legal">Legal</button>
+                </div>
+            </div>
+
+            <div class="glossary" id="glossaryList">
+
+                <details class="g-item" data-cat="technical" data-term="saps stand alone power system">
+                    <summary>
+                        <span class="g-item__term">SAPS</span>
+                        <span class="g-item__cat">Technical</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p><strong>Stand-Alone Power System.</strong> An electrical generation system that operates independently of the main grid. In the Lama Lama context, this typically means solar PV panels paired with battery storage and a charge controller, supplying ranger stations and community facilities at Port Stewart.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="technical" data-term="pv photovoltaic solar panels">
+                    <summary>
+                        <span class="g-item__term">PV (Photovoltaic)</span>
+                        <span class="g-item__cat">Technical</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>Technology that converts sunlight directly into electricity. Solar PV panels are the primary energy generation source for SAPS installations in remote off-grid communities.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="technical" data-term="gsm sms cellular module communication">
+                    <summary>
+                        <span class="g-item__term">GSM Module</span>
+                        <span class="g-item__cat">Technical</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>A cellular communication module that allows the system to send and receive SMS messages over standard mobile networks. Selected for our solution because it functions on minimal bandwidth and does not require internet connectivity.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="technical" data-term="ip rating ingress protection">
+                    <summary>
+                        <span class="g-item__term">IP Rating</span>
+                        <span class="g-item__cat">Technical</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p><strong>Ingress Protection rating.</strong> A two-digit code (e.g. IP65) classifying the degree of protection a sealed enclosure provides against dust and water. Higher ratings indicate greater resistance to environmental ingress — critical for tropical, wet-season deployment.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="technical" data-term="threshold based detection fault analysis">
+                    <summary>
+                        <span class="g-item__term">Threshold-based detection</span>
+                        <span class="g-item__cat">Technical</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>A fault-detection approach that compares live sensor readings against predefined safe operating limits. If a measurement crosses a threshold (e.g. battery voltage too low, panel temperature too high), the system classifies it as a fault and issues an alert.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="technical" data-term="microcontroller mcu arduino">
+                    <summary>
+                        <span class="g-item__term">Microcontroller</span>
+                        <span class="g-item__cat">Technical</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>A small, low-power computer-on-a-chip that runs the firmware controlling the monitoring system. Reads sensor inputs, applies threshold logic, logs events, and triggers alerts via the GSM module.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="community" data-term="lama lama country port stewart cape york">
+                    <summary>
+                        <span class="g-item__term">Lama Lama Country</span>
+                        <span class="g-item__cat">Community</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>The lands and waters of the Lama Lama Peoples, located around Port Stewart on Cape York Peninsula, Queensland. The community we are designing in partnership with for this challenge.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="community" data-term="ranger indigenous land management">
+                    <summary>
+                        <span class="g-item__term">Ranger</span>
+                        <span class="g-item__cat">Community</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>In this project, Rangers are members of the Lama Lama community who monitor and care for Country, collecting environmental data and managing infrastructure. They are the primary users of the proposed energy-monitoring system.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="community" data-term="country aboriginal traditional connection">
+                    <summary>
+                        <span class="g-item__term">Country</span>
+                        <span class="g-item__cat">Community</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>In Aboriginal and Torres Strait Islander cultures, <em>Country</em> refers to far more than land — it encompasses the people, waters, sky, plants, animals, stories, and responsibilities of place. We capitalise the word out of respect.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="community" data-term="acknowledgement of country welcome">
+                    <summary>
+                        <span class="g-item__term">Acknowledgement of Country</span>
+                        <span class="g-item__cat">Community</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>A statement of respect that recognises Traditional Custodians of the land. Distinct from a Welcome to Country, which is delivered by Traditional Owners themselves.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="design" data-term="pestle political economic social technological legal environmental">
+                    <summary>
+                        <span class="g-item__term">PESTLE Analysis</span>
+                        <span class="g-item__cat">Design Process</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>A strategic framework used to scan the broader context affecting a project across six lenses: <strong>P</strong>olitical, <strong>E</strong>conomic, <strong>S</strong>ocial, <strong>T</strong>echnological, <strong>L</strong>egal and <strong>E</strong>nvironmental.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="design" data-term="user journey map experience">
+                    <summary>
+                        <span class="g-item__term">User Journey Map</span>
+                        <span class="g-item__cat">Design Process</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>A visual representation of a user's experience over time across phases of interaction with a system. Tracks events, emotional states, breakthroughs and pain points to surface design opportunities.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="design" data-term="stakeholder map influence rainbow">
+                    <summary>
+                        <span class="g-item__term">Rainbow Stakeholder Map</span>
+                        <span class="g-item__cat">Design Process</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>A semicircular diagram plotting stakeholders along two axes: their level of influence over a project and the degree to which they are affected by it. Used to prioritise engagement and design focus.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="design" data-term="decision matrix weighted scoring concept selection">
+                    <summary>
+                        <span class="g-item__term">Decision Matrix</span>
+                        <span class="g-item__cat">Design Process</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>A weighted-scoring tool used to compare concepts against a set of criteria (e.g. cost, durability, usability), helping the team select a direction in a transparent and defensible way.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="design" data-term="ewb engineers without borders challenge">
+                    <summary>
+                        <span class="g-item__term">EWB Challenge</span>
+                        <span class="g-item__cat">Design Process</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>An annual design programme run by <em>Engineers Without Borders Australia</em>, in which first-year university students partner with a community to develop human-centred engineering proposals. Team 7 is working on Research Area 3.4: Energy Monitoring and Fault Diagnosis.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="legal" data-term="aboriginal cultural heritage act 2003 qld">
+                    <summary>
+                        <span class="g-item__term">Aboriginal Cultural Heritage Act 2003 (QLD)</span>
+                        <span class="g-item__cat">Legal</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>Queensland legislation providing recognition, protection and conservation of Aboriginal cultural heritage. Establishes a statutory <em>duty of care</em> on all land users to avoid harming cultural heritage.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="legal" data-term="electrical safety act 2002 qld">
+                    <summary>
+                        <span class="g-item__term">Electrical Safety Act 2002 (QLD)</span>
+                        <span class="g-item__cat">Legal</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>Establishes legal duties, licensing requirements and safety obligations to prevent electrical hazards in Queensland workplaces and public spaces. All electrical components of the proposed system must comply with this Act.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="legal" data-term="work health and safety act 2011 qld">
+                    <summary>
+                        <span class="g-item__term">Work Health and Safety Act 2011 (QLD)</span>
+                        <span class="g-item__cat">Legal</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>Provides a comprehensive framework for ensuring the health, safety and welfare of everyone in a workplace, outlining the responsibilities of employers and employees, and establishing safety standards and risk-management provisions.</p>
+                    </div>
+                </details>
+
+                <details class="g-item" data-cat="legal" data-term="privacy act 1988 personal information">
+                    <summary>
+                        <span class="g-item__term">Privacy Act 1988 (Cth)</span>
+                        <span class="g-item__cat">Legal</span>
+                        <span class="g-item__caret" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="g-item__body">
+                        <p>Commonwealth legislation regulating the collection, use, storage and disclosure of personal information by organisations and government agencies. Relevant where the system records usage patterns that could be linked to individuals.</p>
+                    </div>
+                </details>
+
+            </div>
+
+            <p class="glossary-empty" id="glossaryEmpty" hidden>No glossary entries match that search. Try a different term or clear the filters.</p>
+
+        </div>
+    </section>
+
+    <!-- APPENDIX SHELL: SIDEBAR + CONTENT -->
+    <section class="appendix-shell">
+
+        <!-- Sticky Sidebar TOC -->
+        <aside class="appx-side">
+            <div class="appx-side__inner">
+                <div class="appx-side__head">
+                    <span class="appx-side__label">Contents</span>
+                    <span class="appx-side__hint">Tap to jump · auto-highlights as you scroll</span>
+                </div>
+
+                <nav class="appx-toc" aria-label="Appendix sections">
+
+                    <a href="#sec-context" class="toc-link toc-link--top">
+                        <span class="toc-link__num">A.</span>
+                        <span class="toc-link__text">PESTLE &amp; Community Context</span>
+                    </a>
+                    <div class="toc-sub">
+                        <a href="#context-pestle" class="toc-sublink">PESTLE deep-dive</a>
+                        <a href="#context-stakeholders" class="toc-sublink">Stakeholder analysis</a>
+                        <a href="#context-journey" class="toc-sublink">User journey notes</a>
+                    </div>
+
+                    <a href="#sec-funding" class="toc-link toc-link--top">
+                        <span class="toc-link__num">B.</span>
+                        <span class="toc-link__text">Funding, Cost &amp; Testing</span>
+                    </a>
+                    <div class="toc-sub">
+                        <a href="#funding-budget" class="toc-sublink">Budget breakdown</a>
+                        <a href="#funding-bom" class="toc-sublink">Bill of materials</a>
+                        <a href="#funding-tests" class="toc-sublink">Test records</a>
+                        <a href="#funding-prototype" class="toc-sublink">Prototype iterations</a>
+                    </div>
+
+                    <a href="#sec-solution" class="toc-link toc-link--top">
+                        <span class="toc-link__num">C.</span>
+                        <span class="toc-link__text">Solution &amp; Design Process</span>
+                    </a>
+                    <div class="toc-sub">
+                        <a href="#solution-spec" class="toc-sublink">Full design spec</a>
+                        <a href="#solution-firmware" class="toc-sublink">Firmware notes</a>
+                        <a href="#solution-process" class="toc-sublink">Design process log</a>
+                    </div>
+
+                </nav>
+
+                <div class="appx-side__foot">
+                    <a href="#top" class="appx-side__top">↑ Back to top</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="appx-main">
+
+            <!-- ============================================
+                 SECTION A · PESTLE & COMMUNITY CONTEXT
+                 ============================================ -->
+            <section class="appx-section" id="sec-context">
+
+                <header class="appx-section__head">
+                    <div class="appx-section__marker">A.</div>
+                    <div>
+                        <span class="appx-section__eyebrow">Section A</span>
+                        <h2 class="appx-section__title">PESTLE &amp; Community Context</h2>
+                        <p class="appx-section__intro">
+                            Source material behind the empathise stage — full PESTLE notes,
+                            extended stakeholder analysis, and the raw user-journey work
+                            that shaped our understanding of life on Lama Lama Country.
+                        </p>
+                    </div>
+                </header>
+
+                <article class="appx-block" id="context-pestle">
+                    <h3 class="appx-block__title">A.1 · PESTLE Deep-Dive</h3>
+                    <p class="appx-block__lead">
+                        The complete PESTLE working document, including longer-form notes,
+                        legislation references, and the sources we consulted for each lens.
+                    </p>
+
+                    <div class="doc-card">
+                        <div class="doc-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="8" y1="13" x2="16" y2="13"></line>
+                                <line x1="8" y1="17" x2="16" y2="17"></line>
+                            </svg>
+                        </div>
+                        <div class="doc-card__body">
+                            <span class="doc-card__type">Google Doc</span>
+                            <h4 class="doc-card__title">PESTLE Working Document</h4>
+                            <p class="doc-card__desc">Full PESTLE notes with cited legislation and research sources for political, economic, social, technological, legal and environmental factors.</p>
+                        </div>
+                        <div class="doc-card__actions">
+                            <button class="doc-btn doc-btn--ghost" data-toggle-doc>Preview ▾</button>
+                            <a class="doc-btn doc-btn--solid" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+                        <div class="doc-embed" hidden>
+                            <iframe src="" title="PESTLE Working Document" loading="lazy"></iframe>
+                            <p class="doc-embed__hint">Replace the iframe <code>src</code> with your Google Doc <code>/preview</code> URL.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="appx-block" id="context-stakeholders">
+                    <h3 class="appx-block__title">A.2 · Stakeholder Analysis</h3>
+                    <p class="appx-block__lead">
+                        Extended notes from the rainbow stakeholder mapping exercise, including
+                        each stakeholder's PESTLE alignment and engagement priority.
+                    </p>
+
+                    <div class="doc-card">
+                        <div class="doc-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <div class="doc-card__body">
+                            <span class="doc-card__type">Google Doc</span>
+                            <h4 class="doc-card__title">Stakeholder Analysis — Extended Notes</h4>
+                            <p class="doc-card__desc">Detailed write-up for each stakeholder group, including influence, responsibility, and engagement implications.</p>
+                        </div>
+                        <div class="doc-card__actions">
+                            <button class="doc-btn doc-btn--ghost" data-toggle-doc>Preview ▾</button>
+                            <a class="doc-btn doc-btn--solid" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+                        <div class="doc-embed" hidden>
+                            <iframe src="" title="Stakeholder Analysis" loading="lazy"></iframe>
+                            <p class="doc-embed__hint">Replace the iframe <code>src</code> with your Google Doc <code>/preview</code> URL.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="appx-block" id="context-journey">
+                    <h3 class="appx-block__title">A.3 · User Journey Notes</h3>
+                    <p class="appx-block__lead">
+                        Raw user-journey research — emotional states, pain points and
+                        breakthroughs across Setup, Monitoring, Detection and Repair.
+                    </p>
+
+                    <div class="doc-card">
+                        <div class="doc-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <div class="doc-card__body">
+                            <span class="doc-card__type">Google Doc</span>
+                            <h4 class="doc-card__title">User Journey — Working Notes</h4>
+                            <p class="doc-card__desc">Original ranger-experience research, mapped pain points and corresponding requirements.</p>
+                        </div>
+                        <div class="doc-card__actions">
+                            <button class="doc-btn doc-btn--ghost" data-toggle-doc>Preview ▾</button>
+                            <a class="doc-btn doc-btn--solid" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+                        <div class="doc-embed" hidden>
+                            <iframe src="" title="User Journey Notes" loading="lazy"></iframe>
+                            <p class="doc-embed__hint">Replace the iframe <code>src</code> with your Google Doc <code>/preview</code> URL.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- ============================================
+                 SECTION B · FUNDING / COST / TESTING
+                 ============================================ -->
+            <section class="appx-section" id="sec-funding">
+
+                <header class="appx-section__head">
+                    <div class="appx-section__marker">B.</div>
+                    <div>
+                        <span class="appx-section__eyebrow">Section B</span>
+                        <h2 class="appx-section__title">Funding, Cost &amp; Testing</h2>
+                        <p class="appx-section__intro">
+                            Full costings, bill of materials, prototype testing records, and
+                            the funding model behind making this system deployable on Country.
+                        </p>
+                    </div>
+                </header>
+
+                <article class="appx-block" id="funding-budget">
+                    <h3 class="appx-block__title">B.1 · Budget Breakdown</h3>
+                    <p class="appx-block__lead">
+                        Itemised costs for development, deployment and ongoing operation,
+                        plus the funding strategy that makes it viable for the community.
+                    </p>
+
+                    <div class="doc-card">
+                        <div class="doc-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
+                        <div class="doc-card__body">
+                            <span class="doc-card__type">Google Sheet</span>
+                            <h4 class="doc-card__title">Cost &amp; Funding Model</h4>
+                            <p class="doc-card__desc">Itemised budget with unit costs, contingency, and three-year operating projection.</p>
+                        </div>
+                        <div class="doc-card__actions">
+                            <button class="doc-btn doc-btn--ghost" data-toggle-doc>Preview ▾</button>
+                            <a class="doc-btn doc-btn--solid" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+                        <div class="doc-embed" hidden>
+                            <iframe src="" title="Cost and Funding Model" loading="lazy"></iframe>
+                            <p class="doc-embed__hint">Use the Sheet's <em>Publish to web → Embed</em> URL for best results.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="appx-block" id="funding-bom">
+                    <h3 class="appx-block__title">B.2 · Bill of Materials</h3>
+                    <p class="appx-block__lead">
+                        Every component in the proposed system, with part numbers, suppliers,
+                        lead times and per-unit cost.
+                    </p>
+
+                    <div class="doc-card">
+                        <div class="doc-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                            </svg>
+                        </div>
+                        <div class="doc-card__body">
+                            <span class="doc-card__type">Google Sheet</span>
+                            <h4 class="doc-card__title">Bill of Materials (BoM)</h4>
+                            <p class="doc-card__desc">Components, quantities, suppliers, lead times, and unit cost.</p>
+                        </div>
+                        <div class="doc-card__actions">
+                            <button class="doc-btn doc-btn--ghost" data-toggle-doc>Preview ▾</button>
+                            <a class="doc-btn doc-btn--solid" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+                        <div class="doc-embed" hidden>
+                            <iframe src="" title="Bill of Materials" loading="lazy"></iframe>
+                            <p class="doc-embed__hint">Use the Sheet's <em>Publish to web → Embed</em> URL for best results.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="appx-block" id="funding-tests">
+                    <h3 class="appx-block__title">B.3 · Test Records</h3>
+                    <p class="appx-block__lead">
+                        Test plans and results for environmental, electrical, usability and
+                        field-pilot stages.
+                    </p>
+
+                    <div class="doc-grid">
+                        <div class="doc-card doc-card--compact">
+                            <div class="doc-card__body">
+                                <span class="doc-card__type">Google Doc</span>
+                                <h4 class="doc-card__title">Environmental Tests</h4>
+                                <p class="doc-card__desc">IP-rating verification, UV exposure, humidity chamber results.</p>
+                            </div>
+                            <a class="doc-btn doc-btn--solid doc-btn--full" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+
+                        <div class="doc-card doc-card--compact">
+                            <div class="doc-card__body">
+                                <span class="doc-card__type">Google Doc</span>
+                                <h4 class="doc-card__title">Electrical Tests</h4>
+                                <p class="doc-card__desc">Sensor calibration data and fault-injection results.</p>
+                            </div>
+                            <a class="doc-btn doc-btn--solid doc-btn--full" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+
+                        <div class="doc-card doc-card--compact">
+                            <div class="doc-card__body">
+                                <span class="doc-card__type">Google Doc</span>
+                                <h4 class="doc-card__title">Usability Trials</h4>
+                                <p class="doc-card__desc">Time-to-install and time-to-diagnose with non-technical users.</p>
+                            </div>
+                            <a class="doc-btn doc-btn--solid doc-btn--full" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+
+                        <div class="doc-card doc-card--compact">
+                            <div class="doc-card__body">
+                                <span class="doc-card__type">Google Doc</span>
+                                <h4 class="doc-card__title">Field Pilot Log</h4>
+                                <p class="doc-card__desc">Extended deployment notes, false-positive and missed-event tracking.</p>
+                            </div>
+                            <a class="doc-btn doc-btn--solid doc-btn--full" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="appx-block" id="funding-prototype">
+                    <h3 class="appx-block__title">B.4 · Prototype Iterations</h3>
+                    <p class="appx-block__lead">
+                        Iteration log for each prototype version, with photos, changes, and
+                        what we learned from each round.
+                    </p>
+
+                    <div class="doc-card">
+                        <div class="doc-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <div class="doc-card__body">
+                            <span class="doc-card__type">Google Doc</span>
+                            <h4 class="doc-card__title">Prototype Iteration Log</h4>
+                            <p class="doc-card__desc">Versions, changes, results, and lessons from each prototype round.</p>
+                        </div>
+                        <div class="doc-card__actions">
+                            <button class="doc-btn doc-btn--ghost" data-toggle-doc>Preview ▾</button>
+                            <a class="doc-btn doc-btn--solid" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+                        <div class="doc-embed" hidden>
+                            <iframe src="" title="Prototype Iteration Log" loading="lazy"></iframe>
+                            <p class="doc-embed__hint">Replace the iframe <code>src</code> with your Google Doc <code>/preview</code> URL.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- ============================================
+                 SECTION C · SOLUTION & DESIGN PROCESS
+                 ============================================ -->
+            <section class="appx-section" id="sec-solution">
+
+                <header class="appx-section__head">
+                    <div class="appx-section__marker">C.</div>
+                    <div>
+                        <span class="appx-section__eyebrow">Section C</span>
+                        <h2 class="appx-section__title">Solution &amp; Design Process</h2>
+                        <p class="appx-section__intro">
+                            Technical specification of the final design, firmware notes,
+                            and the full design-process log capturing decisions,
+                            trade-offs and pivots.
+                        </p>
+                    </div>
+                </header>
+
+                <article class="appx-block" id="solution-spec">
+                    <h3 class="appx-block__title">C.1 · Full Design Specification</h3>
+                    <p class="appx-block__lead">
+                        Detailed technical specification covering hardware, software,
+                        enclosure, and interface requirements.
+                    </p>
+
+                    <div class="doc-card">
+                        <div class="doc-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <div class="doc-card__body">
+                            <span class="doc-card__type">Google Doc</span>
+                            <h4 class="doc-card__title">Final Design Specification</h4>
+                            <p class="doc-card__desc">Hardware, firmware, enclosure and interface requirements in full.</p>
+                        </div>
+                        <div class="doc-card__actions">
+                            <button class="doc-btn doc-btn--ghost" data-toggle-doc>Preview ▾</button>
+                            <a class="doc-btn doc-btn--solid" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+                        <div class="doc-embed" hidden>
+                            <iframe src="" title="Design Specification" loading="lazy"></iframe>
+                            <p class="doc-embed__hint">Replace the iframe <code>src</code> with your Google Doc <code>/preview</code> URL.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="appx-block" id="solution-firmware">
+                    <h3 class="appx-block__title">C.2 · Firmware Notes</h3>
+                    <p class="appx-block__lead">
+                        Notes on the on-device logic — thresholds, alert prioritisation,
+                        watchdog behaviour and event logging.
+                    </p>
+
+                    <div class="doc-card">
+                        <div class="doc-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <div class="doc-card__body">
+                            <span class="doc-card__type">Google Doc</span>
+                            <h4 class="doc-card__title">Firmware Notes</h4>
+                            <p class="doc-card__desc">Threshold logic, alert handling, watchdog timers and event-log schema.</p>
+                        </div>
+                        <div class="doc-card__actions">
+                            <button class="doc-btn doc-btn--ghost" data-toggle-doc>Preview ▾</button>
+                            <a class="doc-btn doc-btn--solid" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+                        <div class="doc-embed" hidden>
+                            <iframe src="" title="Firmware Notes" loading="lazy"></iframe>
+                            <p class="doc-embed__hint">Replace the iframe <code>src</code> with your Google Doc <code>/preview</code> URL.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="appx-block" id="solution-process">
+                    <h3 class="appx-block__title">C.3 · Design Process Log</h3>
+                    <p class="appx-block__lead">
+                        Chronological record of major decisions, alternatives considered,
+                        and the reasoning that led to each pivot.
+                    </p>
+
+                    <div class="doc-card">
+                        <div class="doc-card__icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <div class="doc-card__body">
+                            <span class="doc-card__type">Google Doc</span>
+                            <h4 class="doc-card__title">Design Process Log</h4>
+                            <p class="doc-card__desc">Decisions, alternatives, pivots and reasoning across the full design journey.</p>
+                        </div>
+                        <div class="doc-card__actions">
+                            <button class="doc-btn doc-btn--ghost" data-toggle-doc>Preview ▾</button>
+                            <a class="doc-btn doc-btn--solid" href="#" target="_blank" rel="noopener">Open ↗</a>
+                        </div>
+                        <div class="doc-embed" hidden>
+                            <iframe src="" title="Design Process Log" loading="lazy"></iframe>
+                            <p class="doc-embed__hint">Replace the iframe <code>src</code> with your Google Doc <code>/preview</code> URL.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+        </main>
+
+    </section>
+
+    <!-- NEXT -->
     <section class="next-up">
         <div class="next-up__inner">
             <div>
@@ -69,6 +767,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__top">
             <div class="footer__brand">
@@ -89,6 +788,88 @@
             <span class="footer__ack">Always was, always will be Aboriginal land.</span>
         </div>
     </footer>
+
+    <!-- JS · GLOSSARY + TOC SCROLL-SPY + DOC TOGGLES -->
+    <script>
+    (function () {
+        // GLOSSARY · search + filter
+        const search = document.getElementById('glossarySearch');
+        const chips = document.querySelectorAll('.g-chip');
+        const items = document.querySelectorAll('.g-item');
+        const empty = document.getElementById('glossaryEmpty');
+        let activeCat = 'all';
+
+        function applyFilters() {
+            const q = (search.value || '').trim().toLowerCase();
+            let visibleCount = 0;
+            items.forEach(item => {
+                const cat = item.dataset.cat || '';
+                const term = (item.dataset.term || '') + ' ' + item.textContent.toLowerCase();
+                const matchCat = activeCat === 'all' || cat === activeCat;
+                const matchQuery = q === '' || term.indexOf(q) !== -1;
+                const show = matchCat && matchQuery;
+                item.hidden = !show;
+                if (show) visibleCount++;
+            });
+            empty.hidden = visibleCount !== 0;
+        }
+        if (search) search.addEventListener('input', applyFilters);
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => c.classList.remove('g-chip--active'));
+                chip.classList.add('g-chip--active');
+                activeCat = chip.dataset.cat;
+                applyFilters();
+            });
+        });
+
+        // DOC PREVIEW TOGGLES
+        document.querySelectorAll('[data-toggle-doc]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.doc-card');
+                const embed = card.querySelector('.doc-embed');
+                if (!embed) return;
+                const isHidden = embed.hasAttribute('hidden');
+                if (isHidden) {
+                    embed.removeAttribute('hidden');
+                    btn.textContent = 'Hide preview ▴';
+                } else {
+                    embed.setAttribute('hidden', '');
+                    btn.textContent = 'Preview ▾';
+                }
+            });
+        });
+
+        // TOC SCROLL-SPY
+        const tocLinks = document.querySelectorAll('.appx-toc a');
+        const headings = [];
+        tocLinks.forEach(link => {
+            const id = link.getAttribute('href').replace('#', '');
+            const el = document.getElementById(id);
+            if (el) headings.push({ id, el, link });
+        });
+
+        function updateActiveTocLink() {
+            const scrollY = window.scrollY + 180;
+            let currentId = headings.length ? headings[0].id : null;
+            for (const h of headings) {
+                if (h.el.offsetTop <= scrollY) currentId = h.id;
+            }
+            tocLinks.forEach(l => {
+                l.classList.toggle('toc-link--active', l.getAttribute('href') === '#' + currentId);
+            });
+        }
+
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => { updateActiveTocLink(); ticking = false; });
+                ticking = true;
+            }
+        });
+        updateActiveTocLink();
+    })();
+    </script>
 
 </body>
 </html>
