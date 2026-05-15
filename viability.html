@@ -46,7 +46,7 @@
 
             <div class="page-hero__stage">
                 <span class="page-hero__num">V.</span>
-                <span class="page-hero__stage-label">Stage 05 · Cost, funding &amp; rollout</span>
+                <span class="page-hero__stage-label">Stage 05 · Cost, funding &amp; risk</span>
             </div>
 
             <h1 class="page-hero__title">
@@ -56,9 +56,9 @@
 
             <p class="page-hero__intro">
                 Viability is the question that decides whether a good idea becomes a real
-                system on Country. This page shows the rollout, the cost breakdown, and
-                the funding pathway that makes the system both affordable to deploy and
-                sustainable to operate.
+                system on Country. This page lays out the cost, the funding pathway from
+                seed grant to community ownership, and the risks that could derail it —
+                with the mitigations that keep them in check.
             </p>
         </div>
     </section>
@@ -68,15 +68,18 @@
         <div class="subnav__inner">
             <a href="#costs" class="subnav__link">Cost Breakdown</a>
             <a href="#funding" class="subnav__link">Funding Pathway</a>
+            <a href="#risk" class="subnav__link">Risk &amp; Mitigation</a>
         </div>
     </nav>
 
-    <!-- COST BREAKDOWN -->
+    <!-- ============================================
+         COST BREAKDOWN
+         ============================================ -->
     <section class="block block--bone" id="costs">
         <div class="block__inner">
 
             <div class="block__eyebrow">
-                <span class="num">02</span>
+                <span class="num">01</span>
                 <span class="line"></span>
                 <span class="label">Cost Breakdown</span>
             </div>
@@ -86,71 +89,69 @@
             </h2>
 
             <p class="block__lead">
-                Total per-unit deployment costs split across three categories. Hover or tap
-                a slice of the chart to see its detailed breakdown. The full itemised cost
-                sheet is referenced in Appendix A.
+                Total per-unit deployment cost split across three categories. Hover or tap
+                a slice of the chart, or any legend row, to highlight that category across
+                the chart and detail cards below.
             </p>
 
-            <!-- DONUT + DETAILS -->
+            <!-- DONUT CHART + LEGEND -->
             <div class="cost-block">
+                <div class="donut">
+                    <svg viewBox="0 0 200 200" role="img" aria-label="Cost breakdown donut chart">
+                        <g transform="translate(100 100)">
+                            <!-- Background ring -->
+                            <circle r="80" fill="none" stroke="rgba(42, 29, 18, 0.06)" stroke-width="32"/>
 
-<div class="donut">
-    <svg viewBox="0 0 200 200" role="img" aria-label="Cost breakdown donut chart">
-        <g transform="translate(100 100)">
-            <!-- Background ring -->
-            <circle r="80" fill="none" stroke="rgba(42, 29, 18, 0.06)" stroke-width="32"/>
+                            <!-- Installation & Labour · 70.9% -->
+                            <circle class="donut__slice" r="80" fill="none"
+                                stroke="#c2622d" stroke-width="32"
+                                stroke-dasharray="356.4 502.65"
+                                stroke-dashoffset="0"
+                                transform="rotate(-90)"
+                                data-cat="labour"/>
 
-            <!-- Installation & Labour · 70.9% -->
-            <circle class="donut__slice donut__slice--labour" r="80" fill="none"
-                stroke="#a8347c" stroke-width="32"
-                stroke-dasharray="356.4 502.65"
-                stroke-dashoffset="0"
-                transform="rotate(-90)"
-                data-cat="labour"/>
+                            <!-- Material Costs · 26.6% -->
+                            <circle class="donut__slice" r="80" fill="none"
+                                stroke="#9a4a1f" stroke-width="32"
+                                stroke-dasharray="133.7 502.65"
+                                stroke-dashoffset="-356.4"
+                                transform="rotate(-90)"
+                                data-cat="material"/>
 
-            <!-- Material Costs · 26.6% -->
-            <circle class="donut__slice donut__slice--material" r="80" fill="none"
-                stroke="#6b3a5e" stroke-width="32"
-                stroke-dasharray="133.7 502.65"
-                stroke-dashoffset="-356.4"
-                transform="rotate(-90)"
-                data-cat="material"/>
+                            <!-- Ongoing Software/SMS · 2.5% -->
+                            <circle class="donut__slice" r="80" fill="none"
+                                stroke="#d9a878" stroke-width="32"
+                                stroke-dasharray="12.57 502.65"
+                                stroke-dashoffset="-490.1"
+                                transform="rotate(-90)"
+                                data-cat="ongoing"/>
+                        </g>
+                    </svg>
 
-            <!-- Ongoing Software/SMS · 2.5% -->
-            <circle class="donut__slice donut__slice--ongoing" r="80" fill="none"
-                stroke="#d63384" stroke-width="32"
-                stroke-dasharray="12.57 502.65"
-                stroke-dashoffset="-490.1"
-                transform="rotate(-90)"
-                data-cat="ongoing"/>
-        </g>
-    </svg>
+                    <div class="donut__centre">
+                        <span class="donut__centre-label" id="donutLabel">Total Cost</span>
+                        <span class="donut__centre-value" id="donutValue">~$3,461</span>
+                        <span class="donut__centre-hint" id="donutHint">Hover a slice</span>
+                    </div>
+                </div>
 
-    <div class="donut__centre">
-        <span class="donut__centre-label" id="donutLabel">Total Cost</span>
-        <span class="donut__centre-value" id="donutValue">~$3,461</span>
-        <span class="donut__centre-hint" id="donutHint">Hover a slice</span>
-    </div>
-</div>
-
-                <!-- Legend / quick stats -->
                 <div class="cost-legend">
-                    <button class="cost-leg cost-leg--labour" data-cat="labour">
-                        <span class="cost-leg__swatch" style="background:#a8347c"></span>
+                    <button class="cost-leg" data-cat="labour">
+                        <span class="cost-leg__swatch" style="background:#c2622d"></span>
                         <div class="cost-leg__text">
                             <span class="cost-leg__name">Installation &amp; Labour</span>
                             <span class="cost-leg__pct">~70.9% · ~$2,280</span>
                         </div>
                     </button>
-                    <button class="cost-leg cost-leg--material" data-cat="material">
-                        <span class="cost-leg__swatch" style="background:#6b3a5e"></span>
+                    <button class="cost-leg" data-cat="material">
+                        <span class="cost-leg__swatch" style="background:#9a4a1f"></span>
                         <div class="cost-leg__text">
                             <span class="cost-leg__name">Material Costs</span>
                             <span class="cost-leg__pct">~26.6% · ~$1,081.20</span>
                         </div>
                     </button>
-                    <button class="cost-leg cost-leg--ongoing" data-cat="ongoing">
-                        <span class="cost-leg__swatch" style="background:#d63384"></span>
+                    <button class="cost-leg" data-cat="ongoing">
+                        <span class="cost-leg__swatch" style="background:#d9a878"></span>
                         <div class="cost-leg__text">
                             <span class="cost-leg__name">Ongoing Software / SMS</span>
                             <span class="cost-leg__pct">~2.5% · ~$100/month</span>
@@ -159,15 +160,14 @@
                 </div>
             </div>
 
-            <!-- DETAIL CARDS · one per category -->
-            <div class="cost-details">
-
+            <!-- DETAIL CARDS -->
+            <div class="cost-cards">
                 <article class="cost-card" data-cat="labour">
                     <header class="cost-card__head">
-                        <span class="cost-card__swatch" style="background:#a8347c"></span>
+                        <span class="cost-card__swatch" style="background:#c2622d"></span>
                         <div>
                             <h3 class="cost-card__title">Installation &amp; Labour</h3>
-                            <p class="cost-card__sub">~$2,280 · 70.9% of total cost</p>
+                            <p class="cost-card__sub">~$2,280 · 70.9% of total</p>
                         </div>
                     </header>
                     <ul class="cost-card__list">
@@ -177,15 +177,15 @@
                         <li><span>Set Up</span></li>
                         <li><span>Delivery</span></li>
                     </ul>
-                    <p class="cost-card__note">See Appendix A (Slide 69) for full itemised breakdown.</p>
+                    <p class="cost-card__note">See Appendix B for full itemised breakdown.</p>
                 </article>
 
                 <article class="cost-card" data-cat="material">
                     <header class="cost-card__head">
-                        <span class="cost-card__swatch" style="background:#6b3a5e"></span>
+                        <span class="cost-card__swatch" style="background:#9a4a1f"></span>
                         <div>
                             <h3 class="cost-card__title">Material Costs</h3>
-                            <p class="cost-card__sub">~$1,081.20 · 26.6% of total cost</p>
+                            <p class="cost-card__sub">~$1,081.20 · 26.6% of total</p>
                         </div>
                     </header>
                     <ul class="cost-card__list">
@@ -195,144 +195,189 @@
                         <li><span>Enclosure</span></li>
                         <li><span>Electronics</span></li>
                     </ul>
-                    <p class="cost-card__note">See Appendix A (Slide 69) for full itemised breakdown.</p>
+                    <p class="cost-card__note">See Appendix B for full bill of materials.</p>
                 </article>
 
                 <article class="cost-card" data-cat="ongoing">
                     <header class="cost-card__head">
-                        <span class="cost-card__swatch" style="background:#d63384"></span>
+                        <span class="cost-card__swatch" style="background:#d9a878"></span>
                         <div>
                             <h3 class="cost-card__title">Ongoing Software / SMS</h3>
-                            <p class="cost-card__sub">~$100/month · 2.5% of total cost</p>
+                            <p class="cost-card__sub">~$100/month · 2.5% of total</p>
                         </div>
                     </header>
                     <ul class="cost-card__list">
                         <li><span>Thingsboard</span></li>
                         <li><span>Twilio / SMS</span></li>
                     </ul>
-                    <p class="cost-card__note">Recurring monthly cost — see Appendix A (Slide 69).</p>
+                    <p class="cost-card__note">Recurring monthly cost — see Appendix B.</p>
                 </article>
-
             </div>
 
         </div>
     </section>
 
-    <!-- FUNDING PATHWAY -->
+    <!-- ============================================
+         FUNDING PATHWAY · RIVER
+         ============================================ -->
     <section class="block block--ink" id="funding">
         <div class="block__inner">
 
             <div class="block__eyebrow">
-                <span class="num">03</span>
+                <span class="num">02</span>
                 <span class="line"></span>
                 <span class="label">Funding Pathway</span>
             </div>
 
             <h2 class="block__title">
-                Funding Timeline · <em>AEA</em> to IGC.
+                From <em>seed</em> to community-led.
             </h2>
 
             <p class="block__lead">
-                Running parallel to the implementation rollout is a funding pathway that
-                moves the project from concept proposal through to long-term, community-led
-                operation. Each phase secures the next, building toward the formation of an
-                Indigenous Governance Committee (IGC) that takes ownership of the system.
+                Running parallel to the implementation rollout, the funding pathway moves
+                the project from concept proposal through to long-term, community-led
+                operation. Each phase secures the next, building toward an Indigenous
+                Governance Committee that holds ownership of the system.
             </p>
 
-            <!-- Horizontal funding flow (clean — no broken arrow) -->
-            <div class="funding">
+            <!-- The river: SVG flow + cards anchored along it -->
+            <div class="river" id="river">
 
-                <article class="f-step">
-                    <div class="f-step__media">
-                        <img src="assets/community-1.png" alt="Concept proposal" loading="lazy">
-                        <span class="f-step__credit">Engineers Without Borders, 2026</span>
-                    </div>
-                    <div class="f-step__body">
-                        <span class="f-step__num">01</span>
-                        <h4 class="f-step__title">Concept Proposal &amp; Stakeholder Alignment</h4>
-                    </div>
-                </article>
+                <!-- Decorative flowing path -->
+                <svg class="river__path" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%"  stop-color="#9a4a1f" stop-opacity="0.9"/>
+                            <stop offset="50%" stop-color="#c2622d" stop-opacity="0.9"/>
+                            <stop offset="100%" stop-color="#d9a878" stop-opacity="0.95"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Soft glow trail -->
+                    <path d="M 0 130 C 150 60, 280 200, 430 110 S 720 180, 870 90 S 1100 200, 1200 110"
+                          fill="none" stroke="url(#riverGrad)" stroke-width="22"
+                          stroke-linecap="round" opacity="0.18"/>
+                    <!-- Main current -->
+                    <path d="M 0 130 C 150 60, 280 200, 430 110 S 720 180, 870 90 S 1100 200, 1200 110"
+                          fill="none" stroke="url(#riverGrad)" stroke-width="3"
+                          stroke-linecap="round"/>
+                    <!-- Dotted overlay -->
+                    <path d="M 0 130 C 150 60, 280 200, 430 110 S 720 180, 870 90 S 1100 200, 1200 110"
+                          fill="none" stroke="#f5efe4" stroke-width="1.2"
+                          stroke-dasharray="2 8" stroke-linecap="round" opacity="0.4"/>
+                </svg>
 
-                <span class="f-connector" aria-hidden="true">→</span>
+                <!-- Stage cards -->
+                <div class="river__cards">
 
-                <article class="f-step">
-                    <div class="f-step__media">
-                        <img src="assets/community-2.png" alt="Prototype development with AEA Ignite" loading="lazy">
-                        <span class="f-step__credit">Clarke M, 2025</span>
-                    </div>
-                    <div class="f-step__body">
-                        <span class="f-step__num">02</span>
-                        <h4 class="f-step__title">Prototype Development <em>(using AEA Ignite)</em></h4>
-                    </div>
-                </article>
+                    <article class="rcard" data-funding="Concept">
+                        <div class="rcard__node">
+                            <span class="rcard__num">I</span>
+                        </div>
+                        <div class="rcard__media">
+                            <img src="assets/community-1.png" alt="Concept proposal" loading="lazy">
+                        </div>
+                        <div class="rcard__body">
+                            <span class="rcard__phase">Phase 01</span>
+                            <h4 class="rcard__title">Concept &amp; Alignment</h4>
+                            <p class="rcard__desc">Proposal submission, stakeholder alignment with Lama Lama Rangers and partners.</p>
+                            <span class="rcard__tag">Seed concept</span>
+                        </div>
+                    </article>
 
-                <span class="f-connector" aria-hidden="true">→</span>
+                    <article class="rcard" data-funding="AEA Ignite">
+                        <div class="rcard__node">
+                            <span class="rcard__num">II</span>
+                        </div>
+                        <div class="rcard__media">
+                            <img src="assets/community-2.png" alt="Prototype development" loading="lazy">
+                        </div>
+                        <div class="rcard__body">
+                            <span class="rcard__phase">Phase 02</span>
+                            <h4 class="rcard__title">Prototype Development</h4>
+                            <p class="rcard__desc">Hardware build, firmware iteration and material testing under the AEA Ignite grant.</p>
+                            <span class="rcard__tag">AEA Ignite</span>
+                        </div>
+                    </article>
 
-                <article class="f-step">
-                    <div class="f-step__media">
-                        <img src="assets/community-3.png" alt="Performance validation and field testing" loading="lazy">
-                        <span class="f-step__credit">Indigenous, 2022</span>
-                    </div>
-                    <div class="f-step__body">
-                        <span class="f-step__num">03</span>
-                        <h4 class="f-step__title">Performance Validation &amp; Field Testing</h4>
-                    </div>
-                </article>
+                    <article class="rcard" data-funding="Validation">
+                        <div class="rcard__node">
+                            <span class="rcard__num">III</span>
+                        </div>
+                        <div class="rcard__media">
+                            <img src="assets/community-3.png" alt="Field validation" loading="lazy">
+                        </div>
+                        <div class="rcard__body">
+                            <span class="rcard__phase">Phase 03</span>
+                            <h4 class="rcard__title">Performance Validation</h4>
+                            <p class="rcard__desc">Controlled field testing, fault-injection trials and ranger usability walkthroughs.</p>
+                            <span class="rcard__tag">Validation milestone</span>
+                        </div>
+                    </article>
 
-                <span class="f-connector" aria-hidden="true">→</span>
+                    <article class="rcard" data-funding="Industry partner">
+                        <div class="rcard__node">
+                            <span class="rcard__num">IV</span>
+                        </div>
+                        <div class="rcard__media">
+                            <img src="assets/community-4.png" alt="Industry partner engagement" loading="lazy">
+                        </div>
+                        <div class="rcard__body">
+                            <span class="rcard__phase">Phase 04</span>
+                            <h4 class="rcard__title">Industry Engagement</h4>
+                            <p class="rcard__desc">Pacific Energy and remote-power partners brought in for hardware supply and installation support.</p>
+                            <span class="rcard__tag">Partner co-invest</span>
+                        </div>
+                    </article>
 
-                <article class="f-step">
-                    <div class="f-step__media">
-                        <img src="assets/community-4.png" alt="Industry partner engagement" loading="lazy">
-                        <span class="f-step__credit">Pacific Energy, 2026</span>
-                    </div>
-                    <div class="f-step__body">
-                        <span class="f-step__num">04</span>
-                        <h4 class="f-step__title">Industry Partner Engagement</h4>
-                    </div>
-                </article>
+                    <article class="rcard rcard--accent" data-funding="IGC formation">
+                        <div class="rcard__node rcard__node--accent">
+                            <span class="rcard__num">V</span>
+                        </div>
+                        <div class="rcard__media">
+                            <img src="assets/community-5.png" alt="Co-funding agreement and IGC formation" loading="lazy">
+                        </div>
+                        <div class="rcard__body">
+                            <span class="rcard__phase">Phase 05 · Pivot</span>
+                            <h4 class="rcard__title">Co-Funding &amp; IGC Formation</h4>
+                            <p class="rcard__desc">Indigenous Governance Committee formed alongside formal co-funding agreement.</p>
+                            <span class="rcard__tag">Community ownership</span>
+                        </div>
+                    </article>
 
-                <span class="f-connector" aria-hidden="true">→</span>
+                    <article class="rcard" data-funding="Pilot deployment">
+                        <div class="rcard__node">
+                            <span class="rcard__num">VI</span>
+                        </div>
+                        <div class="rcard__media">
+                            <img src="assets/community-6.png" alt="Pilot deployment" loading="lazy">
+                        </div>
+                        <div class="rcard__body">
+                            <span class="rcard__phase">Phase 06</span>
+                            <h4 class="rcard__title">Pilot Deployment</h4>
+                            <p class="rcard__desc">First unit deployed on Lama Lama Country, monitored through one full wet/dry cycle.</p>
+                            <span class="rcard__tag">Live on Country</span>
+                        </div>
+                    </article>
 
-                <article class="f-step">
-                    <div class="f-step__media">
-                        <img src="assets/community-5.png" alt="Co-funding agreement and IGC formation" loading="lazy">
-                        <span class="f-step__credit">ARENA, 2018</span>
-                    </div>
-                    <div class="f-step__body">
-                        <span class="f-step__num">05</span>
-                        <h4 class="f-step__title">Co-Funding Agreement <em>(IGC formation)</em></h4>
-                    </div>
-                </article>
+                    <article class="rcard" data-funding="Scale-up">
+                        <div class="rcard__node">
+                            <span class="rcard__num">VII</span>
+                        </div>
+                        <div class="rcard__media">
+                            <img src="assets/community-3.png" alt="Scale-up phase" loading="lazy">
+                        </div>
+                        <div class="rcard__body">
+                            <span class="rcard__phase">Phase 07</span>
+                            <h4 class="rcard__title">Scale-Up &amp; Long-Term</h4>
+                            <p class="rcard__desc">IGC directs roll-out across additional SAPS sites under ongoing service agreement.</p>
+                            <span class="rcard__tag">Community-led</span>
+                        </div>
+                    </article>
 
-                <span class="f-connector" aria-hidden="true">→</span>
-
-                <article class="f-step">
-                    <div class="f-step__media">
-                        <img src="assets/community-6.png" alt="Pilot deployment in Lama Lama community" loading="lazy">
-                        <span class="f-step__credit">Pacific Energy, 2026</span>
-                    </div>
-                    <div class="f-step__body">
-                        <span class="f-step__num">06</span>
-                        <h4 class="f-step__title">Pilot Deployment into Lama Lama Community</h4>
-                    </div>
-                </article>
-
-                <span class="f-connector" aria-hidden="true">→</span>
-
-                <article class="f-step f-step--final">
-                    <div class="f-step__media">
-                        <img src="assets/community-3.png" alt="Scale-up and long-term implementation" loading="lazy">
-                        <span class="f-step__credit">Great Barrier Reef Marine Authority, 2024</span>
-                    </div>
-                    <div class="f-step__body">
-                        <span class="f-step__num">07</span>
-                        <h4 class="f-step__title">Scale-Up &amp; Long-Term Implementation</h4>
-                    </div>
-                </article>
-
+                </div>
             </div>
 
+            <!-- Three funding-source summary cards -->
             <div class="funding-notes">
                 <div class="fn-card">
                     <span class="fn-card__label">Seed funding</span>
@@ -344,9 +389,268 @@
                 </div>
                 <div class="fn-card">
                     <span class="fn-card__label">Long-term governance</span>
-                    <p>An Indigenous Governance Committee (IGC) directs scale-up decisions and maintains community ownership of the system.</p>
+                    <p>An Indigenous Governance Committee directs scale-up decisions and maintains community ownership of the system.</p>
                 </div>
             </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================
+         RISK REGISTER
+         ============================================ -->
+    <section class="block block--paper" id="risk">
+        <div class="block__inner">
+
+            <div class="block__eyebrow">
+                <span class="num">03</span>
+                <span class="line"></span>
+                <span class="label">Risk &amp; Mitigation</span>
+            </div>
+
+            <h2 class="block__title">
+                What could go <em>wrong,</em><br>
+                and what holds it.
+            </h2>
+
+            <p class="block__lead">
+                A working register of the risks identified across the project — technical,
+                community, operational, and financial — with the likelihood, severity, and
+                the mitigation plan keeping each one in check. Filter by category to focus
+                on a specific area.
+            </p>
+
+            <div class="risk-tools">
+                <div class="risk-filters" role="tablist" aria-label="Filter risks by category">
+                    <button type="button" class="g-chip g-chip--active" data-cat="all">All</button>
+                    <button type="button" class="g-chip" data-cat="technical">Technical</button>
+                    <button type="button" class="g-chip" data-cat="community">Community</button>
+                    <button type="button" class="g-chip" data-cat="operational">Operational</button>
+                    <button type="button" class="g-chip" data-cat="financial">Financial</button>
+                </div>
+                <div class="risk-legend">
+                    <span><span class="dot dot--low"></span>Low</span>
+                    <span><span class="dot dot--med"></span>Medium</span>
+                    <span><span class="dot dot--high"></span>High</span>
+                </div>
+            </div>
+
+            <div class="risk-list" id="riskList">
+
+                <!-- TECHNICAL -->
+                <article class="risk" data-cat="technical" data-sev="high">
+                    <div class="risk__head">
+                        <span class="risk__tag">Technical</span>
+                        <div class="risk__rating">
+                            <span class="risk__rating-label">Likelihood</span>
+                            <span class="risk__rating-pill risk__rating-pill--med">Medium</span>
+                            <span class="risk__rating-label">Severity</span>
+                            <span class="risk__rating-pill risk__rating-pill--high">High</span>
+                        </div>
+                    </div>
+                    <h3 class="risk__title">GSM signal dropout in remote areas</h3>
+                    <div class="risk__grid">
+                        <div class="risk__col">
+                            <span class="risk__col-label">Risk</span>
+                            <p>SMS alerts fail to dispatch when cellular coverage is weak or absent across parts of Cape York.</p>
+                        </div>
+                        <div class="risk__col">
+                            <span class="risk__col-label">Mitigation</span>
+                            <p>External antenna, message retry queue with timestamping, dashboard log retained on-device, and quarterly signal-survey of installation sites.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="risk" data-cat="technical" data-sev="high">
+                    <div class="risk__head">
+                        <span class="risk__tag">Technical</span>
+                        <div class="risk__rating">
+                            <span class="risk__rating-label">Likelihood</span>
+                            <span class="risk__rating-pill risk__rating-pill--med">Medium</span>
+                            <span class="risk__rating-label">Severity</span>
+                            <span class="risk__rating-pill risk__rating-pill--high">High</span>
+                        </div>
+                    </div>
+                    <h3 class="risk__title">Enclosure failure under wet-season conditions</h3>
+                    <div class="risk__grid">
+                        <div class="risk__col">
+                            <span class="risk__col-label">Risk</span>
+                            <p>Water ingress or UV degradation compromises internal hardware during extended monsoon periods.</p>
+                        </div>
+                        <div class="risk__col">
+                            <span class="risk__col-label">Mitigation</span>
+                            <p>ABS shell + TPU gasket tested across heat, water, dust, vibration; IP-rated cable glands; pole-mount above flood line; six-month inspection cycle.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="risk" data-cat="technical" data-sev="med">
+                    <div class="risk__head">
+                        <span class="risk__tag">Technical</span>
+                        <div class="risk__rating">
+                            <span class="risk__rating-label">Likelihood</span>
+                            <span class="risk__rating-pill risk__rating-pill--low">Low</span>
+                            <span class="risk__rating-label">Severity</span>
+                            <span class="risk__rating-pill risk__rating-pill--med">Medium</span>
+                        </div>
+                    </div>
+                    <h3 class="risk__title">False positive fault alerts</h3>
+                    <div class="risk__grid">
+                        <div class="risk__col">
+                            <span class="risk__col-label">Risk</span>
+                            <p>Edge readings near threshold limits generate alerts that don't reflect real faults, eroding trust in the system.</p>
+                        </div>
+                        <div class="risk__col">
+                            <span class="risk__col-label">Mitigation</span>
+                            <p>Hysteresis bands on thresholds; alerts require sustained breach (≥2 cycles); thresholds tunable post-deployment based on field data.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- COMMUNITY -->
+                <article class="risk" data-cat="community" data-sev="high">
+                    <div class="risk__head">
+                        <span class="risk__tag">Community</span>
+                        <div class="risk__rating">
+                            <span class="risk__rating-label">Likelihood</span>
+                            <span class="risk__rating-pill risk__rating-pill--low">Low</span>
+                            <span class="risk__rating-label">Severity</span>
+                            <span class="risk__rating-pill risk__rating-pill--high">High</span>
+                        </div>
+                    </div>
+                    <h3 class="risk__title">Cultural protocol misalignment</h3>
+                    <div class="risk__grid">
+                        <div class="risk__col">
+                            <span class="risk__col-label">Risk</span>
+                            <p>Installation sites or maintenance activities inadvertently affect culturally significant areas.</p>
+                        </div>
+                        <div class="risk__col">
+                            <span class="risk__col-label">Mitigation</span>
+                            <p>Site approval through Lama Lama Land Trust and ranger leadership before each install; Aboriginal Cultural Heritage Act 2003 duty-of-care guidelines followed throughout.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="risk" data-cat="community" data-sev="med">
+                    <div class="risk__head">
+                        <span class="risk__tag">Community</span>
+                        <div class="risk__rating">
+                            <span class="risk__rating-label">Likelihood</span>
+                            <span class="risk__rating-pill risk__rating-pill--med">Medium</span>
+                            <span class="risk__rating-label">Severity</span>
+                            <span class="risk__rating-pill risk__rating-pill--med">Medium</span>
+                        </div>
+                    </div>
+                    <h3 class="risk__title">Reliance on external technical support</h3>
+                    <div class="risk__grid">
+                        <div class="risk__col">
+                            <span class="risk__col-label">Risk</span>
+                            <p>System repairs or threshold adjustments require external technicians, reducing community autonomy.</p>
+                        </div>
+                        <div class="risk__col">
+                            <span class="risk__col-label">Mitigation</span>
+                            <p>Plain-language maintenance guide for rangers; standard tooling only (no proprietary fasteners); modular components for field-swap; training built into rollout.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- OPERATIONAL -->
+                <article class="risk" data-cat="operational" data-sev="high">
+                    <div class="risk__head">
+                        <span class="risk__tag">Operational</span>
+                        <div class="risk__rating">
+                            <span class="risk__rating-label">Likelihood</span>
+                            <span class="risk__rating-pill risk__rating-pill--high">High</span>
+                            <span class="risk__rating-label">Severity</span>
+                            <span class="risk__rating-pill risk__rating-pill--med">Medium</span>
+                        </div>
+                    </div>
+                    <h3 class="risk__title">Wet-season access delays</h3>
+                    <div class="risk__grid">
+                        <div class="risk__col">
+                            <span class="risk__col-label">Risk</span>
+                            <p>Road closures during wet season prevent on-site maintenance for weeks at a time.</p>
+                        </div>
+                        <div class="risk__col">
+                            <span class="risk__col-label">Mitigation</span>
+                            <p>Pre-wet-season inspection sweep; spare components stocked locally with rangers; remote diagnostics via SMS keep operators informed during isolation.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="risk" data-cat="operational" data-sev="med">
+                    <div class="risk__head">
+                        <span class="risk__tag">Operational</span>
+                        <div class="risk__rating">
+                            <span class="risk__rating-label">Likelihood</span>
+                            <span class="risk__rating-pill risk__rating-pill--med">Medium</span>
+                            <span class="risk__rating-label">Severity</span>
+                            <span class="risk__rating-pill risk__rating-pill--med">Medium</span>
+                        </div>
+                    </div>
+                    <h3 class="risk__title">Wildlife interference</h3>
+                    <div class="risk__grid">
+                        <div class="risk__col">
+                            <span class="risk__col-label">Risk</span>
+                            <p>Insects, rodents, or larger fauna damage cabling or block sensor inlets.</p>
+                        </div>
+                        <div class="risk__col">
+                            <span class="risk__col-label">Mitigation</span>
+                            <p>Sealed cable glands; pole-mount placement raises unit above ground-level fauna; mesh-protected ventilation; visual inspection at every site visit.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FINANCIAL -->
+                <article class="risk" data-cat="financial" data-sev="high">
+                    <div class="risk__head">
+                        <span class="risk__tag">Financial</span>
+                        <div class="risk__rating">
+                            <span class="risk__rating-label">Likelihood</span>
+                            <span class="risk__rating-pill risk__rating-pill--med">Medium</span>
+                            <span class="risk__rating-label">Severity</span>
+                            <span class="risk__rating-pill risk__rating-pill--high">High</span>
+                        </div>
+                    </div>
+                    <h3 class="risk__title">Grant funding shortfall</h3>
+                    <div class="risk__grid">
+                        <div class="risk__col">
+                            <span class="risk__col-label">Risk</span>
+                            <p>AEA Ignite outcome or industry partner co-investment falls short of projected scale-up budget.</p>
+                        </div>
+                        <div class="risk__col">
+                            <span class="risk__col-label">Mitigation</span>
+                            <p>Multi-source funding strategy: ARENA Regional Microgrids Program as secondary path; reduced-scope deployment plan with two-unit minimum viable rollout.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="risk" data-cat="financial" data-sev="med">
+                    <div class="risk__head">
+                        <span class="risk__tag">Financial</span>
+                        <div class="risk__rating">
+                            <span class="risk__rating-label">Likelihood</span>
+                            <span class="risk__rating-pill risk__rating-pill--low">Low</span>
+                            <span class="risk__rating-label">Severity</span>
+                            <span class="risk__rating-pill risk__rating-pill--med">Medium</span>
+                        </div>
+                    </div>
+                    <h3 class="risk__title">Ongoing service-fee creep</h3>
+                    <div class="risk__grid">
+                        <div class="risk__col">
+                            <span class="risk__col-label">Risk</span>
+                            <p>ThingsBoard / Twilio pricing changes make the monthly recurring cost untenable for the community.</p>
+                        </div>
+                        <div class="risk__col">
+                            <span class="risk__col-label">Mitigation</span>
+                            <p>Self-hosted ThingsBoard Community Edition as fallback; SMS-only mode that bypasses dashboard infrastructure; annual cost review built into IGC governance.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="risk-empty" id="riskEmpty" hidden>No risks match that category.</p>
 
         </div>
     </section>
@@ -355,8 +659,8 @@
     <section class="next-up">
         <div class="next-up__inner">
             <div>
-                <span class="next-up__label">Supporting evidence</span>
-                <h3 class="next-up__title">Integration with &amp; <em>Community.</em></h3>
+                <span class="next-up__label">Continue · Stage 06</span>
+                <h3 class="next-up__title">Bringing it to <em>Country.</em></h3>
             </div>
             <a href="implementation.html" class="next-up__btn">
                 Continue to Implementation Plan
@@ -380,16 +684,16 @@
                 <p>The Lama Lama Peoples<br>Port Stewart, Cape York Peninsula<br>Queensland, Australia</p>
             </div>
         </div>
-
         <div class="footer__bottom">
             <span>© 2026 Team 7 · Designed with respect for Country.</span>
             <span class="footer__ack">Always was, always will be Aboriginal land.</span>
         </div>
     </footer>
 
-    <!-- JS · donut interactions -->
+    <!-- JS · DONUT INTERACTION + RISK FILTER -->
     <script>
     (function () {
+        // ---- DONUT ----
         const slices = document.querySelectorAll('.donut__slice');
         const legends = document.querySelectorAll('.cost-leg');
         const cards = document.querySelectorAll('.cost-card');
@@ -413,7 +717,6 @@
                 hint.textContent = data[cat].pct + ' of total';
             }
         }
-
         function reset() {
             slices.forEach(s => s.classList.remove('donut__slice--active'));
             legends.forEach(l => l.classList.remove('cost-leg--active'));
@@ -422,17 +725,40 @@
             value.textContent = '~$3,461';
             hint.textContent = 'Hover a slice';
         }
-
         slices.forEach(slice => {
             slice.addEventListener('mouseenter', () => activate(slice.dataset.cat));
             slice.addEventListener('mouseleave', reset);
             slice.addEventListener('click', () => activate(slice.dataset.cat));
         });
-
         legends.forEach(leg => {
             leg.addEventListener('mouseenter', () => activate(leg.dataset.cat));
             leg.addEventListener('mouseleave', reset);
             leg.addEventListener('click', () => activate(leg.dataset.cat));
+        });
+
+        // ---- RISK FILTER ----
+        const chips = document.querySelectorAll('#risk .g-chip');
+        const risks = document.querySelectorAll('.risk');
+        const empty = document.getElementById('riskEmpty');
+        let activeRisk = 'all';
+
+        function filterRisks() {
+            let visible = 0;
+            risks.forEach(r => {
+                const show = activeRisk === 'all' || r.dataset.cat === activeRisk;
+                r.hidden = !show;
+                if (show) visible++;
+            });
+            if (empty) empty.hidden = visible !== 0;
+        }
+        chips.forEach(chip => {
+            chip.addEventListener('click', (e) => {
+                e.preventDefault();
+                chips.forEach(c => c.classList.remove('g-chip--active'));
+                chip.classList.add('g-chip--active');
+                activeRisk = chip.dataset.cat || 'all';
+                filterRisks();
+            });
         });
     })();
     </script>

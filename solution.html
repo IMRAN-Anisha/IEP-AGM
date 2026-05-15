@@ -362,11 +362,12 @@
                         relay cutoff, battery monitoring, and LED indicators</strong>.
                     </p>
                     <p class="block__lead" style="margin-bottom: 0;">
-                        Sensors collect current, voltage, temperature, moisture, and battery
-                        data. The Raspberry Pi Pico checks these values against fault
-                        thresholds and identifies unsafe conditions. If a fault is detected,
-                        the relay can support safety cutoff, the LEDs show the system status,
-                        and the GSM module sends an alert to maintenance staff or Rangers.
+                        Sensors collect current, voltage, temperature, moisture, and battery data. 
+                        Raspberry Pi Pico checks sensor values against baseline fault thresholds and identifies unsafe conditions.
+                        If a fault is detected, the relay can support safety cutoff
+                        LEDs show the system status.
+                        GSM module sends maintenance and messaging alerts to central receiver (Macbook NEO) and Ranger devices.
+
                     </p>
                 </div>
 
@@ -394,13 +395,15 @@
             <div class="hw-callout" style="margin-top: 72px;">
                 <div class="hw-callout__body">
                     <span class="hw-callout__label">External design</span>
-                    <h3 class="hw-callout__title">A pole-mounted enclosure, built for the field.</h3>
+                    <h3 class="hw-callout__title">A non-invasive monitoring device for existing power systems</h3>
                     <p>
-                        The external design focuses on protecting the monitoring device in
-                        harsh remote conditions. The enclosure is mounted on a pole near the
-                        energy system and protects the internal sensors, controller, battery,
-                        and communication module from <strong>rain, dust, heat, vibration,
-                        and possible wildlife interference</strong>.
+                        The system holding module is attached non-destructively to the switchboard 
+                        of a Stand-Alone Power System (SAPS). The box measures several parameters
+                         including voltage, current, moisture levels, and temperature. The internal 
+                         system is able to communicate through its antennae key system information, 
+                         measured through baseline parameters on energy flow consistency, temperature,
+                         and more.
+            
                     </p>
                     <p>
                         It includes an external antenna for GSM communication, cable entry
@@ -501,17 +504,17 @@
                 <div class="media-pair__body">
                     <h3 style="color: var(--bone);">Fault detection logic</h3>
                     <p style="color: rgba(245, 239, 228, 0.78);">
-                        The fault detection program uses <strong style="color: var(--clay);">threshold-based
-                        logic</strong> to decide whether the system is operating normally or
-                        experiencing a fault. Sensor readings — voltage, current, temperature,
-                        and moisture — are checked against predefined safe limits. If a value
-                        exceeds the limit, the system identifies the fault type, such as low
-                        battery, overheating, water ingress, or power interruption.
+                        The fault detection program employs <strong style="color: var(--clay);">threshold-based
+                        logic</strong> through 
+                        quantifiable parameters to determine whether system operations fall 
+                        within baseline expected ranges. Should sensor readings for voltage, 
+                        current, temperature, moisture exceed or retract below expected ranges, 
+                        the module collects the respective sensor information and prepares it for relay.
                     </p>
                     <p style="color: rgba(245, 239, 228, 0.78);">
-                        This simple logic is suitable for the prototype because it is easy to
-                        test, adjust, and explain. The thresholds can also be changed later
-                        based on real field data.
+                        This streamlined logic enables rapid, responsive testing, adjustment, 
+                        and accessibility when communicating information. The specified thresholds 
+                        may also be adjusted following more data to reflect real field data.
                     </p>
                 </div>
             </div>
@@ -530,17 +533,17 @@
                 <div class="media-pair__body">
                     <h3 style="color: var(--bone);">SMS alerts</h3>
                     <p style="color: rgba(245, 239, 228, 0.78);">
-                        The SMS alert system sends a warning message when the software detects
-                        a fault. The alert includes the <strong style="color: var(--clay);">fault type</strong>
-                        and key sensor readings — voltage, temperature, and moisture level —
-                        allowing Rangers or maintenance staff to understand the issue without
-                        needing to check the physical device immediately.
+                        Should sensor readings for <strong style="color: var(--clay);">fault type voltage, current, temperature, moisture exceed or retract 
+                        below expected ranges</strong>, the system module returns a detailed SMS message to both Lama 
+                        Lama Ranger devices containing system and fault information to request a check-up.
+                         An identical message to the central receiving device (the Macbook NEO) to ensure 
+                         clear, trackable records and record-keeping.
+
                     </p>
                     <p style="color: rgba(245, 239, 228, 0.78);">
-                        SMS was chosen because it is more suitable for remote areas where
-                        internet access may be weak or unreliable. Even if dashboard access
-                        is limited, urgent alerts can still be sent through the GSM/Twilio
-                        alert system.
+                        SMS remains a suitable mode of communication despite
+                        connectivity difficulties thanks to the ability to utilise
+                         satellite networks to circumvent network limitations
                     </p>
                 </div>
             </div>
@@ -572,7 +575,7 @@
             <div style="margin-top: 96px;">
                 <h3 class="sol-stack-title">The software stack.</h3>
                 <p style="color: rgba(245, 239, 228, 0.78); max-width: 720px; margin-bottom: 40px;">
-                    Five core technologies make the prototype work together. Each was chosen
+                    Five core technologies make the prototype work together. Each component was chosen
                     deliberately for its fit with remote, low-bandwidth operation on Country.
                 </p>
 
@@ -621,27 +624,32 @@
 
             <p class="block__lead">
                 Testing is divided into two areas: <strong>hardware material testing</strong>
-                and <strong>software simulation testing</strong>. Hardware testing focuses on
-                the physical materials used for the enclosure — specifically ABS and TPU —
-                tested separately because they serve different purposes. ABS is used for
-                the rigid structure, while TPU is used for flexible sealing and protection.
+                and <strong>software simulation testing</strong>. Hardware testing focuses on the 
+                physical materials used for the enclosure, specifically ABS and TPU, 
+                tested separately because they serve different purposes. ABS is used for the 
+                rigid structure, while TPU is used for flexible sealing and protection.
             </p>
 
             <p class="block__lead">
-                Software testing focuses on whether the monitoring logic works correctly in
-                simulation. <strong>Wokwi</strong> is used to test sensor input values and
-                fault detection logic, while <strong>ThingsBoard</strong> is used to check
-                whether readings and fault statuses can be displayed on a remote dashboard.
+                Software testing focuses on whether the monitoring logic works correctly in simulation. 
+                <strong>Wokwi</strong> is used to test sensor input values and fault detection logic.
+                <strong>ThingsBoard</strong> acts as the remote monitoring interface in an energy monitoring system 
+                by receiving device data and presenting it in a clear, usable form. It helps users 
+                view system conditions in real time, track changes over time, and recognise faults 
+                quickly so they can respond without needing to inspect the equipment directly.
+
             </p>
 
             <!-- Software Testing Table -->
             <div class="test-section" style="margin-top: 64px;">
                 <h3 class="test-section__title">Software simulation testing</h3>
                 <p class="test-section__lead">
-                    Software is tested through simulation before full field deployment. Wokwi
-                    simulates sensor readings — voltage, temperature, moisture, current, and
-                    battery level — which are adjusted to verify fault detection. ThingsBoard
-                    confirms that readings and fault statuses display correctly on the dashboard.
+                    Software is tested through simulation before full field deployment. 
+                    Wokwi is able to simulate sensor readings of voltage, temperature, moisture, 
+                    current, and battery level,  which are adjusted to verify fault detection.
+                     ThingsBoard confirms that readings and fault statuses display correctly on the
+                      dashboard.
+
                 </p>
 
                 <div class="data-table data-table--light">
