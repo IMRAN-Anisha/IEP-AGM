@@ -1832,7 +1832,152 @@ em { font-style: italic; }
 }
 
 .block--ink .block__lead { color: rgba(245, 239, 228, 0.78); }
+/* ============================================
+   IMAGE FIT FIXES + CLICK-TO-ZOOM
+   ============================================ */
 
+/* Carousel images: contain instead of cover so whole image shows */
+.carousel__media {
+    aspect-ratio: 16 / 10;
+    background: var(--bone-warm);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.carousel__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.6s var(--ease);
+}
+
+/* Figure images: cap maximum height so they don't dominate the page */
+.figure img,
+.media-pair__media--figure img,
+.media-figure img {
+    max-height: 560px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* For media-pair figures specifically — keep them proportional within the column */
+.media-pair__media--figure {
+    background: transparent;
+    aspect-ratio: auto;
+    display: flex;
+    align-items: center;
+}
+
+.media-pair__media--figure .figure {
+    width: 100%;
+    margin: 0;
+}
+
+/* Compact variant for taller portraits like the box.png enclosure */
+.media-pair__media--compact img {
+    max-height: 480px;
+}
+
+/* All clickable images get a subtle cursor + lift */
+.figure img,
+.carousel__media img,
+.media-pair__media img {
+    cursor: zoom-in;
+    transition: transform 0.4s var(--ease), opacity 0.3s var(--ease);
+}
+
+.figure img:hover,
+.media-pair__media img:hover {
+    opacity: 0.9;
+}
+
+/* ============================================
+   LIGHTBOX MODAL
+   ============================================ */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(26, 20, 16, 0.94);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(20px, 4vw, 60px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s var(--ease);
+    cursor: zoom-out;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.lightbox--open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox__img {
+    max-width: 92vw;
+    max-height: 88vh;
+    object-fit: contain;
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    transform: scale(0.96);
+    transition: transform 0.4s var(--ease);
+}
+
+.lightbox--open .lightbox__img {
+    transform: scale(1);
+}
+
+.lightbox__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(245, 239, 228, 0.12);
+    border: 1px solid rgba(245, 239, 228, 0.25);
+    color: var(--bone);
+    font-family: var(--display);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s var(--ease);
+    line-height: 1;
+}
+
+.lightbox__close:hover {
+    background: var(--ochre);
+    border-color: var(--ochre);
+    transform: rotate(90deg);
+}
+
+.lightbox__caption {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245, 239, 228, 0.65);
+    text-align: center;
+    pointer-events: none;
+}
+
+body.lightbox-open { overflow: hidden; }
 /* ============================================
    FRAMED IMAGE (for graphics)
    ============================================ */

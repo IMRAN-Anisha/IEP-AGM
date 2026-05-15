@@ -549,7 +549,7 @@
             <div class="media-pair" style="margin-top: 80px;">
                 <div class="media-pair__media media-pair__media--figure">
                     <figure class="figure figure--spaced">
-                        <img src="assets/sol-thingsboard.png" alt="ThingsBoard remote monitoring dashboard">
+                        <img src="assets/dashboarddemo.jpeg" alt="ThingsBoard remote monitoring dashboard">
                         <figcaption class="figure__caption">
                             <span class="tag">Fig. 06</span>
                             <span>ThingsBoard dashboard · remote monitoring and fault status display.</span>
@@ -702,7 +702,7 @@
                 </p>
 
                 <figure class="figure figure--spaced">
-                    <img src="assets/TPU-testing.jpeg" alt="TPU material testing showing flexible seal and durability checks">
+                    <img src="assets/TPU-testing.png" alt="TPU material testing showing flexible seal and durability checks">
                     <figcaption class="figure__caption">
                         <span class="tag">Fig. 07</span>
                         <span>TPU material testing · flexible seal durability and moisture protection.</span>
@@ -722,7 +722,7 @@
                 </p>
 
                 <figure class="figure figure--spaced">
-                    <img src="assets/ABS-testing.jpeg" alt="ABS material testing showing rigid enclosure durability checks">
+                    <img src="assets/ABS-testing.png" alt="ABS material testing showing rigid enclosure durability checks">
                     <figcaption class="figure__caption">
                         <span class="tag">Fig. 08</span>
                         <span>ABS material testing · rigid enclosure durability and environmental resilience.</span>
@@ -812,6 +812,54 @@
         updateDots();
     })();
     </script>
+<script>
+(function () {
+    // Build the lightbox once
+    const box = document.createElement('div');
+    box.className = 'lightbox';
+    box.innerHTML = `
+        <button class="lightbox__close" aria-label="Close">×</button>
+        <img class="lightbox__img" alt="">
+        <span class="lightbox__caption">Click anywhere to close · Esc</span>
+    `;
+    document.body.appendChild(box);
 
+    const img = box.querySelector('.lightbox__img');
+    const closeBtn = box.querySelector('.lightbox__close');
+
+    function open(src, alt) {
+        img.src = src;
+        img.alt = alt || '';
+        box.classList.add('lightbox--open');
+        document.body.classList.add('lightbox-open');
+    }
+
+    function close() {
+        box.classList.remove('lightbox--open');
+        document.body.classList.remove('lightbox-open');
+        setTimeout(() => { img.src = ''; }, 300);
+    }
+
+    // Attach to all relevant images
+    const selectors = [
+        '.figure img',
+        '.carousel__media img',
+        '.media-pair__media img'
+    ];
+    document.querySelectorAll(selectors.join(',')).forEach(el => {
+        el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            open(el.src, el.alt);
+        });
+    });
+
+    // Close handlers
+    box.addEventListener('click', close);
+    closeBtn.addEventListener('click', (e) => { e.stopPropagation(); close(); });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && box.classList.contains('lightbox--open')) close();
+    });
+})();
+</script>
 </body>
 </html>
