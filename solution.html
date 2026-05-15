@@ -113,29 +113,35 @@
             </h2>
 
             <p class="block__lead">
-                Our solution improves the reliability and long-term performance of SAPS by
-                enabling early fault detection, reducing the risk of equipment damage, and
-                minimising system downtime. By providing timely insights into system health,
-                it also supports faster and more effective remote maintenance responses.
+                Our solution improves the reliability and long-term performance of Stand-Alone Power Systems 
+                by enabling early fault detection, reducing the risk of equipment damage, and minimising system
+                 downtime. Stand-Alone Power Systems operate independently from the main electricity grid, so 
+                 reliable monitoring is especially important in remote communities where maintenance access and 
+                 technical support can be limited (Australian Energy Market Commission, 2019; Australian Renewable 
+                 Energy Agency, 2023). This supports remote energy resilience by helping operators identify issues 
+                 earlier and maintain more stable power for community and ranger operations.
+                </p>
+                <p class="block__lead">
+                This is achieved through continuous monitoring of key operating parameters, including current, voltage, 
+                temperature, and moisture levels. These readings help operators observe system performance and detect 
+                abnormal conditions before they become major failures. The Raspberry Pi Pico is suitable for this prototype 
+                because it provides general-purpose input/output pins and analog input capability for reading sensors and 
+                controlling connected components (Raspberry Pi Ltd., 2021). When potential issues are detected, the system 
+                automatically sends SMS alerts through the GSM module, allowing operators and maintenance teams to respond 
+                quickly before faults escalate.
             </p>
-
-            <p class="block__lead">
-                This is achieved through continuous monitoring of key operating parameters —
-                <strong>current, voltage, temperature, and moisture levels</strong>. The
-                collected data is analysed using threshold-based fault detection methods to
-                identify abnormal operating conditions. When potential issues are detected,
-                the system automatically sends SMS alerts, allowing operators and maintenance
-                teams to respond quickly before faults escalate.
             </p>
 
             <div class="sol-feature">
                 <div>
                     <p class="block__lead" style="margin-bottom: 0;">
-                        By collecting and tracking this data over time, operators can better
-                        understand energy generation, storage, and consumption patterns across
-                        the system. This supports more informed decision-making, improves
-                        operational efficiency, and ensures the power system can continue to
-                        meet the needs of the community under changing environmental conditions.
+                        By collecting and tracking this data over time, operators can better 
+                        understand energy generation, storage, and consumption patterns across the system. Australian 
+                        remote microgrid projects show that monitoring, control, and local visibility are important for 
+                        improving reliability and supporting decision-making in isolated energy systems 
+                        (Australian Renewable Energy Agency, 2021, 2022). For Port Stewart, this supports more informed decisions,
+                        improves operational efficiency, and helps the power system continue meeting community 
+                        needs under changing environmental conditions.
                     </p>
                 </div>
 
@@ -178,11 +184,18 @@
 
             <p class="block__lead">
                 The prototype monitors current, voltage, temperature, moisture, and battery
-                condition in remote energy systems. A <strong>Raspberry Pi Pico W</strong>
-                processes the sensor data and detects faults such as overheating, abnormal
-                current, low battery, and moisture intrusion. When a fault occurs, the system
-                logs the data to ThingsBoard, displays LED status indicators, and sends an
-                SMS alert to Rangers through Twilio.
+                 condition in remote energy systems so faults can be identified before they become 
+                 major failures. A Raspberry Pi Pico W processes the sensor data and detects conditions 
+                 such as overheating, abnormal current, low battery, and moisture intrusion using
+                  threshold-based logic. This is suitable for a remote monitoring prototype because the 
+                  Raspberry Pi Pico W supports sensor input and control through its general-purpose
+                   input/output and analog input pins (Raspberry Pi Ltd., 2022). When a fault occurs, 
+                   the system logs telemetry data to ThingsBoard for dashboard visibility, displays LED 
+                   status indicators for quick local checking, and sends SMS alerts to Rangers through 
+                   Twilio’s Programmable Messaging service so maintenance teams can respond faster (Twilio, 2026). 
+                   This approach aligns with Australian remote energy needs, where microgrids and stand-alone
+                    systems require reliable monitoring and local visibility to improve power reliability in 
+                    remote communities (Australian Renewable Energy Agency, 2023).
             </p>
 
             <figure class="figure figure--spaced">
@@ -194,41 +207,60 @@
             </figure>
 
             <div class="media-pair" style="margin-top: 64px;">
-                <div class="media-pair__media">
-                    <img src="assets/external-hardware.png" alt="Internal components of the prototype">
-                </div>
+                    <div class="media-pair__media media-pair__media--figure">
+                        <figure class="figure figure--spaced">
+                            <img src="assets/external-hardware.png" alt="Internal components of the prototype">
+
+                            <figcaption class="figure__caption">
+                                <span class="tag">Fig. 02</span>
+                                <span>Internal components layout · Prototype hardware assembly</span>
+                            </figcaption>
+                        </figure>
+                    </div>
                 <div class="media-pair__body">
                     <h3>Internal components</h3>
                     <p>
-                        The internal components include the <strong>main controller, sensors,
-                        power protection, communication module, relay module, battery, and
-                        wiring</strong>. These parts work together to collect energy system
-                        data, detect faults, and trigger alerts when unsafe conditions occur.
-                    </p>
-                    <p>
-                        The layout keeps the battery separated from the electronics to improve
-                        safety, while the sensors and modules are arranged clearly for
-                        maintenance and testing.
+                        The internal hardware includes sensors, power protection circuits,
+                         a Raspberry Pi Pico controller, GSM communication, relay cutoff, battery
+                          monitoring, and LED indicators. The sensors collect current, voltage, temperature, 
+                          moisture, and battery data to monitor system performance and environmental conditions.
+                           This supports remote Stand-Alone Power Systems, which often use solar power, battery 
+                           storage, and backup generation where grid connection is difficult (Ergon Energy Network, 
+                           2026; Australian Renewable Energy Agency, 2023). The Raspberry Pi Pico reads sensor inputs
+                            and controls connected components through its GPIO pins and analog input capability (Raspberry
+                             Pi Ltd., 2024). If unsafe conditions are detected, the relay can support safety cutoff, LEDs 
+                             show system status, and the GSM communication module sends SMS alerts to maintenance staff or 
+                             rangers. Australian remote monitoring products also use cellular or SMS-based alerts to send 
+                             notifications from field equipment, making this approach suitable for low-bandwidth remote
+                              alerting (Datran Australia, 2026.; Telstra, 2023).
                     </p>
                 </div>
             </div>
 
             <div class="media-pair media-pair--reverse" style="margin-top: 64px;">
-                <div class="media-pair__media">
-                    <img src="assets/box.png" alt="External enclosure of the prototype">
+                <div class="media-pair__media media-pair__media--figure media-pair__media--compact">
+                    <figure class="figure figure--spaced">
+                        <img src="assets/box.png" alt="External enclosure of the prototype">
+
+                        <figcaption class="figure__caption">
+                            <span class="tag">Fig. 03</span>
+                            <span>External enclosure design · Weatherproof SAPS housing</span>
+                        </figcaption>
+                    </figure>
                 </div>
                 <div class="media-pair__body">
                     <h3>External enclosure</h3>
                     <p>
-                        The external enclosure protects the prototype from harsh remote
-                        conditions — <strong>dust, rain, heat, vibration, and possible
-                        wildlife interference</strong>. It includes a rugged ABS body,
-                        flexible TPU sealing, external antenna, cable gland, LED status
-                        window, and mounting points.
-                    </p>
-                    <p>
-                        These features make the system suitable for outdoor field use in
-                        remote energy monitoring deployments.
+                        The external enclosure uses a rugged Acrylonitrile Butadiene Styrene body and 
+                        flexible Thermoplastic Polyurethane sealing to protect the prototype from harsh 
+                        remote conditions. Acrylonitrile Butadiene Styrene is suitable for the main body
+                        because it provides a rigid, lightweight, and impact-resistant structure for 
+                        protecting internal components (SpecialChem, 2026). Thermoplastic Polyurethane 
+                        is suitable for the sealing and vibration-damping areas because it offers flexibility, 
+                        elasticity, abrasion resistance, and impact resistance across a wide temperature range
+                         (Australian Urethane Systems, 2026). These material properties help the enclosure resist dust,
+                          rain, heat, vibration, and possible wildlife interference during outdoor field use in remote 
+                          energy monitoring deployments.
                     </p>
                 </div>
             </div>
@@ -456,8 +488,15 @@
 
             <!-- Fault Detection Logic -->
             <div class="media-pair" style="margin-top: 96px;">
-                <div class="media-pair__media">
-                    <img src="assets/fault-detection-logic.png" alt="Fault detection logic diagram">
+                <div class="media-pair__media media-pair__media--figure">
+                    <figure class="figure figure--spaced media-figure">
+                        <img src="assets/fault-detection-logic.png" alt="Fault detection logic diagram">
+
+                        <figcaption class="figure__caption">
+                            <span class="tag">Fig. 04</span>
+                            <span>Fault detection logic · threshold based decision system</span>
+                        </figcaption>
+                    </figure>
                 </div>
                 <div class="media-pair__body">
                     <h3 style="color: var(--bone);">Fault detection logic</h3>
@@ -479,8 +518,14 @@
 
             <!-- SMS Alert -->
             <div class="media-pair media-pair--reverse" style="margin-top: 80px;">
-                <div class="media-pair__media">
-                    <img src="assets/SMS-demo.png" alt="SMS alert example">
+                <div class="media-pair__media media-pair__media--figure">
+                    <figure class="figure figure--spaced">
+                        <img src="assets/SMS-demo.png" alt="SMS alert example">
+                        <figcaption class="figure__caption">
+                            <span class="tag">Fig. 05</span>
+                            <span>SMS alert example · remote fault notification via text message.</span>
+                        </figcaption>
+                    </figure>
                 </div>
                 <div class="media-pair__body">
                     <h3 style="color: var(--bone);">SMS alerts</h3>
@@ -502,8 +547,14 @@
 
             <!-- ThingsBoard Dashboard -->
             <div class="media-pair" style="margin-top: 80px;">
-                <div class="media-pair__media">
-                    <img src="assets/sol-thingsboard.png" alt="ThingsBoard remote monitoring dashboard">
+                <div class="media-pair__media media-pair__media--figure">
+                    <figure class="figure figure--spaced">
+                        <img src="assets/sol-thingsboard.png" alt="ThingsBoard remote monitoring dashboard">
+                        <figcaption class="figure__caption">
+                            <span class="tag">Fig. 06</span>
+                            <span>ThingsBoard dashboard · remote monitoring and fault status display.</span>
+                        </figcaption>
+                    </figure>
                 </div>
                 <div class="media-pair__body">
                     <h3 style="color: var(--bone);">ThingsBoard dashboard</h3>
@@ -687,7 +738,7 @@
         <div class="next-up__inner">
             <div>
                 <span class="next-up__label">Supporting evidence · 05</span>
-                <h3 class="next-up__title">Costing &amp; <em>implementation.</em></h3>
+                <h3 class="next-up__title">Costing &amp; <em>Prototyping.</em></h3>
             </div>
             <a href="viability.html" class="next-up__btn">
                 Viability Analysis

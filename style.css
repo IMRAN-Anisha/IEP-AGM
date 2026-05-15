@@ -1836,6 +1836,17 @@ em { font-style: italic; }
 /* ============================================
    FRAMED IMAGE (for graphics)
    ============================================ */
+.media-figure {
+    width: 100%;
+    margin: 0;
+}
+
+.media-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .figure {
     background: var(--paper);
     border: 1px solid rgba(42, 29, 18, 0.12);
@@ -2529,6 +2540,28 @@ em { font-style: italic; }
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.media-pair__media--figure {
+    aspect-ratio: auto;
+    background: transparent;
+    overflow: visible;
+    box-shadow: none;
+}
+
+.media-pair__media--figure .figure {
+    margin: 0;
+}
+
+.media-pair__media--figure .figure img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.media-pair__media--compact {
+    max-width: 420px;
+    margin-inline: auto;
 }
 
 .media-pair__media--placeholder {
