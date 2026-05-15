@@ -92,12 +92,12 @@
                 </label>
 
                 <div class="glossary-filters" role="tablist" aria-label="Filter references by category">
-                    <button class="g-chip g-chip--active" data-cat="all">All</button>
-                    <button class="g-chip" data-cat="legislation">Legislation</button>
-                    <button class="g-chip" data-cat="papers">Reports &amp; Papers</button>
-                    <button class="g-chip" data-cat="web">Web Sources</button>
-                    <button class="g-chip" data-cat="images">Images &amp; Diagrams</button>
-                    <button class="g-chip" data-cat="tools">Software &amp; Tools</button>
+                    <button type="button" class="g-chip g-chip--active" data-cat="all">All</button>
+                    <button type="button" class="g-chip" data-cat="legislation">Legislation</button>
+                    <button type="button" class="g-chip" data-cat="papers">Reports &amp; Papers</button>
+                    <button type="button" class="g-chip" data-cat="web">Web Sources</button>
+                    <button type="button" class="g-chip" data-cat="images">Images &amp; Diagrams</button>
+                    <button type="button" class="g-chip" data-cat="tools">Software &amp; Tools</button>
                 </div>
             </div>
 
@@ -105,151 +105,730 @@
             <div class="ref-style">
                 <span class="ref-style__label">Citation style:</span>
                 <div class="ref-style__group" role="radiogroup">
-                    <button class="ref-style__btn ref-style__btn--active" data-style="apa">APA 7</button>
+                    <button type="button" class="ref-style__btn ref-style__btn--active" data-style="apa">APA 7</button>
                 </div>
             </div>
 
             <!-- Reference list -->
             <ol class="ref-list" id="refList">
 
-                <!-- LEGISLATION -->
                 <li class="ref" data-cat="legislation" data-keywords="aboriginal cultural heritage act 2003 qld queensland">
                     <div class="ref__num">01</div>
                     <div class="ref__body">
                         <span class="ref__tag">Legislation</span>
                         <p class="ref__cite ref__cite--apa">
-                            Queensland Government. (2003). <em>Aboriginal Cultural Heritage Act 2003 (QLD)</em>. Queensland Legislation.
+                            <em>Aboriginal Cultural Heritage Act 2003</em> (Qld).
                         </p>
-                        <p class="ref__cite ref__cite--harvard" hidden>
-                            Queensland Government 2003, <em>Aboriginal Cultural Heritage Act 2003 (QLD)</em>, Queensland Legislation.
-                        </p>
-                        <p class="ref__cite ref__cite--ieee" hidden>
-                            Queensland Government, "Aboriginal Cultural Heritage Act 2003 (QLD)," Queensland Legislation, 2003.
-                        </p>
-                        <a class="ref__link" href="https://www.legislation.qld.gov.au/view/whole/html/inforce/current/act-2003-079" target="_blank" rel="noopener">View source ↗</a>
                     </div>
                 </li>
 
-                <li class="ref" data-cat="legislation" data-keywords="electrical safety act 2002 qld queensland">
+                <li class="ref" data-cat="web" data-keywords="arena regional microgrids program">
                     <div class="ref__num">02</div>
                     <div class="ref__body">
-                        <span class="ref__tag">Legislation</span>
+                        <span class="ref__tag">Web Source</span>
                         <p class="ref__cite ref__cite--apa">
-                            Queensland Government. (2002). <em>Electrical Safety Act 2002 (QLD)</em>. Queensland Legislation.
+                            ARENA (n.d.). <em>Regional Microgrids Program</em>. [online] Australian Renewable Energy Agency. Available at: https://arena.gov.au/funding/rmp/.
                         </p>
-                        <p class="ref__cite ref__cite--harvard" hidden>
-                            Queensland Government 2002, <em>Electrical Safety Act 2002 (QLD)</em>, Queensland Legislation.
-                        </p>
-                        <p class="ref__cite ref__cite--ieee" hidden>
-                            Queensland Government, "Electrical Safety Act 2002 (QLD)," Queensland Legislation, 2002.
-                        </p>
-                        <a class="ref__link" href="https://www.legislation.qld.gov.au/view/html/inforce/current/act-2002-042" target="_blank" rel="noopener">View source ↗</a>
                     </div>
                 </li>
 
-                <li class="ref" data-cat="legislation" data-keywords="work health and safety act 2011 qld queensland whs">
+                <li class="ref" data-cat="web" data-keywords="auseco electrical data rural electrification 2024">
                     <div class="ref__num">03</div>
                     <div class="ref__body">
-                        <span class="ref__tag">Legislation</span>
+                        <span class="ref__tag">Web Source</span>
                         <p class="ref__cite ref__cite--apa">
-                            Queensland Government. (2011). <em>Work Health and Safety Act 2011 (QLD)</em>. Queensland Legislation.
+                            AusEco Electrical &amp; Data. (2024, March 4). <em>Rural Electrification: Challenges and Solutions | AusEco Electrical &amp; Data</em>. AusEco Electrical &amp; Data. https://ausecoelectrical.com.au/articles/rural-electrification-challenges-and-solutions/
                         </p>
-                        <p class="ref__cite ref__cite--harvard" hidden>
-                            Queensland Government 2011, <em>Work Health and Safety Act 2011 (QLD)</em>, Queensland Legislation.
-                        </p>
-                        <p class="ref__cite ref__cite--ieee" hidden>
-                            Queensland Government, "Work Health and Safety Act 2011 (QLD)," Queensland Legislation, 2011.
-                        </p>
-                        <a class="ref__link" href="https://www.legislation.qld.gov.au/view/html/inforce/current/act-2011-018" target="_blank" rel="noopener">View source ↗</a>
                     </div>
                 </li>
 
-                <li class="ref" data-cat="legislation" data-keywords="privacy act 1988 commonwealth australia">
+                <li class="ref" data-cat="papers" data-keywords="australian energy market commission 2019 stand alone power systems">
                     <div class="ref__num">04</div>
                     <div class="ref__body">
-                        <span class="ref__tag">Legislation</span>
+                        <span class="ref__tag">Report</span>
                         <p class="ref__cite ref__cite--apa">
-                            Commonwealth of Australia. (1988). <em>Privacy Act 1988 (Cth)</em>. Federal Register of Legislation.
+                            Australian Energy Market Commission. (2019). <em>Review of the regulatory frameworks for stand-alone power systems – Priority 2 review</em>. https://www.aemc.gov.au/market-reviews-advice/review-regulatory-frameworks-stand-alone-power-systems
                         </p>
-                        <p class="ref__cite ref__cite--harvard" hidden>
-                            Commonwealth of Australia 1988, <em>Privacy Act 1988 (Cth)</em>, Federal Register of Legislation.
-                        </p>
-                        <p class="ref__cite ref__cite--ieee" hidden>
-                            Commonwealth of Australia, "Privacy Act 1988 (Cth)," Federal Register of Legislation, 1988.
-                        </p>
-                        <a class="ref__link" href="https://www.legislation.gov.au/C2004A03712/latest/text" target="_blank" rel="noopener">View source ↗</a>
                     </div>
                 </li>
 
-                <!-- PLACEHOLDER · Reports & Papers -->
-                <li class="ref ref--placeholder" data-cat="papers" data-keywords="ewb engineers without borders challenge 2026">
+                <li class="ref" data-cat="papers" data-keywords="australian government first nations clean energy strategy 2024 2030">
                     <div class="ref__num">05</div>
                     <div class="ref__body">
                         <span class="ref__tag">Report</span>
                         <p class="ref__cite ref__cite--apa">
-                            Engineers Without Borders Australia. (2026). <em>EWB Challenge Design Brief: Lama Lama Country</em>. EWB Australia.
+                            Australian Government. (2024). <em>First Nations Clean Energy Strategy 2024–2030</em>. https://h2council.com.au/wp-content/uploads/2024/12/241206-First-Nations-Clean-Energy-Strategy.pdf
                         </p>
-                        <p class="ref__cite ref__cite--harvard" hidden>
-                            Engineers Without Borders Australia 2026, <em>EWB Challenge Design Brief: Lama Lama Country</em>, EWB Australia.
-                        </p>
-                        <p class="ref__cite ref__cite--ieee" hidden>
-                            Engineers Without Borders Australia, "EWB Challenge Design Brief: Lama Lama Country," EWB Australia, 2026.
-                        </p>
-                        <a class="ref__link" href="#" target="_blank" rel="noopener">View source ↗</a>
                     </div>
                 </li>
 
-                <!-- PLACEHOLDER · Web Source -->
-                <li class="ref ref--placeholder" data-cat="web" data-keywords="placeholder web source">
+                <li class="ref" data-cat="web" data-keywords="aiatsis indigenous data sovereignty 2019">
                     <div class="ref__num">06</div>
                     <div class="ref__body">
                         <span class="ref__tag">Web Source</span>
                         <p class="ref__cite ref__cite--apa">
-                            Author, A. (Year). <em>Title of online resource</em>. Site Name. <span class="ref__placeholder">[Add URL]</span>
+                            Australian Institute of Aboriginal and Torres Strait Islander Studies. (2019, July 2). <em>Delivering Indigenous Data Sovereignty</em>. AIATSIS Corporate Website. https://aiatsis.gov.au/publication/116530
                         </p>
-                        <p class="ref__cite ref__cite--harvard" hidden>
-                            Author, A. Year, <em>Title of online resource</em>, Site Name.
-                        </p>
-                        <p class="ref__cite ref__cite--ieee" hidden>
-                            A. Author, "Title of online resource," Site Name, Year.
-                        </p>
-                        <a class="ref__link" href="#" target="_blank" rel="noopener">View source ↗</a>
                     </div>
                 </li>
 
-                <!-- PLACEHOLDER · Image -->
-                <li class="ref ref--placeholder" data-cat="images" data-keywords="placeholder image diagram">
+                <li class="ref" data-cat="web" data-keywords="aihw indigenous housing utilities 2026">
                     <div class="ref__num">07</div>
                     <div class="ref__body">
-                        <span class="ref__tag">Image</span>
+                        <span class="ref__tag">Web Source</span>
                         <p class="ref__cite ref__cite--apa">
-                            Photographer, P. (Year). <em>Image title</em> [Photograph]. Source.
+                            Australian Institute of Health and Welfare. (2026, March 6). <em>2.02 Access to functional housing with utilities</em>. Aboriginal and Torres Strait Islander Health Performance Framework. https://www.indigenoushpf.gov.au/measures/2-02-access-to-functional-housing-with-utilities
                         </p>
-                        <p class="ref__cite ref__cite--harvard" hidden>
-                            Photographer, P. Year, <em>Image title</em>, photograph, Source.
-                        </p>
-                        <p class="ref__cite ref__cite--ieee" hidden>
-                            P. Photographer, "Image title," Year. [Photograph].
-                        </p>
-                        <a class="ref__link" href="#" target="_blank" rel="noopener">View source ↗</a>
                     </div>
                 </li>
 
-                <!-- PLACEHOLDER · Tools -->
-                <li class="ref ref--placeholder" data-cat="tools" data-keywords="placeholder software tools">
+                <li class="ref" data-cat="papers" data-keywords="arena lord howe island renewable energy 2021">
                     <div class="ref__num">08</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Australian Renewable Energy Agency. (2021). <em>Lord Howe Island renewable energy project system design report</em>. https://arena.gov.au/assets/2021/09/lord-howeisland-renewable-energy-project-system-design-report.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="arena port gregory microgrid 2022">
+                    <div class="ref__num">09</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Australian Renewable Energy Agency. (2022). <em>Port Gregory microgrid knowledge sharing final report</em>. https://arena.gov.au/assets/2023/05/port-gregory-microgrid-knowledge-sharing-final-report.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="arena powering daintree sunverge 2017">
+                    <div class="ref__num">10</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Australian Renewable Energy Agency. (2017). <em>Powering Daintree</em>. https://arena.gov.au/assets/2018/08/powering-daintree-sunverge.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="bureau of meteorology csiro cape york climate 2019">
+                    <div class="ref__num">11</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Bureau of Meteorology &amp; CSIRO (2019). <em>A guide to weather and climate in Cape York: A climate guide for agriculture</em>. Australian Government. https://www.bom.gov.au/climate/climate-guides/guides/025-Cape-York-QLD-Climate-Guide.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="cape york nrm regions australia 2025">
+                    <div class="ref__num">12</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Cape York NRM - NRM Regions Australia. (2025, December 11). <em>NRM Regions Australia</em>. https://nrmregionsaustralia.com.au/region/cape-york-nrm
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="centre for appropriate technology bushlight port stewart 2008a">
+                    <div class="ref__num">13</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Centre for Appropriate Technology [CfAT]. (2008a). <em>Bushlight Case Study 23: Port Stewart</em>. Bushlight Energy Archive. https://static1.squarespace.com/static/5450868fe4b09b217330bb42/t/55a4ae70e4b07587ecc461e3/1436855920428/Bushlight+Case+study+23+-+Port+Stewart.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="centre for appropriate technology community planning lama lama">
+                    <div class="ref__num">14</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Centre for Appropriate Technology. (n.d.). <em>Community Planning with the Lama Lama Peoples</em>. https://www.cfat.org.au/community-planning-with-the-lama-lama-people
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="centre for appropriate technology 2008b indigenous renewable energy port stewart">
+                    <div class="ref__num">15</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Centre for Appropriate Technology (2008b). <em>Improving Livelihood Choices for Indigenous People through Improved Access to Sustainable and Renewable Energy Services 1 Port Stewart</em>. [online] Available at: https://static1.squarespace.com/static/5450868fe4b09b217330bb42/t/55a4ae70e4b07587ecc461e3/1436855920428/Bushlight+Case+study+23+-+Port+Stewart.pdf.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="centre for appropriate technology renewable energy 2021">
+                    <div class="ref__num">16</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Centre for Appropriate Technology. (2021). <em>Renewable Energy Program at Centre for Appropriate Technology</em>. Centre for Appropriate Technology. https://www.cfat.org.au/bushlight-archive
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="closing the gap targets outcomes 2020">
+                    <div class="ref__num">17</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Closing the Gap. (2020). <em>Closing the Gap Targets and Outcomes</em>. https://www.closingthegap.gov.au/national-agreement/targets
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="commonwealth of australia first nations clean energy strategy 2024">
+                    <div class="ref__num">18</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Commonwealth of Australia. (2024). <em>The First Nations Clean Energy Strategy</em>. https://www.energy.gov.au/sites/default/files/2024-12/First%20Nations%20Clean%20Energy%20Strategy.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="dccew first nations clean energy strategy case study 2024">
+                    <div class="ref__num">19</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Department of Climate Change, Energy, the Environment and Water. (2024). <em>First Nations clean energy strategy - Case study pack</em>. Department of Climate Change, Energy, the Environment and Water. https://www.energy.gov.au/sites/default/files/2024-12/Appendix%20A%20-%20First%20Nations%20Clean%20Energy%20Strategy%20Case%20Study%20Pack.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="detsi state of environment report 2024a">
+                    <div class="ref__num">20</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Department of the Environment, Tourism, Science and Innovation. (2024a). <em>About this report</em>. [online] State of the Environment Report 2024. Available at: https://www.stateoftheenvironment.detsi.qld.gov.au/about [Accessed 18 Mar. 2026].
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="detsi lama lama national park cypal maps 2024b">
+                    <div class="ref__num">21</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Department of the Environment, Tourism, Science and Innovation. (2024b). <em>Maps and resources | Lama Lama National Park (CYPAL)</em>. Queensland Government. https://parks.qld.gov.au/parks/lama-lama/maps-resources
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="detsi climate observations queensland 2025">
+                    <div class="ref__num">22</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Department of the Environment, Tourism, Science and Innovation. (2025). <em>Climate observations</em>. Queensland State of the Environment Report 2024. https://www.stateoftheenvironment.detsi.qld.gov.au/climate/climate-observations
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="department women aboriginal torres strait remote indigenous land infrastructure 2026">
+                    <div class="ref__num">23</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Department of Women, Aboriginal and Torres Strait Islander Partnerships and Multiculturalism. (2026, February 4). <em>Remote Indigenous Land and Infrastructure Program Office</em>. Department of Women, Aboriginal and Torres Strait Islander Partnerships and Multiculturalism. https://www.dwatsipm.qld.gov.au/our-work/aboriginal-torres-strait-islander-partnerships/discrete-remote-communities/remote-indigenous-land-infrastructure-program-office
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="legislation" data-keywords="electrical safety act 2002 qld queensland">
+                    <div class="ref__num">24</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Legislation</span>
+                        <p class="ref__cite ref__cite--apa">
+                            <em>Electrical Safety Act 2002</em> (Qld).
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="el banby moawad abouzalm photovoltaic fault detection 2023">
+                    <div class="ref__num">25</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Paper</span>
+                        <p class="ref__cite ref__cite--apa">
+                            El‐Banby, G.M., Moawad, N.M., Abouzalm, B.A., Abouzaid, W.F. and Ramadan, E.A. (2023). <em>Photovoltaic system fault detection techniques: a review</em>. Neural Computing and Applications, 35(35), pp.24829–24842. doi:https://doi.org/10.1007/s00521-023-09041-7.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="engineers without borders lama lama country 2026a">
+                    <div class="ref__num">26</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Engineers Without Borders Australia. (2026a). <em>EWB Challenge | About Lama Lama Country</em>. Ewbchallenge.org. https://ewbchallenge.org/challenge/port-stewart-lama-lama/about-lama-lama-country/
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="engineers without borders lama lama sacred places 2026b">
+                    <div class="ref__num">27</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Engineers Without Borders Australia. (2026b). <em>EWB challenge | Lama Lama Country – A look at the sacred places, sea Country, Ranger bases, existing amenities and infrastructure</em>. Engineers without Borders Australia. https://ewbchallenge.org/challenge/port-stewart-lama-lama/lama-lama-country-a-look-at-the-sacred-places/
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="engineers without borders tropical north queensland 2026c">
+                    <div class="ref__num">28</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Engineers Without Borders Australia. (2026c). <em>EWB challenge | About tropical North Queensland</em>. Engineers without Borders Australia. https://ewbchallenge.org/challenge/port-stewart-lama-lama/about-tropical-north-queensland/
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="engineers without borders port stewart lama lama 2026d">
+                    <div class="ref__num">29</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Engineers Without Borders Australia. (2026d). <em>EWB challenge | Port Stewart, Lama Lama</em>. Engineers without Borders Australia. https://ewbchallenge.org/challenge/port-stewart-lama-lama/
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="environmental defenders office first nations cultural heritage queensland 2024">
+                    <div class="ref__num">30</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Environmental Defenders Office. (2024). <em>First Nations Cultural Heritage Laws in Queensland</em>. https://www.edo.org.au/wp-content/uploads/2024/09/FIRST-NATIONS-CULTURAL-HERITAGE-LAWS-IN-QUEENSLAND.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="ergon energy isolated remote power stations 2023a">
+                    <div class="ref__num">31</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Ergon Energy. (2023a). <em>Isolated &amp; Remote Power Stations</em>. Www.ergon.com.au. https://www.ergon.com.au/network/our-network/isolated-and-remote-power-stations
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="ergon energy isolated networks solar capacity 2023b">
+                    <div class="ref__num">32</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Ergon Energy (2023b). <em>Isolated networks solar capacity</em>. [online] www.ergon.com.au. Available at: https://www.ergon.com.au/network/our-network/isolated-and-remote-power-stations/isolated-networks-solar-capacity.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="harrison first nations renewable energy unsw 2026">
+                    <div class="ref__num">33</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Harrison, K. (2026, February 26). <em>First Nations-owned renewable energy systems promote energy equity and self-determination</em>. UNSW Sydney. https://www.unsw.edu.au/arts-design-architecture/our-research/research-impact/case-studies/first-nations-owned-renewable-energy-systems?utm_source=copilot.com
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="heard berris cain power supply remote indigenous 2025">
+                    <div class="ref__num">34</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Heard, R., Berris, M., Cain, A., Croker, C., Frangos, M., Fraser, D., Grant, A., Riley, B. and Rodden, P. (2025). <em>The current state of power supply to remote Indigenous communities</em>. [online] Available at: https://www.engineersaustralia.org.au/sites/default/files/2025-04/Current-state-of-power-supply-to-remote-Indigenous-communities.pdf.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="legislation" data-keywords="information privacy act 2009 qld queensland">
+                    <div class="ref__num">35</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Legislation</span>
+                        <p class="ref__cite ref__cite--apa">
+                            <em>Information Privacy Act 2009</em> (Qld).
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="international energy agency renewable remote power generation 2000">
+                    <div class="ref__num">36</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            International Energy Agency (2000) <em>Renewable Remote Power Generation Programme – Policies</em>. IEA. https://www.iea.org/policies/4111-renewable-remote-power-generation-programme
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="lama lama country about us 2026">
+                    <div class="ref__num">37</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Lama Lama Country. (2026). <em>About Us – Welcome to Lama Lama Country</em>. [online] Available at: https://www.lamalama.org.au/about-us/.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="lama lama country rangers">
+                    <div class="ref__num">38</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Lama Lama Country. (n.d.). <em>Lama Lama Rangers</em>. Lama Lama Country. https://www.lamalama.org.au/lama-lama-rangers/
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="lama lama national park cypal facts maps 2021">
+                    <div class="ref__num">39</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Lama Lama National Park (Cape York Peninsula Aboriginal Land) — facts and maps. (2021). Qld.gov.au; jurisdiction=Queensland; sector=government; corporateName=Department of the Environment, Tourism, Science and Innovation. https://wetlandinfo.detsi.qld.gov.au/wetlands/facts-maps/national-park-lama-lama-cypal/
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="lama lama organisation about us 2021a">
+                    <div class="ref__num">40</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Lama Lama Organisation. (2021a). <em>About Us – Welcome to Lama Lama Country</em>. Lamalama.org.au. https://www.lamalama.org.au/about-us/
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="lama lama organisation governance 2021b">
+                    <div class="ref__num">41</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Lama Lama Organisation. (2021b). <em>Governance – Welcome to Lama Lama Country</em>. Lamalama.org.au. https://www.lamalama.org.au/governance/
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="mahmud roy electricity supply first nations communities 2025">
+                    <div class="ref__num">42</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Paper</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Mahmud, M.A. and Roy, T.K. (2025). <em>Electricity Supply Systems for First Nations Communities in Remote Australia: Evidence, Consumer Protections and Pathways to Energy Equity</em>. Energies, [online] 18(19), pp.5130–5130. doi:https://doi.org/10.3390/en18195130.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="maiam nayri wingara indigenous data sovereignty 2026">
+                    <div class="ref__num">43</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Maiam Nayri Wingara. (2026). <em>Defining Indigenous Data Sovereignty And Indigenous Data Governance</em>. Maiam Nayri Wingara. https://www.maiamnayriwingara.org/definitions
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="martire powering indigenous communities renewables renew 2020">
+                    <div class="ref__num">44</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Martire, J. L. (2020). <em>Powering Indigenous communities with renewables</em>. Renew. https://renew.org.au/renew-magazine/solar-batteries/powering-indigenous-communities-with-renewables/
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="mummery network regulation climate resilience energy transition 2025">
+                    <div class="ref__num">45</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Paper</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Mummery, J. (2025). <em>Rethinking network regulation for climate resilience in Australia's energy transition</em>. Energy Policy, 205, 114674. https://www.sciencedirect.com/science/article/pii/S0301421525001818
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="niaa framework governance indigenous data 2024">
+                    <div class="ref__num">46</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            National Indigenous Australians Agency. (2024, May). <em>Framework for Governance of Indigenous Data</em>. Commonwealth of Australia. https://www.niaa.gov.au/sites/default/files/documents/2024-05/framework-governance-indigenous-data.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="niklas mey community energy resilience 2023">
+                    <div class="ref__num">47</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Niklas, S., &amp; Mey, F. (2023). <em>Understanding the concept of community energy resilience and its applications</em>. Institute for Sustainable Futures, University of Technology Sydney. https://www.uts.edu.au/globalassets/sites/default/files/2024-09/niklas-and-mey_2023_understanding-the-concept-of-community-energy-resilience-and-its-applications_desktop-review_final.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="office information commissioner queensland qpps 2025">
+                    <div class="ref__num">48</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Office of the Information Commissioner Queensland. (2025). <em>Basic guide to the QPPs</em>. Office of the Information Commissioner Queensland. https://www.oic.qld.gov.au/guidelines/for-government/guidelines-privacy-principles/basic-guide-to-the-qpps
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="preece van oosterzee cape york ecosystem services 2016">
+                    <div class="ref__num">49</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Paper</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Preece, L. D., van Oosterzee, P., Dungey, K., Standley, P.-M., &amp; Preece, N. D. (2016). <em>Ecosystem service valuation reinforces world class value of Cape York Peninsula's ecosystems but environment and Indigenous people lose out</em>. Ecosystem Services, 18, 154–164. https://www.sciencedirect.com/science/article/pii/S221204161630064X
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="legislation" data-keywords="privacy act 1988 commonwealth australia">
+                    <div class="ref__num">50</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Legislation</span>
+                        <p class="ref__cite ref__cite--apa">
+                            <em>Privacy Act 1988</em> (Cth) https://www.legislation.gov.au/C2004A03712/latest/text
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="queensland competition authority regulated retail electricity prices 2025">
+                    <div class="ref__num">51</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Competition Authority. (2025). <em>Regulated retail electricity prices 2025–26 final determination</em>. https://www.qca.org.au/wp-content/uploads/2024/12/final-determination.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="queensland government aboriginal cultural heritage duty of care 2025">
+                    <div class="ref__num">52</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Government. (2025). <em>Aboriginal Cultural Heritage Act 2003 Duty of Care Guidelines</em> (pp. 12–13). https://www.qld.gov.au/__data/assets/word_doc/0031/175198/duty-of-care-guidelines-2025.docx
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="queensland government climate change cape york 2024">
+                    <div class="ref__num">53</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Government. (2024). <em>Climate change in the Cape York region</em> (Version 2). https://data.longpaddock.qld.gov.au/static/Regional%20Impact%20Summaries/Qld%20Climate%20Change%20Impact%20Summary_Cape%20York.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="queensland government disaster assistance cape york rainfall 2022">
+                    <div class="ref__num">54</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Government. (2022, April 27). <em>Disaster assistance available for Cape York rainfall event</em>. Ministerial Media Statements. https://statements.qld.gov.au/statements/95032
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="queensland reconstruction authority cape york torres strait resilience 2022">
+                    <div class="ref__num">55</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Reconstruction Authority. (2022). <em>Cape York and Torres Strait regional resilience strategy</em>. https://www.qra.qld.gov.au/sites/default/files/2022-08/cape_york_and_torres_strait_regional_resilience_strategy.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="queensland treasury electricity pricing inquiry 2016">
+                    <div class="ref__num">56</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Treasury. (2016). <em>ELECTRICITY PRICING INQUIRY</em>. Queensland Treasury. https://www.treasury.qld.gov.au/files/Electricity-Final-Report.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="queensland treasury budget overview 2024a">
+                    <div class="ref__num">57</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Treasury. (2024a). <em>Budget Overview DOING WHAT MATTERS FOR QUEENSLAND</em>. Queensland Government. https://www.treasury.qld.gov.au/files/Budget_2024-25_Budget_Overview.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="queensland treasury annual report 2024b">
+                    <div class="ref__num">58</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Queensland Treasury. (2024b). <em>Queensland Treasury ANNUAL REPORT</em>. Queensland Government. https://www.parliament.qld.gov.au/Work-of-the-Assembly/Tabled-Papers/docs/5825T1460/5825t1460.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="reardon smith the wet seasons cape york oceania 2023">
+                    <div class="ref__num">59</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Paper</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Reardon-Smith, M. (2023). <em>The Wet: Shifting seasons, climate change and natural cycles in Cape York Peninsula, Queensland</em>. Oceania, 93(3), 302–320. https://onlinelibrary.wiley.com/doi/full/10.1002/ocea.5377
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="renew powering indigenous communities renewables 2020">
+                    <div class="ref__num">60</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Renew (2020). <em>Powering Indigenous communities with renewables - Renew magazine</em>. [online] Renew. Available at: https://renew.org.au/renew-magazine/solar-batteries/powering-indigenous-communities-with-renewables/.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="renewable energy program cfat bushlight archive 2021">
+                    <div class="ref__num">61</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Renewable Energy Program at CfAT (2021). <em>Centre for Appropriate Technology</em>. [online] Centre for Appropriate Technology. Available at: https://www.cfat.org.au/bushlight-archive.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="rose langton smith clinch indigenous data governance 2023">
+                    <div class="ref__num">62</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Paper</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Rose, J., Langton, M., Smith, K., &amp; Clinch, D. (2023). <em>Indigenous Data Governance in Australia: Towards a National Framework</em>. The International Indigenous Policy Journal, 14(1), 19–22. https://doi.org/10.18584/iipj.2023.14.1.10987
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="tools" data-keywords="standards australia electrical installations wiring rules as nzs 3000 2018">
+                    <div class="ref__num">63</div>
                     <div class="ref__body">
                         <span class="ref__tag">Software</span>
                         <p class="ref__cite ref__cite--apa">
-                            Tool Name. (Year). <em>Version / Description</em>. Vendor.
+                            Standards Australia, &amp; Standards New Zealand. (2018). <em>Electrical installations (AS/NZS 3000:2018)</em>. https://www.standards.org.au/flagship-projects/wiring-rules
                         </p>
-                        <p class="ref__cite ref__cite--harvard" hidden>
-                            Tool Name Year, <em>Version / Description</em>, Vendor.
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="tahir dwyer kelly microgrids australian funding 2024">
+                    <div class="ref__num">64</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Paper</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Tahir, F., Dwyer, S., &amp; Kelly, S. (2024). <em>Emergent opportunities and barriers on the feasibility of microgrids: Qualitative findings from an Australian funding program</em>. Energy Research &amp; Social Science, 109, Article 103423. https://www.sciencedirect.com/science/article/pii/S2214629624000148?via%3Dihub
                         </p>
-                        <p class="ref__cite ref__cite--ieee" hidden>
-                            "Tool Name," Vendor, Year.
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="telstra coverage rollout maps 2022">
+                    <div class="ref__num">65</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Telstra. (2022). <em>Our Coverage &amp; Rollout Maps</em>. Telstra.com. https://www.telstra.com.au/coverage-networks/our-coverage
                         </p>
-                        <a class="ref__link" href="#" target="_blank" rel="noopener">View source ↗</a>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="venkatakrishnan rengaraj tamilselvi solar pv fault detection 2023">
+                    <div class="ref__num">66</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Paper</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Venkatakrishnan, G.R., R Rengaraj, S Tamilselvi, J Harshini, Sahoo, A., C. Ahamed Saleel, Abbas, M., Erdem Cüce, C Jazlyn, Shaik, S., Pınar Mert Cuce and Saffa Riffat (2023). <em>Detection, location, and diagnosis of different faults in large solar PV system—a review</em>. International Journal of Low-carbon Technologies, 18, pp.659–674. doi:https://doi.org/10.1093/ijlct/ctad018.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="legislation" data-keywords="work health and safety act 2011 qld queensland whs">
+                    <div class="ref__num">67</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Legislation</span>
+                        <p class="ref__cite ref__cite--apa">
+                            <em>Work Health and Safety Act 2011</em> (Qld).
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="papers" data-keywords="workplace health safety queensland rural industry 2012">
+                    <div class="ref__num">68</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Report</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Workplace Health and Safety Queensland. (2012). <em>Work health and safety laws Guide for Queensland's rural industry</em> (p. 18). https://qwalc.org.au/wp-content/uploads/2016/07/rural-guide-whslaws.pdf
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="worksafe queensland electrical safety laws 2020">
+                    <div class="ref__num">69</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            WorkSafe Queensland. (2020, August 7). <em>Electrical safety laws</em>. WorkSafe Queensland; WorkSafe Queensland. https://www.worksafe.qld.gov.au/laws-and-compliance/electrical-safety-laws
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="worksafe queensland work health safety laws 2022">
+                    <div class="ref__num">70</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            WorkSafe Queensland. (2022, September 24). <em>Work health and safety laws</em>. Www.worksafe.qld.gov.au. https://www.worksafe.qld.gov.au/laws-and-compliance/work-health-and-safety-laws
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="yaru water safe drinking lama lama community 2024">
+                    <div class="ref__num">71</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Yaru Water. (2024, October 10). <em>Supporting Safe Drinking Water for the Lama Lama Community</em>. https://yaruwater.com/blogs/news/supporting-safe-drinking-water-for-the-lama-lama-community
+                        </p>
+                    </div>
+                </li>
+
+                <li class="ref" data-cat="web" data-keywords="yintjingga aboriginal corporation lama lama country">
+                    <div class="ref__num">72</div>
+                    <div class="ref__body">
+                        <span class="ref__tag">Web Source</span>
+                        <p class="ref__cite ref__cite--apa">
+                            Yintjingga Aboriginal Corporation. (n.d.). <em>Welcome to Lama Lama Country</em>. https://www.lamalama.org.au/
+                        </p>
                     </div>
                 </li>
 
@@ -306,36 +885,39 @@
         </div>
     </footer>
 
-    <!-- JS · search, filter, citation style toggle -->
     <script>
     (function () {
         const search = document.getElementById('refSearch');
-        const chips = document.querySelectorAll('.g-chip');
+        const chips = document.querySelectorAll('#references .g-chip');
         const items = document.querySelectorAll('.ref');
         const empty = document.getElementById('refEmpty');
         let activeCat = 'all';
 
         function applyFilters() {
+            if (!search) return;
             const q = (search.value || '').trim().toLowerCase();
             let visible = 0;
             items.forEach(item => {
                 const cat = item.dataset.cat || '';
-                const keys = (item.dataset.keywords || '') + ' ' + item.textContent.toLowerCase();
+                const haystack = ((item.dataset.keywords || '') + ' ' + item.textContent).toLowerCase();
                 const matchCat = activeCat === 'all' || cat === activeCat;
-                const matchQuery = q === '' || keys.indexOf(q) !== -1;
+                const matchQuery = q === '' || haystack.indexOf(q) !== -1;
                 const show = matchCat && matchQuery;
                 item.hidden = !show;
                 if (show) visible++;
             });
-            empty.hidden = visible !== 0;
+            if (empty) empty.hidden = visible !== 0;
         }
 
-        if (search) search.addEventListener('input', applyFilters);
+        if (search) {
+            search.addEventListener('input', applyFilters);
+        }
+
         chips.forEach(chip => {
             chip.addEventListener('click', () => {
                 chips.forEach(c => c.classList.remove('g-chip--active'));
                 chip.classList.add('g-chip--active');
-                activeCat = chip.dataset.cat;
+                activeCat = chip.dataset.cat || 'all';
                 applyFilters();
             });
         });
@@ -352,6 +934,8 @@
                 });
             });
         });
+
+        applyFilters();
     })();
     </script>
 

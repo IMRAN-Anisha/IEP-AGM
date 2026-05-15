@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solution · Team 7 — EWB Challenge</title>
-     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -55,10 +55,10 @@
 
             <p class="sol-hero__intro">
                 Team 7 proposes an intelligent monitoring and fault detection system for
-                Stand-Alone Power Systems (SAPS), designed in response to the needs of the
-                Port Stewart community — reflecting local cultural values while addressing
-                the environmental challenges and economic constraints of operating energy
-                systems in remote areas.
+                Stand-Alone Power Systems (SAPS). The solution is designed in response to
+                the needs of the Port Stewart community — reflecting local cultural values
+                while addressing the environmental challenges and economic constraints of
+                operating energy systems in remote areas.
             </p>
 
             <div class="sol-stats">
@@ -86,10 +86,10 @@
     <nav class="subnav">
         <div class="subnav__inner">
             <a href="#overview" class="subnav__link">Our Design Solution</a>
-            <a href="#components" class="subnav__link">Components Overview</a>
+            <a href="#prototype" class="subnav__link">Prototype System Design</a>
             <a href="#hardware" class="subnav__link">Hardware</a>
             <a href="#software" class="subnav__link">Software</a>
-            <a href="#testing" class="subnav__link">Testing</a>
+            <a href="#testing" class="subnav__link">Prototype &amp; Testing</a>
         </div>
     </nav>
 
@@ -107,95 +107,198 @@
                 <em>quietly</em> looked after.
             </h2>
 
+            <p class="block__lead">
+                Our solution improves the reliability and long-term performance of SAPS by
+                enabling early fault detection, reducing the risk of equipment damage, and
+                minimising system downtime. By providing timely insights into system health,
+                it also supports faster and more effective remote maintenance responses.
+            </p>
+
+            <p class="block__lead">
+                This is achieved through continuous monitoring of key operating parameters —
+                <strong>current, voltage, temperature, and moisture levels</strong>. The
+                collected data is analysed using threshold-based fault detection methods to
+                identify abnormal operating conditions. When potential issues are detected,
+                the system automatically sends SMS alerts, allowing operators and maintenance
+                teams to respond quickly before faults escalate.
+            </p>
+
             <div class="sol-feature">
                 <div>
-                    <p class="block__lead" style="margin-bottom: 24px;">
-                        Our solution improves the reliability and long-term performance of
-                        SAPS by enabling early fault detection, reducing the risk of equipment
-                        damage, and minimising system downtime. By providing timely insights
-                        into system health, it also supports faster and more effective remote
-                        maintenance responses.
-                    </p>
                     <p class="block__lead" style="margin-bottom: 0;">
-                        This is achieved through continuous monitoring of key operating
-                        parameters — current, voltage, temperature and moisture — analysed
-                        using threshold-based fault detection methods to identify abnormal
-                        conditions. When potential issues are detected, the system automatically
-                        sends SMS alerts, allowing operators and maintenance teams to respond
-                        quickly before faults escalate.
+                        By collecting and tracking this data over time, operators can better
+                        understand energy generation, storage, and consumption patterns across
+                        the system. This supports more informed decision-making, improves
+                        operational efficiency, and ensures the power system can continue to
+                        meet the needs of the community under changing environmental conditions.
                     </p>
                 </div>
 
                 <ul class="sol-feature__list">
                     <li>
                         <strong>Continuous monitoring</strong>
-                        Tracks current, voltage, temperature and moisture in real time to provide
-                        full visibility into system performance.
+                        Tracks current, voltage, temperature and moisture in real time.
                     </li>
                     <li>
                         <strong>Threshold-based diagnosis</strong>
-                        Compares monitored data against predefined safe limits to detect overvoltage,
+                        Compares readings to predefined safe limits to detect overvoltage,
                         excessive current, overheating, or moisture intrusion.
                     </li>
                     <li>
                         <strong>Automatic SMS alerts</strong>
-                        Notifies operators or maintenance personnel the moment a fault or warning
-                        condition is identified — enabling rapid, remote response.
+                        Notifies operators or maintenance personnel the moment a fault is identified.
                     </li>
                     <li>
                         <strong>Built for resilience</strong>
-                        Minimises equipment damage, reduces maintenance costs, and strengthens
-                        the overall resilience of the energy system in remote community settings.
+                        Minimises equipment damage, lowers maintenance costs, and strengthens
+                        the resilience of the energy system in remote settings.
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- COMPONENTS OVERVIEW -->
-    <section class="block block--bone" id="components">
+    <!-- PROTOTYPE SYSTEM DESIGN -->
+    <section class="block block--bone" id="prototype">
         <div class="block__inner">
             <div class="block__eyebrow">
                 <span class="num">02</span>
                 <span class="line"></span>
-                <span class="label">Components Overview</span>
+                <span class="label">Prototype System Design</span>
             </div>
 
             <h2 class="block__title">
-                The system, at a <em>glance.</em>
+                From signal,<br>to <em>action.</em>
             </h2>
 
             <p class="block__lead">
-                The system is built from a small number of robust, well-understood parts —
-                a sensing layer that watches the panels and batteries, a processing layer
-                that interprets that data, and a communications layer that gets the message
-                out when something is wrong.
+                The prototype monitors current, voltage, temperature, moisture, and battery
+                condition in remote energy systems. A <strong>Raspberry Pi Pico W</strong>
+                processes the sensor data and detects faults such as overheating, abnormal
+                current, low battery, and moisture intrusion. When a fault occurs, the system
+                logs the data to ThingsBoard, displays LED status indicators, and sends an
+                SMS alert to Rangers through Twilio.
             </p>
 
-            <div class="components">
-                <article class="comp">
-                    <div class="comp__icon">S</div>
-                    <h3 class="comp__name">Sensors</h3>
-                    <p class="comp__desc">Current, voltage, temperature, and moisture sensors mounted at key points across the SAPS.</p>
-                </article>
+            <figure class="figure figure--spaced">
+                <img src="assets/system-architecture.png" alt="Data flowchart for the prototype monitoring system">
+                <figcaption class="figure__caption">
+                    <span class="tag">Fig. 01</span>
+                    <span>Data flow · sensors → processing → alerts</span>
+                </figcaption>
+            </figure>
 
-                <article class="comp">
-                    <div class="comp__icon">M</div>
-                    <h3 class="comp__name">Microcontroller</h3>
-                    <p class="comp__desc">A low-power controller reads sensor data, applies threshold logic, and triggers alerts.</p>
-                </article>
+            <div class="media-pair" style="margin-top: 64px;">
+                <div class="media-pair__media">
+                    <img src="assets/external-hardware.png" alt="Internal components of the prototype">
+                </div>
+                <div class="media-pair__body">
+                    <h3>Internal components</h3>
+                    <p>
+                        The internal components include the <strong>main controller, sensors,
+                        power protection, communication module, relay module, battery, and
+                        wiring</strong>. These parts work together to collect energy system
+                        data, detect faults, and trigger alerts when unsafe conditions occur.
+                    </p>
+                    <p>
+                        The layout keeps the battery separated from the electronics to improve
+                        safety, while the sensors and modules are arranged clearly for
+                        maintenance and testing.
+                    </p>
+                </div>
+            </div>
 
-                <article class="comp">
-                    <div class="comp__icon">G</div>
-                    <h3 class="comp__name">GSM Module</h3>
-                    <p class="comp__desc">Sends SMS notifications over cellular networks — no internet required.</p>
-                </article>
+            <div class="media-pair media-pair--reverse" style="margin-top: 64px;">
+                <div class="media-pair__media">
+                    <img src="assets/box.png" alt="External enclosure of the prototype">
+                </div>
+                <div class="media-pair__body">
+                    <h3>External enclosure</h3>
+                    <p>
+                        The external enclosure protects the prototype from harsh remote
+                        conditions — <strong>dust, rain, heat, vibration, and possible
+                        wildlife interference</strong>. It includes a rugged ABS body,
+                        flexible TPU sealing, external antenna, cable gland, LED status
+                        window, and mounting points.
+                    </p>
+                    <p>
+                        These features make the system suitable for outdoor field use in
+                        remote energy monitoring deployments.
+                    </p>
+                </div>
+            </div>
 
-                <article class="comp">
-                    <div class="comp__icon">E</div>
-                    <h3 class="comp__name">Enclosure</h3>
-                    <p class="comp__desc">Weatherproof, UV-stable housing designed for tropical, wildlife-prone environments.</p>
-                </article>
+            <!-- Internal Component Carousel -->
+            <div class="carousel" style="margin-top: 80px;">
+                <header class="carousel__head">
+                    <div>
+                        <span class="carousel__eyebrow">A closer look</span>
+                        <h3 class="carousel__title">Internal components, in detail.</h3>
+                    </div>
+                    <div class="carousel__controls">
+                        <button class="carousel__btn" data-dir="prev" aria-label="Previous">←</button>
+                        <button class="carousel__btn" data-dir="next" aria-label="Next">→</button>
+                    </div>
+                </header>
+
+                <div class="carousel__track" id="carouselTrack">
+                    <article class="carousel__slide">
+                        <div class="carousel__media">
+                            <img src="assets/internal-components.png" alt="Raspberry Pi Pico W controller" loading="lazy">
+                        </div>
+                        <div class="carousel__caption">
+                            <span class="carousel__num">01</span>
+                            <h4>Raspberry Pi Pico W</h4>
+                            <p>The main controller — reads all sensor inputs, runs the threshold-based fault detection logic, and triggers alerts.</p>
+                        </div>
+                    </article>
+
+                    <article class="carousel__slide">
+                        <div class="carousel__media">
+                            <img src="assets/internal-microcontroller.png" alt="Sensor array" loading="lazy">
+                        </div>
+                        <div class="carousel__caption">
+                            <span class="carousel__num">02</span>
+                            <h4>Sensor array</h4>
+                            <p>Current, voltage, temperature, and moisture sensors capture the full electrical and environmental picture of the SAPS.</p>
+                        </div>
+                    </article>
+
+                    <article class="carousel__slide">
+                        <div class="carousel__media">
+                            <img src="assets/internal-connectivity.png" alt="GSM communication module" loading="lazy">
+                        </div>
+                        <div class="carousel__caption">
+                            <span class="carousel__num">03</span>
+                            <h4>GSM module</h4>
+                            <p>Sends SMS alerts over cellular networks via Twilio — no internet required, works on low bandwidth.</p>
+                        </div>
+                    </article>
+
+                    <article class="carousel__slide">
+                        <div class="carousel__media">
+                            <img src="assets/internal-system.png" alt="Relay and power protection" loading="lazy">
+                        </div>
+                        <div class="carousel__caption">
+                            <span class="carousel__num">04</span>
+                            <h4>Relay &amp; power protection</h4>
+                            <p>Supports safety cutoff when unsafe conditions are detected, and protects downstream electronics from surges.</p>
+                        </div>
+                    </article>
+
+                    <article class="carousel__slide">
+                        <div class="carousel__media">
+                            <img src="assets/sol-carousel-5.png" alt="Battery and LED status indicators" loading="lazy">
+                        </div>
+                        <div class="carousel__caption">
+                            <span class="carousel__num">05</span>
+                            <h4>Battery &amp; LEDs</h4>
+                            <p>Kept separated from electronics for safety. LED status indicators provide at-a-glance system health for Rangers in the field.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="carousel__dots" id="carouselDots"></div>
             </div>
         </div>
     </section>
@@ -214,44 +317,69 @@
                 and the long wet season.
             </h2>
 
-            <div class="media-pair">
-                <div class="media-pair__media media-pair__media--placeholder">
-                    Hardware render · placeholder
-                </div>
-                <div class="media-pair__body">
-                    <h3>A rugged sensing layer</h3>
-                    <p>
-                        Sensors are mounted directly to the solar charge controller, battery
-                        terminals and inside the enclosure to capture the full electrical and
-                        environmental picture. All wiring is sealed and rated for outdoor
-                        tropical conditions.
+            <div class="sol-feature">
+                <div>
+                    <p class="block__lead" style="margin-bottom: 24px;">
+                        The internal hardware includes <strong>sensors, power protection
+                        circuits, a Raspberry Pi Pico controller, GSM communication,
+                        relay cutoff, battery monitoring, and LED indicators</strong>.
                     </p>
-                    <p>
-                        Components have been selected for long mean-time-between-failure
-                        ratings, low power draw, and field-serviceability — so that when
-                        something does eventually wear out, a Ranger can swap it without a
-                        specialist callout.
+                    <p class="block__lead" style="margin-bottom: 0;">
+                        Sensors collect current, voltage, temperature, moisture, and battery
+                        data. The Raspberry Pi Pico checks these values against fault
+                        thresholds and identifies unsafe conditions. If a fault is detected,
+                        the relay can support safety cutoff, the LEDs show the system status,
+                        and the GSM module sends an alert to maintenance staff or Rangers.
                     </p>
                 </div>
+
+                <ul class="sol-feature__list">
+                    <li>
+                        <strong>Sensing layer</strong>
+                        Current, voltage, temperature, moisture, and battery sensors.
+                    </li>
+                    <li>
+                        <strong>Processing</strong>
+                        Raspberry Pi Pico W microcontroller runs threshold logic on-device.
+                    </li>
+                    <li>
+                        <strong>Communication</strong>
+                        GSM module dispatches SMS alerts via Twilio.
+                    </li>
+                    <li>
+                        <strong>Safety &amp; status</strong>
+                        Relay cutoff and LED indicators for at-a-glance field checking.
+                    </li>
+                </ul>
             </div>
 
-            <div class="media-pair media-pair--reverse" style="margin-top: 80px;">
-                <div class="media-pair__media media-pair__media--placeholder">
-                    Enclosure diagram · placeholder
-                </div>
-                <div class="media-pair__body">
-                    <h3>A weatherproof enclosure</h3>
+            <!-- External hardware feature -->
+            <div class="hw-callout" style="margin-top: 72px;">
+                <div class="hw-callout__body">
+                    <span class="hw-callout__label">External design</span>
+                    <h3 class="hw-callout__title">A pole-mounted enclosure, built for the field.</h3>
                     <p>
-                        The IP-rated housing keeps moisture, dust and wildlife out, while a
-                        ventilated heat-management design keeps internal temperatures within
-                        operating range during the dry season.
+                        The external design focuses on protecting the monitoring device in
+                        harsh remote conditions. The enclosure is mounted on a pole near the
+                        energy system and protects the internal sensors, controller, battery,
+                        and communication module from <strong>rain, dust, heat, vibration,
+                        and possible wildlife interference</strong>.
                     </p>
                     <p>
-                        Mounting points are designed for both wall and pole installation, with
-                        a service hatch that can be opened with standard tools — no proprietary
-                        fasteners.
+                        It includes an external antenna for GSM communication, cable entry
+                        points for power and sensor wiring, and a visible LED status window
+                        for quick field checking.
                     </p>
                 </div>
+                <aside class="hw-callout__spec">
+                    <span class="hw-callout__spec-label">Estimated dimensions</span>
+                    <p class="hw-callout__spec-value">
+                        <span>28 <em>cm</em></span><span class="sep">×</span>
+                        <span>20 <em>cm</em></span><span class="sep">×</span>
+                        <span>9 <em>cm</em></span>
+                    </p>
+                    <span class="hw-callout__spec-axis">Length × Width × Height</span>
+                </aside>
             </div>
         </div>
     </section>
@@ -275,52 +403,160 @@
                 system continues to detect faults even when connectivity drops out.
             </p>
 
-            <div class="sol-feature">
-                <ul class="sol-feature__list">
-                    <li>
-                        <strong>On-device logic</strong>
-                        All threshold checks, fault classification and alert prioritisation run
-                        locally — no internet dependency.
-                    </li>
-                    <li>
-                        <strong>Plain-language alerts</strong>
-                        SMS messages describe the problem and the recommended next step using
-                        clear, non-technical language.
-                    </li>
-                    <li>
-                        <strong>Event logging</strong>
-                        Every alert and reading is timestamped and stored for later retrieval,
-                        building a maintenance history the community can own.
-                    </li>
-                </ul>
-                <ul class="sol-feature__list">
-                    <li>
-                        <strong>Configurable thresholds</strong>
-                        Safe operating bands can be tuned by trained Rangers as the system
-                        matures and seasonal patterns become clearer.
-                    </li>
-                    <li>
-                        <strong>Watchdog &amp; self-heal</strong>
-                        Built-in watchdog timers restart the firmware if it hangs, ensuring
-                        the device returns to monitoring without manual intervention.
-                    </li>
-                    <li>
-                        <strong>Open &amp; auditable</strong>
-                        The codebase is open source and documented, so future maintainers —
-                        community or otherwise — can read, repair and extend it.
-                    </li>
-                </ul>
+            <!-- Software Action Steps Table -->
+            <div class="data-table" style="margin-top: 56px;">
+                <header class="data-table__head">
+                    <div class="data-table__h"><span class="data-table__h-icon">◐</span> Step</div>
+                    <div class="data-table__h"><span class="data-table__h-icon">◐</span> Software Action</div>
+                    <div class="data-table__h"><span class="data-table__h-icon">◐</span> Purpose</div>
+                </header>
+                <div class="data-table__rows">
+                    <div class="data-table__row">
+                        <div class="data-table__cell data-table__cell--num">01</div>
+                        <div class="data-table__cell data-table__cell--title">Read sensor values</div>
+                        <div class="data-table__cell">Collect voltage, current, temperature, moisture, and battery data.</div>
+                    </div>
+                    <div class="data-table__row">
+                        <div class="data-table__cell data-table__cell--num">02</div>
+                        <div class="data-table__cell data-table__cell--title">Compare with thresholds</div>
+                        <div class="data-table__cell">Check whether each value is within the safe range.</div>
+                    </div>
+                    <div class="data-table__row">
+                        <div class="data-table__cell data-table__cell--num">03</div>
+                        <div class="data-table__cell data-table__cell--title">Detect fault type</div>
+                        <div class="data-table__cell">Identify issues such as overheating, low battery, water ingress, or abnormal current.</div>
+                    </div>
+                    <div class="data-table__row">
+                        <div class="data-table__cell data-table__cell--num">04</div>
+                        <div class="data-table__cell data-table__cell--title">Update status</div>
+                        <div class="data-table__cell">Show whether the system is normal, warning, or fault detected.</div>
+                    </div>
+                    <div class="data-table__row">
+                        <div class="data-table__cell data-table__cell--num">05</div>
+                        <div class="data-table__cell data-table__cell--title">Send data to dashboard</div>
+                        <div class="data-table__cell">Log readings for monitoring and trend analysis.</div>
+                    </div>
+                    <div class="data-table__row">
+                        <div class="data-table__cell data-table__cell--num">06</div>
+                        <div class="data-table__cell data-table__cell--title">Trigger SMS alert</div>
+                        <div class="data-table__cell">Notify Rangers or maintenance staff when urgent action is needed.</div>
+                    </div>
+                    <div class="data-table__row">
+                        <div class="data-table__cell data-table__cell--num">07</div>
+                        <div class="data-table__cell data-table__cell--title">Continue monitoring</div>
+                        <div class="data-table__cell">Keep checking the system in repeated cycles.</div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Fault Detection Logic -->
+            <div class="media-pair" style="margin-top: 96px;">
+                <div class="media-pair__media">
+                    <img src="assets/fault-detection-logic.png" alt="Fault detection logic diagram">
+                </div>
+                <div class="media-pair__body">
+                    <h3 style="color: var(--bone);">Fault detection logic</h3>
+                    <p style="color: rgba(245, 239, 228, 0.78);">
+                        The fault detection program uses <strong style="color: var(--clay);">threshold-based
+                        logic</strong> to decide whether the system is operating normally or
+                        experiencing a fault. Sensor readings — voltage, current, temperature,
+                        and moisture — are checked against predefined safe limits. If a value
+                        exceeds the limit, the system identifies the fault type, such as low
+                        battery, overheating, water ingress, or power interruption.
+                    </p>
+                    <p style="color: rgba(245, 239, 228, 0.78);">
+                        This simple logic is suitable for the prototype because it is easy to
+                        test, adjust, and explain. The thresholds can also be changed later
+                        based on real field data.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SMS Alert -->
+            <div class="media-pair media-pair--reverse" style="margin-top: 80px;">
+                <div class="media-pair__media">
+                    <img src="assets/SMS-demo.png" alt="SMS alert example">
+                </div>
+                <div class="media-pair__body">
+                    <h3 style="color: var(--bone);">SMS alerts</h3>
+                    <p style="color: rgba(245, 239, 228, 0.78);">
+                        The SMS alert system sends a warning message when the software detects
+                        a fault. The alert includes the <strong style="color: var(--clay);">fault type</strong>
+                        and key sensor readings — voltage, temperature, and moisture level —
+                        allowing Rangers or maintenance staff to understand the issue without
+                        needing to check the physical device immediately.
+                    </p>
+                    <p style="color: rgba(245, 239, 228, 0.78);">
+                        SMS was chosen because it is more suitable for remote areas where
+                        internet access may be weak or unreliable. Even if dashboard access
+                        is limited, urgent alerts can still be sent through the GSM/Twilio
+                        alert system.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ThingsBoard Dashboard -->
+            <div class="media-pair" style="margin-top: 80px;">
+                <div class="media-pair__media">
+                    <img src="assets/sol-thingsboard.png" alt="ThingsBoard remote monitoring dashboard">
+                </div>
+                <div class="media-pair__body">
+                    <h3 style="color: var(--bone);">ThingsBoard dashboard</h3>
+                    <p style="color: rgba(245, 239, 228, 0.78);">
+                        ThingsBoard is used as the remote monitoring dashboard for the
+                        prototype. It displays <strong style="color: var(--clay);">sensor
+                        readings, device status, and logged fault events</strong>, helping
+                        users check whether the energy system is operating normally or if a
+                        fault has been detected.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Software Stack -->
+            <div style="margin-top: 96px;">
+                <h3 class="sol-stack-title">The software stack.</h3>
+                <p style="color: rgba(245, 239, 228, 0.78); max-width: 720px; margin-bottom: 40px;">
+                    Five core technologies make the prototype work together. Each was chosen
+                    deliberately for its fit with remote, low-bandwidth operation on Country.
+                </p>
+
+                <div class="components">
+                    <article class="comp">
+                        <div class="comp__icon">T</div>
+                        <h3 class="comp__name">ThingsBoard</h3>
+                        <p class="comp__desc">Remote monitoring dashboard — displays sensor readings, device status, and logged fault events.</p>
+                    </article>
+
+                    <article class="comp">
+                        <div class="comp__icon">M</div>
+                        <h3 class="comp__name">MQTT</h3>
+                        <p class="comp__desc">Lightweight messaging protocol that transfers sensor data on low-bandwidth, intermittent connections.</p>
+                    </article>
+
+                    <article class="comp">
+                        <div class="comp__icon">S</div>
+                        <h3 class="comp__name">Twilio SMS</h3>
+                        <p class="comp__desc">SMS alert system — sends fault type, voltage, temperature, moisture, device ID, and location.</p>
+                    </article>
+
+                    <article class="comp">
+                        <div class="comp__icon">W</div>
+                        <h3 class="comp__name">Wokwi</h3>
+                        <p class="comp__desc">Circuit and logic simulator — sensor values can be changed manually to verify fault response.</p>
+                    </article>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- TESTING -->
+    <!-- PROTOTYPE & TESTING -->
     <section class="block block--bone" id="testing">
         <div class="block__inner">
             <div class="block__eyebrow">
                 <span class="num">05</span>
                 <span class="line"></span>
-                <span class="label">Testing</span>
+                <span class="label">Prototype &amp; Testing</span>
             </div>
 
             <h2 class="block__title">
@@ -328,37 +564,194 @@
             </h2>
 
             <p class="block__lead">
-                Before deployment, the system is validated against the design requirements
-                set out in <a href="define.html" style="color: var(--ochre-deep); border-bottom: 1px solid rgba(154,74,31,0.4);">Define</a>.
-                Each test maps back to a specific user need — uptime, latency, training
-                time, and recoverability.
+                Testing is divided into two areas: <strong>hardware material testing</strong>
+                and <strong>software simulation testing</strong>. Hardware testing focuses on
+                the physical materials used for the enclosure — specifically ABS and TPU —
+                tested separately because they serve different purposes. ABS is used for
+                the rigid structure, while TPU is used for flexible sealing and protection.
             </p>
 
-            <div class="components">
-                <article class="comp">
-                    <div class="comp__icon">01</div>
-                    <h3 class="comp__name">Environmental</h3>
-                    <p class="comp__desc">IP-rating verification, UV exposure, thermal cycling and humidity chamber tests.</p>
-                </article>
+            <p class="block__lead">
+                Software testing focuses on whether the monitoring logic works correctly in
+                simulation. <strong>Wokwi</strong> is used to test sensor input values and
+                fault detection logic, while <strong>ThingsBoard</strong> is used to check
+                whether readings and fault statuses can be displayed on a remote dashboard.
+            </p>
 
-                <article class="comp">
-                    <div class="comp__icon">02</div>
-                    <h3 class="comp__name">Electrical</h3>
-                    <p class="comp__desc">Calibration of sensors against reference instruments and fault-injection tests.</p>
-                </article>
+            <!-- Software Testing Table -->
+            <div class="test-section" style="margin-top: 64px;">
+                <h3 class="test-section__title">Software simulation testing</h3>
+                <p class="test-section__lead">
+                    Software is tested through simulation before full field deployment. Wokwi
+                    simulates sensor readings — voltage, temperature, moisture, current, and
+                    battery level — which are adjusted to verify fault detection. ThingsBoard
+                    confirms that readings and fault statuses display correctly on the dashboard.
+                </p>
 
-                <article class="comp">
-                    <div class="comp__icon">03</div>
-                    <h3 class="comp__name">Usability</h3>
-                    <p class="comp__desc">Time-to-install and time-to-diagnose trials with non-technical users.</p>
-                </article>
-
-                <article class="comp">
-                    <div class="comp__icon">04</div>
-                    <h3 class="comp__name">Field Pilot</h3>
-                    <p class="comp__desc">Extended deployment on a representative SAPS, monitoring for false positives and missed events.</p>
-                </article>
+                <div class="data-table data-table--light">
+                    <header class="data-table__head">
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> Test</div>
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> What is Tested</div>
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> Expected Result</div>
+                    </header>
+                    <div class="data-table__rows">
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Wokwi Sensor Simulation</div>
+                            <div class="data-table__cell">Simulated voltage, current, temperature, moisture, and battery values.</div>
+                            <div class="data-table__cell">The program receives and processes the values correctly.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Threshold Logic Test</div>
+                            <div class="data-table__cell">Sensor values are changed above or below safe limits.</div>
+                            <div class="data-table__cell">The system detects the correct fault type.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Fault Detection Test</div>
+                            <div class="data-table__cell">Low battery, overheating, and water ingress conditions are simulated.</div>
+                            <div class="data-table__cell">The correct fault status is produced.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Normal Status Test</div>
+                            <div class="data-table__cell">All values remain within the safe range.</div>
+                            <div class="data-table__cell">The system displays normal operation.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">ThingsBoard Dashboard Test</div>
+                            <div class="data-table__cell">Data is sent to the dashboard.</div>
+                            <div class="data-table__cell">Sensor readings and system status appear correctly.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Dashboard Logging Test</div>
+                            <div class="data-table__cell">Readings and fault events are recorded.</div>
+                            <div class="data-table__cell">Data can be viewed for monitoring and trend analysis.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Twilio SMS Alert Test</div>
+                            <div class="data-table__cell">A simulated fault is triggered using a Twilio account.</div>
+                            <div class="data-table__cell">An SMS alert is generated with the fault type and key readings.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- TPU Testing -->
+            <div class="test-section" style="margin-top: 96px;">
+                <h3 class="test-section__title">TPU material testing</h3>
+                <p class="test-section__lead">
+                    TPU is tested as the <strong>flexible protective and sealing material</strong>
+                    of the enclosure — representing the soft parts such as the lid gasket, cable
+                    gland seal, antenna seal, LED window seal, and vibration-damping parts. The
+                    purpose is to confirm TPU resists moisture, dust, vibration, and repeated
+                    opening or handling.
+                </p>
+
+                <div class="data-table data-table--light">
+                    <header class="data-table__head">
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> Test</div>
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> What is Tested</div>
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> Expected Result</div>
+                    </header>
+                    <div class="data-table__rows">
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Heat Resistance Test</div>
+                            <div class="data-table__cell">TPU sample is exposed to high temperature using a controlled heat source or hair dryer.</div>
+                            <div class="data-table__cell">The TPU remains intact, flexible, and free from melting or warping.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Water Resistance Test</div>
+                            <div class="data-table__cell">Water is applied around TPU sealing areas to simulate rain and outdoor moisture exposure.</div>
+                            <div class="data-table__cell">The TPU maintains an effective seal and reduces water entry into the enclosure.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Dust Protection Test</div>
+                            <div class="data-table__cell">TPU-sealed areas are exposed to dust or fine particles.</div>
+                            <div class="data-table__cell">The TPU prevents dust intrusion and keeps the protected areas sealed.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Impact and Vibration Test</div>
+                            <div class="data-table__cell">The TPU part is inspected after movement, shaking, or light impact to simulate field conditions.</div>
+                            <div class="data-table__cell">The TPU absorbs movement, stays in place, and shows no major damage.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Attachment and Fit Test</div>
+                            <div class="data-table__cell">The TPU cover or sealing part is fitted to the enclosure and checked for secure installation.</div>
+                            <div class="data-table__cell">The TPU fits securely and remains attached without loosening or affecting performance.</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Maintenance &amp; Flexibility Test</div>
+                            <div class="data-table__cell">The TPU part is bent, handled, and used during opening, inspection, and cleaning.</div>
+                            <div class="data-table__cell">The TPU remains flexible and allows easy maintenance and repeated handling.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABS Testing -->
+            <div class="test-section" style="margin-top: 96px;">
+                <h3 class="test-section__title">ABS material testing</h3>
+                <p class="test-section__lead">
+                    ABS testing checks whether the <strong>rigid enclosure parts</strong> can
+                    protect the internal hardware in remote conditions. Tests focus on heat
+                    resistance, impact resistance, dust exposure, structural strength, and
+                    mounting stability — important because ABS forms the main protective
+                    shell of the prototype.
+                </p>
+
+                <div class="data-table data-table--light data-table--5col">
+                    <header class="data-table__head">
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> Test</div>
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> What is Tested</div>
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> Method</div>
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> Expected Result</div>
+                        <div class="data-table__h"><span class="data-table__h-icon">◐</span> Result</div>
+                    </header>
+                    <div class="data-table__rows">
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Heat Resistance Test</div>
+                            <div class="data-table__cell">Expose ABS sample to heat using a controlled heat source.</div>
+                            <div class="data-table__cell">Heat sample using a hair dryer at close range for 5–10 minutes.</div>
+                            <div class="data-table__cell">Positive: ABS does not melt, deform, or warp.</div>
+                            <div class="data-table__cell data-table__cell--pass">✓ Pass</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Impact Test</div>
+                            <div class="data-table__cell">Drop or tap the ABS sample to simulate field handling.</div>
+                            <div class="data-table__cell">Drop sample from a height of ~50 cm onto a hard surface.</div>
+                            <div class="data-table__cell">Positive: ABS does not crack or break.</div>
+                            <div class="data-table__cell data-table__cell--pass">✓ Pass</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Dust Resistance Test</div>
+                            <div class="data-table__cell">Expose ABS part to dust or dirt.</div>
+                            <div class="data-table__cell">Place sample in a dusty environment for several hours, then inspect.</div>
+                            <div class="data-table__cell">Positive: Surface is easy to clean and dust does not pass through the structure.</div>
+                            <div class="data-table__cell data-table__cell--pass">✓ Pass</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Fit and Structure Test</div>
+                            <div class="data-table__cell">Check whether ABS parts hold their shape.</div>
+                            <div class="data-table__cell">Inspect sample for deformation or changes after all tests.</div>
+                            <div class="data-table__cell">Positive: ABS remains firm and maintains its shape.</div>
+                            <div class="data-table__cell data-table__cell--pass">✓ Pass</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Mounting Stability Test</div>
+                            <div class="data-table__cell">Attach or shake the ABS enclosure / mounting part.</div>
+                            <div class="data-table__cell">Secure part to mount and shake gently for 1–2 minutes.</div>
+                            <div class="data-table__cell">Positive: ABS stays secure without loosening or cracking.</div>
+                            <div class="data-table__cell data-table__cell--pass">✓ Pass</div>
+                        </div>
+                        <div class="data-table__row">
+                            <div class="data-table__cell data-table__cell--title">Outdoor Durability Test</div>
+                            <div class="data-table__cell">Simulate outdoor conditions (sunlight, heat, humidity).</div>
+                            <div class="data-table__cell">Expose sample to sunlight and outdoor environment for 2–3 days.</div>
+                            <div class="data-table__cell">Positive: ABS remains stable, no fading, no major changes.</div>
+                            <div class="data-table__cell data-table__cell--pass">✓ Pass</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -397,6 +790,50 @@
             <span class="footer__ack">Always was, always will be Aboriginal land.</span>
         </div>
     </footer>
+
+    <!-- JS · CAROUSEL -->
+    <script>
+    (function () {
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+        if (!track) return;
+
+        const slides = track.querySelectorAll('.carousel__slide');
+        const prevBtn = document.querySelector('[data-dir="prev"]');
+        const nextBtn = document.querySelector('[data-dir="next"]');
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'carousel__dot';
+            dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            dot.addEventListener('click', () => scrollTo(i));
+            dotsContainer.appendChild(dot);
+        });
+        const dots = dotsContainer.querySelectorAll('.carousel__dot');
+
+        function currentIndex() {
+            const slideWidth = slides[0].offsetWidth + 16;
+            return Math.round(track.scrollLeft / slideWidth);
+        }
+
+        function scrollTo(i) {
+            const slideWidth = slides[0].offsetWidth + 16;
+            track.scrollTo({ left: i * slideWidth, behavior: 'smooth' });
+        }
+
+        function updateDots() {
+            const i = currentIndex();
+            dots.forEach((d, idx) => d.classList.toggle('carousel__dot--active', idx === i));
+        }
+
+        prevBtn.addEventListener('click', () => scrollTo(Math.max(0, currentIndex() - 1)));
+        nextBtn.addEventListener('click', () => scrollTo(Math.min(slides.length - 1, currentIndex() + 1)));
+
+        track.addEventListener('scroll', () => requestAnimationFrame(updateDots));
+
+        updateDots();
+    })();
+    </script>
 
 </body>
 </html>
