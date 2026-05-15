@@ -1773,6 +1773,7 @@ em { font-style: italic; }
 
 .block {
     padding: clamp(70px, 10vw, 120px) var(--gutter);
+    overflow: visible;
 }
 
 .block--bone { background: var(--bone); }
@@ -1785,6 +1786,7 @@ em { font-style: italic; }
 .block__inner {
     max-width: var(--max);
     margin: 0 auto;
+    overflow: visible;
 }
 
 .block__eyebrow {
@@ -4633,6 +4635,7 @@ body.lightbox-open { overflow: hidden; }
     grid-template-columns: 360px 1fr;
     gap: 64px;
     align-items: start;  /* changed from center → start */
+    overflow: visible;
 }
 
 .donut {
@@ -4643,6 +4646,8 @@ body.lightbox-open { overflow: hidden; }
     max-width: 100%;
     flex-shrink: 0;
     z-index: 3;
+    overflow: visible;
+    margin-bottom: -180px;
 }
 
 .donut svg {
@@ -4717,6 +4722,33 @@ body.lightbox-open { overflow: hidden; }
     text-transform: uppercase;
     color: var(--ochre);
     font-style: normal;
+}
+
+/* New: separated interactive donut so it can be moved without shifting layout */
+.donut-wrap { position: relative; width: 360px; height: 360px; }
+.donut-display { position: relative; width: 100%; height: 100%; }
+.interactive-donut {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 360px;
+    height: 360px;
+    pointer-events: auto;
+    z-index: 4;
+    transform: translateY(-100px); /* adjust this value to move the coloured pie up/down */
+}
+.interactive-slice {
+    transition: stroke-width 0.3s var(--ease), opacity 0.3s var(--ease);
+    cursor: pointer;
+    transform-origin: center;
+}
+.interactive-slice:hover,
+.donut__slice--active {
+    stroke-width: 40;
+}
+
+.interactive-donut:has(.donut__slice--active) .interactive-slice:not(.donut__slice--active) {
+    opacity: 0.35;
 }
 
 /* Legend list */
@@ -5090,14 +5122,18 @@ body.lightbox-open { overflow: hidden; }
     width: 360px;
     height: 360px;
     max-width: 100%;
+    display: grid;
+    place-items: center;
     flex-shrink: 0;
 }
 
 .donut svg {
     width: 100%;
     height: 100%;
+    aspect-ratio: 1 / 1;
     overflow: visible;
     display: block;
+    margin: 0 auto;
 }
 
 .donut__slice {
