@@ -1836,7 +1836,6 @@ em { font-style: italic; }
 /* ============================================
    FRAMED IMAGE (for graphics)
    ============================================ */
-
 .figure {
     background: var(--paper);
     border: 1px solid rgba(42, 29, 18, 0.12);
