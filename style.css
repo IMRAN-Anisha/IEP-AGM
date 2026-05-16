@@ -5816,3 +5816,86 @@ body.lightbox-open { overflow: hidden; }
     border-radius: 100px;
     font-style: italic;
 }
+/* ============================================
+   APPENDIX · PREVIEW NOTICE
+   ============================================ */
+
+.preview-notice-wrap {
+    padding-top: 0 !important;
+    padding-bottom: clamp(40px, 5vw, 60px) !important;
+    background: var(--bone) !important;
+}
+
+.preview-notice {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 24px;
+    padding: 28px 32px;
+    background: var(--paper);
+    border: 1px solid rgba(194, 98, 45, 0.25);
+    border-left: 4px solid var(--ochre);
+    border-radius: 4px;
+    box-shadow: 0 12px 30px -22px rgba(42, 29, 18, 0.2);
+}
+
+.preview-notice__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(194, 98, 45, 0.12);
+    color: var(--ochre-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.preview-notice__body {
+    min-width: 0;
+}
+
+.preview-notice__label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ochre-deep);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.preview-notice p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    margin: 0;
+}
+
+.preview-notice strong {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.preview-notice em {
+    font-style: italic;
+    color: var(--ochre-deep);
+}
+
+@media (max-width: 600px) {
+    .preview-notice {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px;
+    }
+    .preview-notice__icon { width: 36px; height: 36px; }
+}
+/* ============================================
+   IDEATE · CONCEPT NOTES (under figures)
+   ============================================ */
+.block__lead--after-figure {
+    margin-top: 40px;
+    margin-bottom: 24px;
+}
