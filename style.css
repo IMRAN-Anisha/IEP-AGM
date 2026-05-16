@@ -5778,3 +5778,41 @@ body.lightbox-open { overflow: hidden; }
     }
     .donut { width: 280px; height: 280px; }
 }
+/* ============================================
+   APPENDIX · PLACEHOLDER DOC CARD
+   ============================================ */
+
+.doc-card--placeholder {
+    background: repeating-linear-gradient(
+        135deg,
+        var(--paper),
+        var(--paper) 10px,
+        rgba(232, 220, 196, 0.4) 10px,
+        rgba(232, 220, 196, 0.4) 12px
+    );
+    grid-template-columns: 44px 1fr;
+    opacity: 0.85;
+}
+
+.doc-card--placeholder:hover {
+    border-color: rgba(42, 29, 18, 0.1);
+    box-shadow: none;
+}
+
+.doc-card--placeholder:hover::before {
+    transform: scaleY(0);
+}
+
+.doc-card--placeholder .doc-card__icon {
+    background: rgba(232, 220, 196, 0.6);
+    color: var(--ink-soft);
+    border-color: rgba(42, 29, 18, 0.1);
+}
+
+.doc-card--placeholder .doc-card__type {
+    color: var(--ink-soft);
+    background: var(--bone-warm);
+    padding: 2px 10px;
+    border-radius: 100px;
+    font-style: italic;
+}
