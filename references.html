@@ -873,6 +873,19 @@
                     <p>EWB Challenge · Research Area 3.4<br>Energy Monitoring &amp; Fault Diagnosis</p>
                 </div>
             </div>
+
+            <div class="footer__team">
+                <h5>The team</h5>
+                <ul class="footer__team-list">
+                    <li>Anisha Imran</li>
+                    <li>Kingsley Lam Li</li>
+                    <li>Jhuniya Rizza Viernes</li>
+                    <li>Suvana Alam</li>
+                    <li>Emily Abboud</li>
+                    <li>Chloe Kelsey</li>
+                </ul>
+            </div>
+
             <div class="footer__partner">
                 <h5>In partnership with</h5>
                 <p>The Lama Lama Peoples<br>Port Stewart, Cape York Peninsula<br>Queensland, Australia</p>
@@ -884,64 +897,58 @@
             <span class="footer__ack">Always was, always will be Aboriginal land.</span>
         </div>
 
-    <div class="footer__credit">
-        <span>Website designed &amp; developed by Anisha Imran · Project a collective Team 7 contribution.</span>
-    </div>
-</footer>
+        <div class="footer__credit">
+            <span>Website designed &amp; developed by Anisha Imran · Project a collective Team 7 contribution.</span>
+        </div>
+    </footer>
 
-    <script>
-    (function () {
-        const search = document.getElementById('refSearch');
-        const chips = document.querySelectorAll('#references .g-chip');
-        const items = document.querySelectorAll('.ref');
-        const empty = document.getElementById('refEmpty');
-        let activeCat = 'all';
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+    const search = document.getElementById('refSearch');
+    const chips = document.querySelectorAll('#references .g-chip');
+    const items = document.querySelectorAll('#refList .ref');
+    const empty = document.getElementById('refEmpty');
+    let activeCat = 'all';
 
-        function applyFilters() {
-            if (!search) return;
-            const q = (search.value || '').trim().toLowerCase();
-            let visible = 0;
-            items.forEach(item => {
-                const cat = item.dataset.cat || '';
-                const haystack = ((item.dataset.keywords || '') + ' ' + item.textContent).toLowerCase();
-                const matchCat = activeCat === 'all' || cat === activeCat;
-                const matchQuery = q === '' || haystack.indexOf(q) !== -1;
-                const show = matchCat && matchQuery;
-                item.hidden = !show;
-                if (show) visible++;
-            });
-            if (empty) empty.hidden = visible !== 0;
-        }
+    function applyFilters() {
+        const q = search ? (search.value || '').trim().toLowerCase() : '';
+        let visible = 0;
 
-        if (search) {
-            search.addEventListener('input', applyFilters);
-        }
+        items.forEach(function (item) {
+            const cat = (item.getAttribute('data-cat') || '').toLowerCase();
+            const keywords = (item.getAttribute('data-keywords') || '').toLowerCase();
+            const text = (item.textContent || '').toLowerCase();
+            const haystack = cat + ' ' + keywords + ' ' + text;
 
-        chips.forEach(chip => {
-            chip.addEventListener('click', () => {
-                chips.forEach(c => c.classList.remove('g-chip--active'));
-                chip.classList.add('g-chip--active');
-                activeCat = chip.dataset.cat || 'all';
-                applyFilters();
-            });
+            const matchCat = (activeCat === 'all') || (cat === activeCat);
+            const matchQuery = (q === '') || (haystack.indexOf(q) !== -1);
+            const show = matchCat && matchQuery;
+
+            item.style.display = show ? '' : 'none';
+            if (show) visible++;
         });
 
-        // Citation style toggle
-        const styleBtns = document.querySelectorAll('.ref-style__btn');
-        styleBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                styleBtns.forEach(b => b.classList.remove('ref-style__btn--active'));
-                btn.classList.add('ref-style__btn--active');
-                const style = btn.dataset.style;
-                document.querySelectorAll('.ref__cite').forEach(cite => {
-                    cite.hidden = !cite.classList.contains('ref__cite--' + style);
-                });
-            });
-        });
+        if (empty) empty.hidden = visible !== 0;
+    }
 
-        applyFilters();
-    })();
-    </script>
+    if (search) {
+        search.addEventListener('input', applyFilters);
+        search.addEventListener('keyup', applyFilters);
+    }
+
+    chips.forEach(function (chip) {
+        chip.addEventListener('click', function (e) {
+            e.preventDefault();
+            chips.forEach(function (c) { c.classList.remove('g-chip--active'); });
+            chip.classList.add('g-chip--active');
+            activeCat = chip.getAttribute('data-cat') || 'all';
+            applyFilters();
+        });
+    });
+
+    applyFilters();
+});
+</script>
 
 </body>
 </html>
