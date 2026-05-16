@@ -5839,3 +5839,70 @@ body.lightbox-open { overflow: hidden; }
     .risk__head { flex-direction: column; align-items: flex-start; }
     .risk-tools { flex-direction: column; align-items: stretch; }
 }
+/* ============================================
+   FOOTER · TEAM NAMES + SUBTLE CREDIT
+   ============================================ */
+
+.footer__top {
+    grid-template-columns: 1.3fr 1fr 1.1fr !important;
+}
+
+.footer__team {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__team h5 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.footer__team-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer__team-list li {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: rgba(245, 239, 228, 0.78);
+    font-family: var(--body);
+    transition: color 0.3s var(--ease);
+}
+
+.footer__team-list li:hover {
+    color: var(--ochre-soft);
+}
+
+/* Subtle credit line */
+.footer__credit {
+    max-width: var(--max);
+    margin: 18px auto 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(245, 239, 228, 0.06);
+    text-align: center;
+}
+
+.footer__credit span {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: rgba(245, 239, 228, 0.32);
+    font-style: italic;
+}
+
+@media (max-width: 760px) {
+    .footer__top {
+        grid-template-columns: 1fr !important;
+    }
+}
