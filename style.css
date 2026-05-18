@@ -2524,10 +2524,38 @@ body.lightbox-open { overflow: hidden; }
 /* Solution feature blocks */
 .sol-feature {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(40px, 6vw, 96px);
+    grid-template-columns: minmax(320px, 1.1fr) minmax(300px, 450px);
+    gap: clamp(36px, 6vw, 72px);
     align-items: start;
     margin-top: 48px;
+}
+
+.sol-feature__text {
+    display: grid;
+    gap: 32px;
+}
+
+.sol-feature__text .block__lead {
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+.sol-feature__excerpt {
+    margin-top: 8px;
+    color: var(--ink-soft);
+}
+
+.sol-feature__card {
+    padding: 32px 28px;
+    border-radius: 32px;
+    background: rgba(245, 239, 228, 0.72);
+    border: 1px solid rgba(209, 189, 163, 0.45);
+    box-shadow: 0 20px 44px rgba(17, 28, 41, 0.08);
+}
+
+.block--ink .sol-feature__card {
+    background: rgba(32, 36, 45, 0.88);
+    border-color: rgba(245, 239, 228, 0.12);
 }
 
 .sol-feature__list {
@@ -5896,6 +5924,9 @@ body.lightbox-open { overflow: hidden; }
    IDEATE · CONCEPT NOTES (under figures)
    ============================================ */
 .block__lead--after-figure {
+    display: block;
+    max-width: 100%;
+    width: 100%;
     margin-top: 40px;
     margin-bottom: 24px;
 }
