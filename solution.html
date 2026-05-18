@@ -54,17 +54,32 @@
             </h2>
 
             <p class="sol-hero__intro">
-                Team 7 (AGM) proposes an intelligent monitoring and fault detection system
-                for Stand-Alone Power Systems. The solution is designed in response to the 
-                needs of the Port Stewart community, where energy access is shaped by remote 
-                location, limited infrastructure, environmental stress, and the need for systems 
-                that are simple, durable, and locally manageable (Australian Energy Market Commission, 
-                2019; Centre for Appropriate Technology, 2008; Mahmud & Roy, 2025). The design also 
-                reflects Lama Lama cultural values by considering community involvement, local capability, 
-                and the importance of maintaining strong cultural connections to Country while addressing 
-                the economic and environmental constraints of operating energy systems in remote areas 
-                (Engineers Without Borders Australia, 2024; Lama Lama Organisation, n.d.).
+                Team 7 (AGM) proposes a compact monitoring and fault detection device for 
+                Stand-Alone Power Systems (SAPS) used in remote communities such as Port Stewart
+                 and Lama Lama Country. The solution consists of a durable UTP/ABS enclosure that 
+                 attaches non-destructively to an existing SAPS switchboard and continuously monitors 
+                 system conditions including voltage, current, temperature, and moisture levels. 
             </p>
+
+            <p class="sol-hero__intro">
+                When abnormal operating conditions are detected for a sustained period, 
+                the device automatically sends an SMS alert containing system and fault 
+                information to Lama Lama Rangers and a designated monitoring laptop, enabling
+                 earlier fault response and record keeping. 
+            </p>
+                
+            <p class="sol-hero__intro">
+                By improving fault detection and reducing response delays,
+                 the system aims to support the reliability, safety, and 
+                 maintainability of remote energy infrastructure in areas with
+                  limited access and harsh environmental conditions (Australian Energy 
+                  Market Commission, 2019; Centre for Appropriate Technology, 2008; 
+                  Mahmud & Roy, 2025). The design aligns with the importance of practical,
+                   community-oriented solutions that support local capability and ongoing 
+                   connection to Country (Engineers Without Borders Australia, 2026a; 
+                   Lama Lama Organisation, 2021a).
+            </p>
+
 
             <div class="sol-stats">
                 <div class="sol-stat">
@@ -113,35 +128,35 @@
             </h2>
 
             <p class="block__lead">
-                Our solution improves the reliability and long-term performance of Stand-Alone Power Systems 
-                by enabling early fault detection, reducing the risk of equipment damage, and minimising system
-                 downtime. Stand-Alone Power Systems operate independently from the main electricity grid, so 
-                 reliable monitoring is especially important in remote communities where maintenance access and 
-                 technical support can be limited (Australian Energy Market Commission, 2019; Australian Renewable 
-                 Energy Agency, 2023). This supports remote energy resilience by helping operators identify issues 
-                 earlier and maintain more stable power for community and ranger operations.
+                The AGM monitoring system is designed to improve the reliability and maintainability of Stand-Alone Power Systems (SAPS)
+                 in remote communities by enabling earlier fault detection and reducing system downtime. 
+                 Because SAPS operate independently from the main electricity grid, faults can be difficult 
+                 to identify and resolve quickly, particularly in isolated regions where technical support and
+                  maintenance access are limited (Australian Energy Market Commission, 2019; Heard et al., 2025). 
+                  Improving visibility over system performance therefore supports more reliable power delivery for 
+                  ranger operations and essential community services.
                 </p>
                 <p class="block__lead">
-                This is achieved through continuous monitoring of key operating parameters, including current, voltage, 
-                temperature, and moisture levels. These readings help operators observe system performance and detect 
-                abnormal conditions before they become major failures. The Raspberry Pi Pico is suitable for this prototype 
-                because it provides general-purpose input/output pins and analog input capability for reading sensors and 
-                controlling connected components (Raspberry Pi Ltd., 2021). When potential issues are detected, the system 
-                automatically sends SMS alerts through the GSM module, allowing operators and maintenance teams to respond 
-                quickly before faults escalate.
+                The device continuously monitors key operating parameters including voltage, current,
+                 temperature, and moisture levels. When abnormal conditions persist beyond expected operating 
+                 ranges, the system automatically sends SMS alerts containing diagnostic information to Lama Lama 
+                 Rangers and a designated monitoring laptop. This allows faults to be identified earlier and
+                  maintenance responses to occur before issues escalate into larger system failures.
+                  The monitoring approach aligns with broader research showing that visibility, monitoring, 
+                  and local operational control are important for improving resilience and reliability in 
+                  isolated energy systems (Australian Renewable Energy Agency, 2021; Australian Renewable
+                   Energy Agency, 2022).
             </p>
             </p>
 
             <div class="sol-feature">
                 <div>
                     <p class="block__lead" style="margin-bottom: 0;">
-                        By collecting and tracking this data over time, operators can better 
-                        understand energy generation, storage, and consumption patterns across the system. Australian 
-                        remote microgrid projects show that monitoring, control, and local visibility are important for 
-                        improving reliability and supporting decision-making in isolated energy systems 
-                        (Australian Renewable Energy Agency, 2021, 2022). For Port Stewart, this supports more informed decisions,
-                        improves operational efficiency, and helps the power system continue meeting community 
-                        needs under changing environmental conditions.
+                        By recording operational data over time, the system can also support improved 
+                        understanding of system behaviour and maintenance requirements under changing 
+                        environmental conditions. This contributes to longer-term energy resilience in
+                        Port Stewart by supporting more informed operational decision-making and reducing 
+                        the likelihood of prolonged outages in remote conditions.
                     </p>
                 </div>
 
@@ -183,19 +198,26 @@
             </h2>
 
             <p class="block__lead">
-                The prototype monitors current, voltage, temperature, moisture, and battery
-                 condition in remote energy systems so faults can be identified before they become 
-                 major failures. A Raspberry Pi Pico W processes the sensor data and detects conditions 
-                 such as overheating, abnormal current, low battery, and moisture intrusion using
-                  threshold-based logic. This is suitable for a remote monitoring prototype because the 
-                  Raspberry Pi Pico W supports sensor input and control through its general-purpose
-                   input/output and analog input pins (Raspberry Pi Ltd., 2022). When a fault occurs, 
-                   the system logs telemetry data to ThingsBoard for dashboard visibility, displays LED 
-                   status indicators for quick local checking, and sends SMS alerts to Rangers through 
-                   Twilio’s Programmable Messaging service so maintenance teams can respond faster (Twilio, 2026). 
-                   This approach aligns with Australian remote energy needs, where microgrids and stand-alone
-                    systems require reliable monitoring and local visibility to improve power reliability in 
-                    remote communities (Australian Renewable Energy Agency, 2023).
+                The AGM prototype monitors key operating conditions within Stand-Alone Power Systems
+                 (SAPS), including voltage, current, temperature, moisture levels, and battery condition, 
+                 to help identify faults before they develop into larger system failures. Sensor data is 
+                 processed by a Raspberry Pi Pico W, which continuously checks for abnormal operating 
+                 conditions such as overheating, low battery performance, moisture intrusion, or irregular 
+                 electrical behaviour.
+
+                When faults are detected, the system records telemetry data for remote monitoring,
+                 activates local LED status indicators, and automatically sends SMS alerts containing
+                  diagnostic information to Lama Lama Rangers and designated operators. This enables 
+                  faster maintenance response and improves visibility over system performance in remote
+                   environments where technical support and site access may be limited.
+
+                Continuous monitoring and fault reporting are particularly important in isolated
+                 energy systems, where early detection can reduce downtime, protect equipment, 
+                 and improve overall power reliability. Similar Australian remote energy projects
+                  have identified monitoring and operational visibility as important components of
+                  resilient stand-alone and microgrid systems (Australian Renewable Energy Agency,
+                   2021; Australian Renewable Energy Agency, 2022).
+
             </p>
 
             <figure class="figure figure--spaced">
@@ -220,19 +242,29 @@
                 <div class="media-pair__body">
                     <h3>Internal components</h3>
                     <p>
-                        The internal hardware includes sensors, power protection circuits,
-                         a Raspberry Pi Pico controller, GSM communication, relay cutoff, battery
-                          monitoring, and LED indicators. The sensors collect current, voltage, temperature, 
-                          moisture, and battery data to monitor system performance and environmental conditions.
-                           This supports remote Stand-Alone Power Systems, which often use solar power, battery 
-                           storage, and backup generation where grid connection is difficult (Ergon Energy Network, 
-                           2026; Australian Renewable Energy Agency, 2023). The Raspberry Pi Pico reads sensor inputs
-                            and controls connected components through its GPIO pins and analog input capability (Raspberry
-                             Pi Ltd., 2024). If unsafe conditions are detected, the relay can support safety cutoff, LEDs 
-                             show system status, and the GSM communication module sends SMS alerts to maintenance staff or 
-                             rangers. Australian remote monitoring products also use cellular or SMS-based alerts to send 
-                             notifications from field equipment, making this approach suitable for low-bandwidth remote
-                              alerting (Datran Australia, 2026.; Telstra, 2023).
+                        The AGM monitoring device integrates sensing, processing, communication, and 
+                        protection components within a compact enclosure designed for remote Stand-Alone
+                         Power Systems (SAPS). Internal sensors continuously monitor voltage, current, 
+                         temperature, moisture levels, and battery condition to provide ongoing visibility
+                          over system performance and environmental conditions. These measurements help
+                           identify abnormal operating behaviour before faults develop into larger failures.
+
+                        The Raspberry Pi Pico W functions as the central controller, 
+                        processing sensor inputs and coordinating system responses. When unsafe 
+                        or abnormal conditions are detected, the device can activate protective functions,
+                         display local LED status indicators, and transmit SMS fault alerts to Lama Lama Rangers 
+                         and designated operators through a GSM communication module. This enables earlier
+                          maintenance intervention and improves operational awareness in remote environments
+                           where technical support and site access may be limited.
+
+                        The design is intended for isolated energy systems commonly used in remote Australian 
+                        communities, where reliable monitoring is important for maintaining power continuity
+                         and reducing downtime (Australian Energy Market Commission, 2019; Heard et al., 2025). 
+                         SMS-based communication was selected because cellular messaging remains practical
+                          for low-bandwidth remote monitoring applications and can continue functioning in 
+                          areas with limited internet connectivity (Telstra, 2022).
+
+
                     </p>
                 </div>
             </div>
@@ -251,16 +283,23 @@
                 <div class="media-pair__body">
                     <h3>External enclosure</h3>
                     <p>
-                        The external enclosure uses a rugged Acrylonitrile Butadiene Styrene body and 
-                        flexible Thermoplastic Polyurethane sealing to protect the prototype from harsh 
-                        remote conditions. Acrylonitrile Butadiene Styrene is suitable for the main body
-                        because it provides a rigid, lightweight, and impact-resistant structure for 
-                        protecting internal components (SpecialChem, 2026). Thermoplastic Polyurethane 
-                        is suitable for the sealing and vibration-damping areas because it offers flexibility, 
-                        elasticity, abrasion resistance, and impact resistance across a wide temperature range
-                         (Australian Urethane Systems, 2026). These material properties help the enclosure resist dust,
-                          rain, heat, vibration, and possible wildlife interference during outdoor field use in remote 
-                          energy monitoring deployments.
+                        The external enclosure is designed to protect the monitoring system from the 
+                        harsh environmental conditions commonly experienced in remote regions such as 
+                        Cape York. The housing uses a durable Acrylonitrile Butadiene Styrene (ABS)-based 
+                        structure with flexible sealing components to help resist dust, moisture, heat, 
+                        vibration, and physical wear during long-term outdoor operation. This ruggedised 
+                        design helps protect internal electronics and maintain reliable system performance 
+                        in isolated environments where maintenance access may be limited.
+
+                        The enclosure was developed to suit the environmental and operational 
+                        conditions associated with remote Stand-Alone Power Systems (SAPS), including 
+                        exposure to extreme weather, seasonal rainfall, and transport vibration across 
+                        unsealed roads (Bureau of Meteorology & CSIRO, 2019; Queensland Reconstruction
+                         Authority, 2022). 
+
+                        By improving physical durability and environmental protection,
+                         the enclosure supports longer service life and more reliable monitoring
+                          performance in remote deployments.
                     </p>
                 </div>
             </div>
